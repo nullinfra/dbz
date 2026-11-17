@@ -1,0 +1,4844 @@
+{
+ "counts": {
+  "not_found": 132,
+  "unverified_number": 264,
+  "exact": 225
+ },
+ "streets": {
+  "Acesso Parque Supermercado LIDL": {
+   "street": "Acesso Parque Supermercado LIDL",
+   "query": "Acesso Parque Supermercado LIDL, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Alameda 25 de Abril": {
+   "street": "Alameda 25 de Abril",
+   "query": "Alameda 25 de Abril, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Alameda 25 de Abril 10, 2855-211 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Alameda Diego Velásquez": {
+   "street": "Alameda Diego Velásquez",
+   "query": "Alameda Diego Velásquez, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Alameda Diego de Velasquez 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Alameda Miguel Torga": {
+   "street": "Alameda Miguel Torga",
+   "query": "Alameda Miguel Torga, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Alameda Miguel Torga 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Alameda Santa Marta do Pinhal": {
+   "street": "Alameda Santa Marta do Pinhal",
+   "query": "Alameda Santa Marta do Pinhal, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Alameda Santa Marta do Pinhal 10, 2855-576 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Alameda do Areeiro": {
+   "street": "Alameda do Areeiro",
+   "query": "Alameda do Areeiro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Alameda do Areeiro, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Autoestrada do Sul": {
+   "street": "Autoestrada do Sul",
+   "query": "Autoestrada do Sul, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "A do Sul, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Avenida 23 de Julho": {
+   "street": "Avenida 23 de Julho",
+   "query": "Avenida 23 de Julho, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Av. 23 de Julho 10, Almada, Portugal"
+  },
+  "Avenida 25 de Abril": {
+   "street": "Avenida 25 de Abril",
+   "query": "Avenida 25 de Abril, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Av. 25 de Abril 10, 2810-123 Almada, Portugal"
+  },
+  "Avenida Amélia Rey Colaço": {
+   "street": "Avenida Amélia Rey Colaço",
+   "query": "Avenida Amélia Rey Colaço, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. Amélia Rey Colaço 10, 2855-503 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Avenida Dom Afonso Henriques": {
+   "street": "Avenida Dom Afonso Henriques",
+   "query": "Avenida Dom Afonso Henriques, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. Dom Afonso Henriques 10, 2855-717 Parque Luso, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Avenida Fonte da Telha": {
+   "street": "Avenida Fonte da Telha",
+   "query": "Avenida Fonte da Telha, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. Fonte da Telha 10A, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Avenida Fábrica da Pólvora": {
+   "street": "Avenida Fábrica da Pólvora",
+   "query": "Avenida Fábrica da Pólvora, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. Fábrica da Pólvora 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Avenida Guerra Junqueiro": {
+   "street": "Avenida Guerra Junqueiro",
+   "query": "Avenida Guerra Junqueiro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. Guerra Junqueiro 10, 2855-035 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Avenida José Saramago": {
+   "street": "Avenida José Saramago",
+   "query": "Avenida José Saramago, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Avenida José Saramago, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Avenida Luís de Camões": {
+   "street": "Avenida Luís de Camões",
+   "query": "Avenida Luís de Camões, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. Luís de Camões 10, 2855-121 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Avenida Parque Natural da Arrábida": {
+   "street": "Avenida Parque Natural da Arrábida",
+   "query": "Avenida Parque Natural da Arrábida, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. Parque Natural da Arrábida 10, 2855-606 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Avenida Pinhal da Aroeira": {
+   "street": "Avenida Pinhal da Aroeira",
+   "query": "Avenida Pinhal da Aroeira, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Av. Pinhal da Aroeira 10, Portugal"
+  },
+  "Avenida Pinhal de Catelas": {
+   "street": "Avenida Pinhal de Catelas",
+   "query": "Avenida Pinhal de Catelas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. Pinhal de Catelas, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Avenida Pinhal do Arneiro": {
+   "street": "Avenida Pinhal do Arneiro",
+   "query": "Avenida Pinhal do Arneiro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. Pinhal do Arneiro 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Avenida Pinhal do Caldas": {
+   "street": "Avenida Pinhal do Caldas",
+   "query": "Avenida Pinhal do Caldas, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. Pinhal do Caldas 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Avenida Pinhal do Vidal": {
+   "street": "Avenida Pinhal do Vidal",
+   "query": "Avenida Pinhal do Vidal, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. Pinhal Vidal 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Avenida Quinta de Valadares": {
+   "street": "Avenida Quinta de Valadares",
+   "query": "Avenida Quinta de Valadares, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Av. Q.ta de Valadares, Corroios, Portugal"
+  },
+  "Avenida Reserva Natural Estuário do Tejo": {
+   "street": "Avenida Reserva Natural Estuário do Tejo",
+   "query": "Avenida Reserva Natural Estuário do Tejo, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Avenida Reserva Natural da Berlenga": {
+   "street": "Avenida Reserva Natural da Berlenga",
+   "query": "Avenida Reserva Natural da Berlenga, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. Reserva Natural da Berlenga 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Avenida Reserva Natural do Estuário do Sado": {
+   "street": "Avenida Reserva Natural do Estuário do Sado",
+   "query": "Avenida Reserva Natural do Estuário do Sado, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. Reserva Natural do Estuário do Sado 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Avenida Rui Grácio": {
+   "street": "Avenida Rui Grácio",
+   "query": "Avenida Rui Grácio, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. Rui Grácio 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Avenida Vale de Milhaços": {
+   "street": "Avenida Vale de Milhaços",
+   "query": "Avenida Vale de Milhaços, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. Vale de Milhaços 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Avenida Vieira da Silva": {
+   "street": "Avenida Vieira da Silva",
+   "query": "Avenida Vieira da Silva, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. Vieira da Silva 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Avenida XVII": {
+   "street": "Avenida XVII",
+   "query": "Avenida XVII, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. XVII 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Avenida da Liberdade": {
+   "street": "Avenida da Liberdade",
+   "query": "Avenida da Liberdade, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. da Liberdade 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Avenida da Marisol": {
+   "street": "Avenida da Marisol",
+   "query": "Avenida da Marisol, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. da Marisol 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Avenida da Verdizela": {
+   "street": "Avenida da Verdizela",
+   "query": "Avenida da Verdizela, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. da Verdizela 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Avenida de Belverde": {
+   "street": "Avenida de Belverde",
+   "query": "Avenida de Belverde, 10, Corroios",
+   "outcome": "not_found",
+   "status": "ZERO_RESULTS"
+  },
+  "Avenida de Vale Bem": {
+   "street": "Avenida de Vale Bem",
+   "query": "Avenida de Vale Bem, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Av. de Vale Bem 10, Portugal"
+  },
+  "Avenida de Vale de Boeiro": {
+   "street": "Avenida de Vale de Boeiro",
+   "query": "Avenida de Vale de Boeiro, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Avenida do Mar": {
+   "street": "Avenida do Mar",
+   "query": "Avenida do Mar, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Av. do Mar 10, Amora, Portugal"
+  },
+  "Beco das Papoilas": {
+   "street": "Beco das Papoilas",
+   "query": "Beco das Papoilas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Beco Papoilas 10, 2855-385 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Beco do Cotovelo": {
+   "street": "Beco do Cotovelo",
+   "query": "Beco do Cotovelo, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Beco do Cotovelo, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Beco do Depósito de Água": {
+   "street": "Beco do Depósito de Água",
+   "query": "Beco do Depósito de Água, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Beco dos Jasmins": {
+   "street": "Beco dos Jasmins",
+   "query": "Beco dos Jasmins, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Bc dos Jasmins 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Circular Regional Interior da Península de Setúbal (CRIPS)": {
+   "street": "Circular Regional Interior da Península de Setúbal (CRIPS)",
+   "query": "Circular Regional Interior da Península de Setúbal (CRIPS), 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "A33, Portugal"
+  },
+  "Estrada de Acesso à Ponta dos Corvos": {
+   "street": "Estrada de Acesso à Ponta dos Corvos",
+   "query": "Estrada de Acesso à Ponta dos Corvos, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Estrada da Ponta dos Corvos 10, Amora, Portugal"
+  },
+  "Estrada dos Álamos": {
+   "street": "Estrada dos Álamos",
+   "query": "Estrada dos Álamos, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Estrada dos Álamos 10, 2810-144 Almada, Portugal"
+  },
+  "Largo do Mercado": {
+   "street": "Largo do Mercado",
+   "query": "Largo do Mercado, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Largo do Mercado 10, 2855-591 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Passeio dos Amores Perfeitos": {
+   "street": "Passeio dos Amores Perfeitos",
+   "query": "Passeio dos Amores Perfeitos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Passeio dos Amores Perfeitos, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Passeio dos Narcisos": {
+   "street": "Passeio dos Narcisos",
+   "query": "Passeio dos Narcisos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Passeio dos Narcisos, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praceta Almeida Garrett": {
+   "street": "Praceta Almeida Garrett",
+   "query": "Praceta Almeida Garrett, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Almeida Garrett 10, 2855-123 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Amândio César": {
+   "street": "Praceta Amândio César",
+   "query": "Praceta Amândio César, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Amândio Cesar 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Ana Plácido": {
+   "street": "Praceta Ana Plácido",
+   "query": "Praceta Ana Plácido, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Ana Plácido 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Ana de Albuquerque": {
+   "street": "Praceta Ana de Albuquerque",
+   "query": "Praceta Ana de Albuquerque, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Ana de Albuquerque 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Ana de Castro Osório": {
+   "street": "Praceta Ana de Castro Osório",
+   "query": "Praceta Ana de Castro Osório, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Ana de Castro Osório 10, 2855-394 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Antero de Quental": {
+   "street": "Praceta Antero de Quental",
+   "query": "Praceta Antero de Quental, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Antero de Quental 10, 2855-229 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta António Andrade": {
+   "street": "Praceta António Andrade",
+   "query": "Praceta António Andrade, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta António Andrade 10, 2855-598 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta António Feijó": {
+   "street": "Praceta António Feijó",
+   "query": "Praceta António Feijó, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta António Feijó 10, 2855-215 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta António Herédia": {
+   "street": "Praceta António Herédia",
+   "query": "Praceta António Herédia, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta António Herédia 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Augusto Gil": {
+   "street": "Praceta Augusto Gil",
+   "query": "Praceta Augusto Gil, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Augusto Gil 10, 2855-247 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Belo Marques": {
+   "street": "Praceta Belo Marques",
+   "query": "Praceta Belo Marques, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Belo Marques 10, 2855-603 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Bernardim Ribeiro": {
+   "street": "Praceta Bernardim Ribeiro",
+   "query": "Praceta Bernardim Ribeiro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Bernardim Ribeiro, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praceta Bocage": {
+   "street": "Praceta Bocage",
+   "query": "Praceta Bocage, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Bocage 10, 2855-218 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Borges Barreto": {
+   "street": "Praceta Borges Barreto",
+   "query": "Praceta Borges Barreto, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Borges Barreto 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Brejos de Helena": {
+   "street": "Praceta Brejos de Helena",
+   "query": "Praceta Brejos de Helena, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Helena de Aragão 10, Corroios, Portugal"
+  },
+  "Praceta Camilo Pessanha": {
+   "street": "Praceta Camilo Pessanha",
+   "query": "Praceta Camilo Pessanha, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Camilo Pessanha 10, 2855-218 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Carlos Botelho": {
+   "street": "Praceta Carlos Botelho",
+   "query": "Praceta Carlos Botelho, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Carlos Botelho 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Carlos Otero": {
+   "street": "Praceta Carlos Otero",
+   "query": "Praceta Carlos Otero, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Carlos Otero 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Carlos Pinhão": {
+   "street": "Praceta Carlos Pinhão",
+   "query": "Praceta Carlos Pinhão, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Carlos Pinhão 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Cidade de Almeirim": {
+   "street": "Praceta Cidade de Almeirim",
+   "query": "Praceta Cidade de Almeirim, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Cidade de Almeirim 10, 2855-097 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Cidade de Lagos": {
+   "street": "Praceta Cidade de Lagos",
+   "query": "Praceta Cidade de Lagos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Cidade de Lagos 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Cidade de Loulé": {
+   "street": "Praceta Cidade de Loulé",
+   "query": "Praceta Cidade de Loulé, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Cidade de Loulé 10, Charneca de Caparica, Portugal"
+  },
+  "Praceta Cidade de Nampula": {
+   "street": "Praceta Cidade de Nampula",
+   "query": "Praceta Cidade de Nampula, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Cidade de Nampula 10, 2855-072 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Cidade de Odivelas": {
+   "street": "Praceta Cidade de Odivelas",
+   "query": "Praceta Cidade de Odivelas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Cidade de Odivelas 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Cidade do Barreiro": {
+   "street": "Praceta Cidade do Barreiro",
+   "query": "Praceta Cidade do Barreiro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Cidade do Barreiro 10, 2855-111 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Cidade do Lobito": {
+   "street": "Praceta Cidade do Lobito",
+   "query": "Praceta Cidade do Lobito, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade do Lobito 10, 2855-064 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Cidade do Montijo": {
+   "street": "Praceta Cidade do Montijo",
+   "query": "Praceta Cidade do Montijo, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Cidade do Montijo 10, 2855-105 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta David Souza": {
+   "street": "Praceta David Souza",
+   "query": "Praceta David Souza, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. David de Sousa 10, Corroios, Portugal"
+  },
+  "Praceta Edimundo Bettencourt": {
+   "street": "Praceta Edimundo Bettencourt",
+   "query": "Praceta Edimundo Bettencourt, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Praceta Edmundo Bettencourt 10, Corroios, Portugal"
+  },
+  "Praceta Ema Reis": {
+   "street": "Praceta Ema Reis",
+   "query": "Praceta Ema Reis, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Ema Reis 10, 2855-597 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Fernando Adrião": {
+   "street": "Praceta Fernando Adrião",
+   "query": "Praceta Fernando Adrião, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Fernando Adrião 10, 2855-053 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Filipe Álvaro": {
+   "street": "Praceta Filipe Álvaro",
+   "query": "Praceta Filipe Álvaro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Filipe Álvaro 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Flaviano Rodrigues": {
+   "street": "Praceta Flaviano Rodrigues",
+   "query": "Praceta Flaviano Rodrigues, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Flaviano Rodrigues 10, 2855-708 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Francisco de Holanda": {
+   "street": "Praceta Francisco de Holanda",
+   "query": "Praceta Francisco de Holanda, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Francisco de Holanda 10, 2855-076 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Frederico de Freitas": {
+   "street": "Praceta Frederico de Freitas",
+   "query": "Praceta Frederico de Freitas, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Frederico de Freitas 10, 2855-599 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Gomes Leal": {
+   "street": "Praceta Gomes Leal",
+   "query": "Praceta Gomes Leal, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Gomes Leal 10, 2855-123 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Graça Pina de Morais": {
+   "street": "Praceta Graça Pina de Morais",
+   "query": "Praceta Graça Pina de Morais, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Graça Pina de Morais 10, 2855-576 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Henrique Santana": {
+   "street": "Praceta Henrique Santana",
+   "query": "Praceta Henrique Santana, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Henrique Santana 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Irene Lisboa": {
+   "street": "Praceta Irene Lisboa",
+   "query": "Praceta Irene Lisboa, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Irene Lisboa 10, 2855-394 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Ivo Cruz": {
+   "street": "Praceta Ivo Cruz",
+   "query": "Praceta Ivo Cruz, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Ivo Cruz 10, 2855-586 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta José Maria Antunes": {
+   "street": "Praceta José Maria Antunes",
+   "query": "Praceta José Maria Antunes, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta José Maria Antunes 10, 2855-597 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta José Rodrigues Miguéis": {
+   "street": "Praceta José Rodrigues Miguéis",
+   "query": "Praceta José Rodrigues Miguéis, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "PCT José Rodrigues Migueis 10, 2855-215 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta João Apolinário": {
+   "street": "Praceta João Apolinário",
+   "query": "Praceta João Apolinário, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta João Apolinário 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta João Azevedo": {
+   "street": "Praceta João Azevedo",
+   "query": "Praceta João Azevedo, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta João Azevedo 10, 2855-587 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta João Correia": {
+   "street": "Praceta João Correia",
+   "query": "Praceta João Correia, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta João Correia 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta João de Deus": {
+   "street": "Praceta João de Deus",
+   "query": "Praceta João de Deus, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta João de Deus 10, 2855-215 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Júlio Dantas": {
+   "street": "Praceta Júlio Dantas",
+   "query": "Praceta Júlio Dantas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Júlio Dantas 10, 2855-223 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Lei das Sesmarias": {
+   "street": "Praceta Lei das Sesmarias",
+   "query": "Praceta Lei das Sesmarias, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "PCT Lei das Sesmarias 10, 2855-717 Parque Luso, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Luísa Todi": {
+   "street": "Praceta Luísa Todi",
+   "query": "Praceta Luísa Todi, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Praceta Luísa Todi 10, São João da Talha, Portugal"
+  },
+  "Praceta Maria Fragoso": {
+   "street": "Praceta Maria Fragoso",
+   "query": "Praceta Maria Fragoso, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Maria Fragoso 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Mário Botas": {
+   "street": "Praceta Mário Botas",
+   "query": "Praceta Mário Botas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Mário Botas 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Odette de Saint-Maurice": {
+   "street": "Praceta Odette de Saint-Maurice",
+   "query": "Praceta Odette de Saint-Maurice, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Praceta Pero Vaz": {
+   "street": "Praceta Pero Vaz",
+   "query": "Praceta Pero Vaz, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Pero Vaz 10, 2855-513 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Quinta da Cereeira": {
+   "street": "Praceta Quinta da Cereeira",
+   "query": "Praceta Quinta da Cereeira, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "P. Qta. da Cereeira 10, Corroios, Portugal"
+  },
+  "Praceta Quinta da Fábrica de Baixo": {
+   "street": "Praceta Quinta da Fábrica de Baixo",
+   "query": "Praceta Quinta da Fábrica de Baixo, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Quinta da Fábrica de Baixo, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praceta Quinta da Marialva": {
+   "street": "Praceta Quinta da Marialva",
+   "query": "Praceta Quinta da Marialva, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "PCT Quinta da Marialva 10, 2855-696 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Quinta da Varejeira": {
+   "street": "Praceta Quinta da Varejeira",
+   "query": "Praceta Quinta da Varejeira, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Quinta da Varejeira, 2855-215 Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praceta Quinta de São Nicolau": {
+   "street": "Praceta Quinta de São Nicolau",
+   "query": "Praceta Quinta de São Nicolau, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Quinta de São Nicolau 10, 2855-076 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Ramada Curto": {
+   "street": "Praceta Ramada Curto",
+   "query": "Praceta Ramada Curto, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Ramada Curto 10, 2855-238 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Reserva Natural do Paúl de Arzila": {
+   "street": "Praceta Reserva Natural do Paúl de Arzila",
+   "query": "Praceta Reserva Natural do Paúl de Arzila, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Reserva Natural Paul de Arzila 1, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Rodrigo Bessone Basto": {
+   "street": "Praceta Rodrigo Bessone Basto",
+   "query": "Praceta Rodrigo Bessone Basto, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Praceta Rodrigo Bessone Bastos, Corroios, Portugal"
+  },
+  "Praceta Rui de Pina": {
+   "street": "Praceta Rui de Pina",
+   "query": "Praceta Rui de Pina, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Rui de Pina 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Serra da Gralheira": {
+   "street": "Praceta Serra da Gralheira",
+   "query": "Praceta Serra da Gralheira, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Serra da Gralheira 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Serra de Monfurado": {
+   "street": "Praceta Serra de Monfurado",
+   "query": "Praceta Serra de Monfurado, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Serra de Monfurado 10, 2855-630 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Serra de Ossa": {
+   "street": "Praceta Serra de Ossa",
+   "query": "Praceta Serra de Ossa, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "PCT Serra da Ossa 10, 2865-498 Fernão Ferro, Portugal"
+  },
+  "Praceta Serra de Portalegre": {
+   "street": "Praceta Serra de Portalegre",
+   "query": "Praceta Serra de Portalegre, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Serra de Portalegre 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Sidónio Muralha": {
+   "street": "Praceta Sidónio Muralha",
+   "query": "Praceta Sidónio Muralha, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Sidónio Muralha 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta Stela de Albuquerque": {
+   "street": "Praceta Stela de Albuquerque",
+   "query": "Praceta Stela de Albuquerque, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Stela de Albuquerque 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta Venceslau de Moraes": {
+   "street": "Praceta Venceslau de Moraes",
+   "query": "Praceta Venceslau de Moraes, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Tv. de Venceslau de Morais 10, Charneca de Caparica, Portugal"
+  },
+  "Praceta da Igreja": {
+   "street": "Praceta da Igreja",
+   "query": "Praceta da Igreja, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Praceta da Igreja 10, Silveira, Portugal"
+  },
+  "Praceta da Madressilva": {
+   "street": "Praceta da Madressilva",
+   "query": "Praceta da Madressilva, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta da Madressilva 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta das Begónias": {
+   "street": "Praceta das Begónias",
+   "query": "Praceta das Begónias, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta das Begónias, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praceta das Flores": {
+   "street": "Praceta das Flores",
+   "query": "Praceta das Flores, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "P. das Flores 10, 2855-204 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta das Murtas": {
+   "street": "Praceta das Murtas",
+   "query": "Praceta das Murtas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Pça das Murtas, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praceta das Orquídeas": {
+   "street": "Praceta das Orquídeas",
+   "query": "Praceta das Orquídeas, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Pct das Orquídeas 10, 2855-191 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta das Rosas": {
+   "street": "Praceta das Rosas",
+   "query": "Praceta das Rosas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta das Rosas 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta de Lichinga": {
+   "street": "Praceta de Lichinga",
+   "query": "Praceta de Lichinga, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta de Lichinga 10, 2855-060 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta do Alecrim": {
+   "street": "Praceta do Alecrim",
+   "query": "Praceta do Alecrim, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta do Alecrim 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta do Rouxinol": {
+   "street": "Praceta do Rouxinol",
+   "query": "Praceta do Rouxinol, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Praceta do Rouxinol 10, 2635-311 Rio de Mouro, Portugal"
+  },
+  "Praceta do Zaire": {
+   "street": "Praceta do Zaire",
+   "query": "Praceta do Zaire, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta do Zaire 10, 2855-106 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praceta dos Choupos": {
+   "street": "Praceta dos Choupos",
+   "query": "Praceta dos Choupos, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Praceta dos Choupos 10, Sobreda, Portugal"
+  },
+  "Praceta dos Malmequeres": {
+   "street": "Praceta dos Malmequeres",
+   "query": "Praceta dos Malmequeres, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Pct dos Malmequeres 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praceta dos Miosótis": {
+   "street": "Praceta dos Miosótis",
+   "query": "Praceta dos Miosótis, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta dos Miosótis, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praceta Álvaro Benamor": {
+   "street": "Praceta Álvaro Benamor",
+   "query": "Praceta Álvaro Benamor, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praceta Álvaro Benamor, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praceta Óscar Silva": {
+   "street": "Praceta Óscar Silva",
+   "query": "Praceta Óscar Silva, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Praceta Óscar Silva 10, 2855-599 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Praça Baden Powell": {
+   "street": "Praça Baden Powell",
+   "query": "Praça Baden Powell, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "PC Baden Powell, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praça Fundação de Portugal": {
+   "street": "Praça Fundação de Portugal",
+   "query": "Praça Fundação de Portugal, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "PC Fundação de Portugal, Portugal"
+  },
+  "Praça José Queluz": {
+   "street": "Praça José Queluz",
+   "query": "Praça José Queluz, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Pç José Queluz, 2855-110 Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praça José Ribeiro dos Santos": {
+   "street": "Praça José Ribeiro dos Santos",
+   "query": "Praça José Ribeiro dos Santos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praça José Ribeiro dos Santos, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praça Latino Coelho": {
+   "street": "Praça Latino Coelho",
+   "query": "Praça Latino Coelho, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Praça Latino Coelho 10, 2855-501 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Praça da Liberdade": {
+   "street": "Praça da Liberdade",
+   "query": "Praça da Liberdade, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Praça da Liberdade, Portugal"
+  },
+  "Praça de Abril": {
+   "street": "Praça de Abril",
+   "query": "Praça de Abril, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Pç de Abril, 2855-720 Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Praça do Luso": {
+   "street": "Praça do Luso",
+   "query": "Praça do Luso, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Pç do Luso 10, 2855-063 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua 1.º de Maio": {
+   "street": "Rua 1.º de Maio",
+   "query": "Rua 1.º de Maio, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. 1º de Maio 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua 1º de Dezembro": {
+   "street": "Rua 1º de Dezembro",
+   "query": "Rua 1º de Dezembro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. 1º de Dezembro 10, 2855-454 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua 1º de Maio": {
+   "street": "Rua 1º de Maio",
+   "query": "Rua 1º de Maio, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. 1º de Maio 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua 25 de Abril": {
+   "street": "Rua 25 de Abril",
+   "query": "Rua 25 de Abril, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. 25 de Abril 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua 31 de Janeiro": {
+   "street": "Rua 31 de Janeiro",
+   "query": "Rua 31 de Janeiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. 31 de Janeiro 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua 5 de Outubro": {
+   "street": "Rua 5 de Outubro",
+   "query": "Rua 5 de Outubro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. 5 de Outubro 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua A": {
+   "street": "Rua A",
+   "query": "Rua A, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. A, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Abel Manta": {
+   "street": "Rua Abel Manta",
+   "query": "Rua Abel Manta, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Abel Manta 10, 2855-402 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Abel Salazar": {
+   "street": "Rua Abel Salazar",
+   "query": "Rua Abel Salazar, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Abel Salazar 10, 2855-160 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Adelaide Cadete": {
+   "street": "Rua Adelaide Cadete",
+   "query": "Rua Adelaide Cadete, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Adelaide Cabete, Corroios, Portugal"
+  },
+  "Rua Adriano Correia de Oliveira": {
+   "street": "Rua Adriano Correia de Oliveira",
+   "query": "Rua Adriano Correia de Oliveira, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Adriano Correia de Oliveira 10, 2855-227 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Afonso Lopes Vieira": {
+   "street": "Rua Afonso Lopes Vieira",
+   "query": "Rua Afonso Lopes Vieira, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Afonso Lopes Vieira 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Agostinho Neto": {
+   "street": "Rua Agostinho Neto",
+   "query": "Rua Agostinho Neto, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Agostinho Neto 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Al Berto": {
+   "street": "Rua Al Berto",
+   "query": "Rua Al Berto, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Al Berto 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Alberto de Oliveira": {
+   "street": "Rua Alberto de Oliveira",
+   "query": "Rua Alberto de Oliveira, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Alberto de Oliveira 10, 1700-234 Lisboa, Portugal"
+  },
+  "Rua Alberto de Serpa": {
+   "street": "Rua Alberto de Serpa",
+   "query": "Rua Alberto de Serpa, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Alberto de Serpa 10, 2855-126 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Alda Lara": {
+   "street": "Rua Alda Lara",
+   "query": "Rua Alda Lara, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Alda Lara 10, 2855-210 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Alexandre Dáskalos": {
+   "street": "Rua Alexandre Dáskalos",
+   "query": "Rua Alexandre Dáskalos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Alexandre Daskalos 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Alexandre Herculano": {
+   "street": "Rua Alexandre Herculano",
+   "query": "Rua Alexandre Herculano, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Alexandre Herculano 10, 2855-480 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Alfredo Bobela-Motta": {
+   "street": "Rua Alfredo Bobela-Motta",
+   "query": "Rua Alfredo Bobela-Motta, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Afredo Bobela - Motta 10, Corroios, Portugal"
+  },
+  "Rua Almada Negreiros": {
+   "street": "Rua Almada Negreiros",
+   "query": "Rua Almada Negreiros, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Almada Negreiros 10, 2855-388 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Almeida Garrett": {
+   "street": "Rua Almeida Garrett",
+   "query": "Rua Almeida Garrett, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Almeida Garrett 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Almirante Reis": {
+   "street": "Rua Almirante Reis",
+   "query": "Rua Almirante Reis, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Alm. Reis 10, 2855-407 Corroios, Portugal"
+  },
+  "Rua Alto do Moinho": {
+   "street": "Rua Alto do Moinho",
+   "query": "Rua Alto do Moinho, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Alto do Moinho, 2855-050 Corroios, Portugal",
+   "location_type": "APPROXIMATE",
+   "partial_match": true
+  },
+  "Rua Alves Redol": {
+   "street": "Rua Alves Redol",
+   "query": "Rua Alves Redol, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Alves Redol 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Alves da Cunha": {
+   "street": "Rua Alves da Cunha",
+   "query": "Rua Alves da Cunha, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Alves da Cunha 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Amadeu de Souza Cardozo": {
+   "street": "Rua Amadeu de Souza Cardozo",
+   "query": "Rua Amadeu de Souza Cardozo, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Amadeu de Sousa Cardoso 10, Corroios, Portugal"
+  },
+  "Rua Ana de Castro Osório": {
+   "street": "Rua Ana de Castro Osório",
+   "query": "Rua Ana de Castro Osório, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Ana de Castro Osório, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Aniceto": {
+   "street": "Rua Aniceto",
+   "query": "Rua Aniceto, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Aniceto 10, Portugal"
+  },
+  "Rua Anjos Teixeira (Pai)": {
+   "street": "Rua Anjos Teixeira (Pai)",
+   "query": "Rua Anjos Teixeira (Pai), 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Anjos Teixeira (Pai) 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Antero de Quental": {
+   "street": "Rua Antero de Quental",
+   "query": "Rua Antero de Quental, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Antero de Quental 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua António Aleixo": {
+   "street": "Rua António Aleixo",
+   "query": "Rua António Aleixo, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. António Aleixo 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua António Botto": {
+   "street": "Rua António Botto",
+   "query": "Rua António Botto, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. António Botto 10, 2855-123 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua António Feliciano de Castilho": {
+   "street": "Rua António Feliciano de Castilho",
+   "query": "Rua António Feliciano de Castilho, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. António Feliciano de Castilho 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua António Garibaldi": {
+   "street": "Rua António Garibaldi",
+   "query": "Rua António Garibaldi, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. António Garibaldi 10, 2855-591 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua António Gedeão": {
+   "street": "Rua António Gedeão",
+   "query": "Rua António Gedeão, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. António Gedeão, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua António Lopes Ribeiro": {
+   "street": "Rua António Lopes Ribeiro",
+   "query": "Rua António Lopes Ribeiro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. António Lopes Ribeiro 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua António Marques Pequeno": {
+   "street": "Rua António Marques Pequeno",
+   "query": "Rua António Marques Pequeno, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. António Marques Pequeno 10, 2855-078 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua António Nobre": {
+   "street": "Rua António Nobre",
+   "query": "Rua António Nobre, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. António Nobre 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua António Palolo": {
+   "street": "Rua António Palolo",
+   "query": "Rua António Palolo, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. António Palolo 10, 2855-378 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua António Pedro": {
+   "street": "Rua António Pedro",
+   "query": "Rua António Pedro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. António Pedro 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua António Silva": {
+   "street": "Rua António Silva",
+   "query": "Rua António Silva, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. António Silva 10, 2855-035 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua António Sérgio": {
+   "street": "Rua António Sérgio",
+   "query": "Rua António Sérgio, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. António Sérgio 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua António Vilar": {
+   "street": "Rua António Vilar",
+   "query": "Rua António Vilar, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua António Vilar 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua António da Costa": {
+   "street": "Rua António da Costa",
+   "query": "Rua António da Costa, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. António da Costa 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua António de Cértima": {
+   "street": "Rua António de Cértima",
+   "query": "Rua António de Cértima, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. António de Cértima, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Aquilino Ribeiro": {
+   "street": "Rua Aquilino Ribeiro",
+   "query": "Rua Aquilino Ribeiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Aquilino Ribeiro 10, 2855-414 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Armando Guerreiro": {
+   "street": "Rua Armando Guerreiro",
+   "query": "Rua Armando Guerreiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Armando Guerreiro 10, 2855-593 Santa Marta do Pinhal, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Armindo Rodrigues": {
+   "street": "Rua Armindo Rodrigues",
+   "query": "Rua Armindo Rodrigues, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Armindo Rodrigues 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Artur Bual": {
+   "street": "Rua Artur Bual",
+   "query": "Rua Artur Bual, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Artur Bual 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Associação de Reformados de Corroios": {
+   "street": "Rua Associação de Reformados de Corroios",
+   "query": "Rua Associação de Reformados de Corroios, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Associação de Reformados de Corroios 10, 2855-097 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Augusto Abelaira": {
+   "street": "Rua Augusto Abelaira",
+   "query": "Rua Augusto Abelaira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R.Augusto Abelaira 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Augusto Pina": {
+   "street": "Rua Augusto Pina",
+   "query": "Rua Augusto Pina, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Augusto Pina 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Aurélio Paz dos Reis": {
+   "street": "Rua Aurélio Paz dos Reis",
+   "query": "Rua Aurélio Paz dos Reis, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Aurélio Paz dos Reis 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Avelino Cunhal": {
+   "street": "Rua Avelino Cunhal",
+   "query": "Rua Avelino Cunhal, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Avelino Cunhal 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Barata Feyo": {
+   "street": "Rua Barata Feyo",
+   "query": "Rua Barata Feyo, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Barata Feyo 10A, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Barbosa du Bocage": {
+   "street": "Rua Barbosa du Bocage",
+   "query": "Rua Barbosa du Bocage, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Barbosa Du Bocage 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Bartolomeu Dias": {
+   "street": "Rua Bartolomeu Dias",
+   "query": "Rua Bartolomeu Dias, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Bartolomeu Dias 10, 2855-477 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Bartolomeu Perestrelo": {
+   "street": "Rua Bartolomeu Perestrelo",
+   "query": "Rua Bartolomeu Perestrelo, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Bartolomeu Perestrelo 10, 2855-381 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Beatriz Costa": {
+   "street": "Rua Beatriz Costa",
+   "query": "Rua Beatriz Costa, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Beatriz Costa 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Beatriz Ângelo": {
+   "street": "Rua Beatriz Ângelo",
+   "query": "Rua Beatriz Ângelo, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Rua Carolina Beatriz Ângelo 10, 2820-456 Charneca de Caparica, Portugal"
+  },
+  "Rua Bento Gonçalves": {
+   "street": "Rua Bento Gonçalves",
+   "query": "Rua Bento Gonçalves, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Bento Gonçalves 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Bento de Jesus Caraça": {
+   "street": "Rua Bento de Jesus Caraça",
+   "query": "Rua Bento de Jesus Caraça, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Bento de Jesus Caraça 10, 2855-017 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Bernardo Santareno": {
+   "street": "Rua Bernardo Santareno",
+   "query": "Rua Bernardo Santareno, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Bernardo Santareno 10, 2855-001 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Bocage": {
+   "street": "Rua Bocage",
+   "query": "Rua Bocage, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Bocage 10, 2855-017 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua C": {
+   "street": "Rua C",
+   "query": "Rua C, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. C 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cabo Espichel": {
+   "street": "Rua Cabo Espichel",
+   "query": "Rua Cabo Espichel, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cabo Espichel 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cabouca": {
+   "street": "Rua Cabouca",
+   "query": "Rua Cabouca, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. da Cabouca 10, 2855-480 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Camilo Castelo Branco": {
+   "street": "Rua Camilo Castelo Branco",
+   "query": "Rua Camilo Castelo Branco, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Camilo Castelo Branco 10, 2855-419 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Camilo Pessanha": {
+   "street": "Rua Camilo Pessanha",
+   "query": "Rua Camilo Pessanha, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Camilo Pessanha 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Canto da Maia": {
+   "street": "Rua Canto da Maia",
+   "query": "Rua Canto da Maia, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Canto da Maia 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Carlos Reis": {
+   "street": "Rua Carlos Reis",
+   "query": "Rua Carlos Reis, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Carlos Reis 10, 2855-513 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Carolina Michaelis": {
+   "street": "Rua Carolina Michaelis",
+   "query": "Rua Carolina Michaelis, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Carolina Michaelis 10, 2855-252 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Carvalho Araújo": {
+   "street": "Rua Carvalho Araújo",
+   "query": "Rua Carvalho Araújo, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Carvalho Araújo 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Casa do Povo": {
+   "street": "Rua Casa do Povo",
+   "query": "Rua Casa do Povo, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Casa do Povo 10d, 2855-111 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Castilho": {
+   "street": "Rua Castilho",
+   "query": "Rua Castilho, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Castilho 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Castro Soromenho": {
+   "street": "Rua Castro Soromenho",
+   "query": "Rua Castro Soromenho, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Castro Soromenho 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Catarina Eufémia": {
+   "street": "Rua Catarina Eufémia",
+   "query": "Rua Catarina Eufémia, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Catarina Eufémia 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cesário Verde": {
+   "street": "Rua Cesário Verde",
+   "query": "Rua Cesário Verde, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cesário Verde 10, 2855-720 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Chaby Pinheiro": {
+   "street": "Rua Chaby Pinheiro",
+   "query": "Rua Chaby Pinheiro, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Chaby Pinheiro 10, Almada, Portugal"
+  },
+  "Rua Chave de Valadares": {
+   "street": "Rua Chave de Valadares",
+   "query": "Rua Chave de Valadares, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Chave de Valadares 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Chianca de Garcia": {
+   "street": "Rua Chianca de Garcia",
+   "query": "Rua Chianca de Garcia, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Chianca de Garcia 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade Carmona": {
+   "street": "Rua Cidade Carmona",
+   "query": "Rua Cidade Carmona, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade Carmona 10, 2855-067 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade da Beira": {
+   "street": "Rua Cidade da Beira",
+   "query": "Rua Cidade da Beira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade da Beira 10, 2855-064 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Abrantes": {
+   "street": "Rua Cidade de Abrantes",
+   "query": "Rua Cidade de Abrantes, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Abrantes 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Almada": {
+   "street": "Rua Cidade de Almada",
+   "query": "Rua Cidade de Almada, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Almada 10, 2855-115 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Amadora": {
+   "street": "Rua Cidade de Amadora",
+   "query": "Rua Cidade de Amadora, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Amadora 10, 2855-116 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Aveiro": {
+   "street": "Rua Cidade de Aveiro",
+   "query": "Rua Cidade de Aveiro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Aveiro 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Beja": {
+   "street": "Rua Cidade de Beja",
+   "query": "Rua Cidade de Beja, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Beja 10, 2855-116 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Benguela": {
+   "street": "Rua Cidade de Benguela",
+   "query": "Rua Cidade de Benguela, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Benguela 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Braga": {
+   "street": "Rua Cidade de Braga",
+   "query": "Rua Cidade de Braga, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Braga 10, 2855-138 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Castelo Branco": {
+   "street": "Rua Cidade de Castelo Branco",
+   "query": "Rua Cidade de Castelo Branco, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Castelo Branco 10, 2855-138 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Coimbra": {
+   "street": "Rua Cidade de Coimbra",
+   "query": "Rua Cidade de Coimbra, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Coimbra 10, 2855-139 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Faro": {
+   "street": "Rua Cidade de Faro",
+   "query": "Rua Cidade de Faro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Faro 10, 2855-591 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Guimarães": {
+   "street": "Rua Cidade de Guimarães",
+   "query": "Rua Cidade de Guimarães, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Guimarães 10, 2855-079 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de João Belo": {
+   "street": "Rua Cidade de João Belo",
+   "query": "Rua Cidade de João Belo, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de João Belo 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Lamego": {
+   "street": "Rua Cidade de Lamego",
+   "query": "Rua Cidade de Lamego, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Lamego 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Leiria": {
+   "street": "Rua Cidade de Leiria",
+   "query": "Rua Cidade de Leiria, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Leiria, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Cidade de Lisboa": {
+   "street": "Rua Cidade de Lisboa",
+   "query": "Rua Cidade de Lisboa, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Lisboa 10, 2855-115 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Lourenço Marques": {
+   "street": "Rua Cidade de Lourenço Marques",
+   "query": "Rua Cidade de Lourenço Marques, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Lourenço Marques 10, Q.ta de São Nicolau, 2855-134 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Loures": {
+   "street": "Rua Cidade de Loures",
+   "query": "Rua Cidade de Loures, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Loures 10, 2855-111 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Luanda": {
+   "street": "Rua Cidade de Luanda",
+   "query": "Rua Cidade de Luanda, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Luanda 10, 2855-063 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Porto Amélia": {
+   "street": "Rua Cidade de Porto Amélia",
+   "query": "Rua Cidade de Porto Amélia, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Porto de Amélia 10, 2855-069 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Quelimane": {
+   "street": "Rua Cidade de Quelimane",
+   "query": "Rua Cidade de Quelimane, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Quelimane 10, 2855-069 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Santarém": {
+   "street": "Rua Cidade de Santarém",
+   "query": "Rua Cidade de Santarém, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Santarém 10, 2855-131 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Setúbal": {
+   "street": "Rua Cidade de Setúbal",
+   "query": "Rua Cidade de Setúbal, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Setúbal 10, 2855-115 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Sá da Bandeira": {
+   "street": "Rua Cidade de Sá da Bandeira",
+   "query": "Rua Cidade de Sá da Bandeira, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Sá da Bandeira 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Tete": {
+   "street": "Rua Cidade de Tete",
+   "query": "Rua Cidade de Tete, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Tete 10, 2855-069 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Tomar": {
+   "street": "Rua Cidade de Tomar",
+   "query": "Rua Cidade de Tomar, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade de Tomar 10, 2855-105 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade de Viana do Castelo": {
+   "street": "Rua Cidade de Viana do Castelo",
+   "query": "Rua Cidade de Viana do Castelo, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Viana do Castelo 10, 2855-138 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Viseu": {
+   "street": "Rua Cidade de Viseu",
+   "query": "Rua Cidade de Viseu, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade de Viseu 10, 2855-114 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade de Évora": {
+   "street": "Rua Cidade de Évora",
+   "query": "Rua Cidade de Évora, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Cidade de Évora 10, 2820-347 Charneca de Caparica, Portugal"
+  },
+  "Rua Cidade do Cartaxo": {
+   "street": "Rua Cidade do Cartaxo",
+   "query": "Rua Cidade do Cartaxo, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade do Cartaxo 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cidade do Lobito": {
+   "street": "Rua Cidade do Lobito",
+   "query": "Rua Cidade do Lobito, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cidade do Lobito 10, 2855-064 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Cidade do Porto": {
+   "street": "Rua Cidade do Porto",
+   "query": "Rua Cidade do Porto, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Cidade do Porto 10, 2855-142 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cirílio Wolkmar Machado": {
+   "street": "Rua Cirílio Wolkmar Machado",
+   "query": "Rua Cirílio Wolkmar Machado, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Cirilo Wolkmar Machado 10, 2855-168 Corroios, Portugal"
+  },
+  "Rua Columbano Bordalo Pinheiro": {
+   "street": "Rua Columbano Bordalo Pinheiro",
+   "query": "Rua Columbano Bordalo Pinheiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Columbano Bordalo Pinheiro 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Comandante Ramiro Correia": {
+   "street": "Rua Comandante Ramiro Correia",
+   "query": "Rua Comandante Ramiro Correia, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Cmte. Ramiro Correia 10, 2855-137 Corroios, Portugal"
+  },
+  "Rua Condessa da Ericeira": {
+   "street": "Rua Condessa da Ericeira",
+   "query": "Rua Condessa da Ericeira, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Condessa da Ericeira 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Curado Ribeiro": {
+   "street": "Rua Curado Ribeiro",
+   "query": "Rua Curado Ribeiro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Curado Ribeiro 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Cândido de Oliveira": {
+   "street": "Rua Cândido de Oliveira",
+   "query": "Rua Cândido de Oliveira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Cândido de Oliveira 10, 2855-256 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua D": {
+   "street": "Rua D",
+   "query": "Rua D, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Rua Damião de Góis": {
+   "street": "Rua Damião de Góis",
+   "query": "Rua Damião de Góis, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Damião de Góis 10, 2855-022 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua David Mourão Ferreira": {
+   "street": "Rua David Mourão Ferreira",
+   "query": "Rua David Mourão Ferreira, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. David Mourão Ferreira 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Diogo Cão": {
+   "street": "Rua Diogo Cão",
+   "query": "Rua Diogo Cão, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Diogo Cão 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Diogo do Couto": {
+   "street": "Rua Diogo do Couto",
+   "query": "Rua Diogo do Couto, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Diogo do Couto 10, 2855-555 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Dom Francisco Manuel de Melo": {
+   "street": "Rua Dom Francisco Manuel de Melo",
+   "query": "Rua Dom Francisco Manuel de Melo, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Dom Francisco Manuel de Melo 10, 2855-382 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Dom Nuno Álvares Pereira": {
+   "street": "Rua Dom Nuno Álvares Pereira",
+   "query": "Rua Dom Nuno Álvares Pereira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Dom Nuno Álvares Pereira 10, 2855-720 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Domingos António de Sequeira": {
+   "street": "Rua Domingos António de Sequeira",
+   "query": "Rua Domingos António de Sequeira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Domingos António de Sequeira 10, 2855-170 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Domingues Monteiro": {
+   "street": "Rua Domingues Monteiro",
+   "query": "Rua Domingues Monteiro, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Domingues Monteiro 10, Charneca de Caparica, Portugal"
+  },
+  "Rua Dona Celeste Correia de Campos": {
+   "street": "Rua Dona Celeste Correia de Campos",
+   "query": "Rua Dona Celeste Correia de Campos, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Dona Celeste Correia de Campos 10, 2855-019 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Doutor Afonso Costa": {
+   "street": "Rua Doutor Afonso Costa",
+   "query": "Rua Doutor Afonso Costa, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Dr. Afonso Costa 10, Amora, Portugal"
+  },
+  "Rua Doutor António José de Almeida": {
+   "street": "Rua Doutor António José de Almeida",
+   "query": "Rua Doutor António José de Almeida, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Dr. António José de Almeida 10, Corroios, Portugal"
+  },
+  "Rua Doutor Arlindo Vicente": {
+   "street": "Rua Doutor Arlindo Vicente",
+   "query": "Rua Doutor Arlindo Vicente, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Dr. Arlindo Vicente 10, 2855-386 Corroios, Portugal"
+  },
+  "Rua Doutor Bernadino Machado": {
+   "street": "Rua Doutor Bernadino Machado",
+   "query": "Rua Doutor Bernadino Machado, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Dr. Bernardino Machado 10, 2855-437 Corroios, Portugal"
+  },
+  "Rua Doutor Manuel de Arriaga": {
+   "street": "Rua Doutor Manuel de Arriaga",
+   "query": "Rua Doutor Manuel de Arriaga, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Dr. Manuel de Arriaga 10, Corroios, Portugal"
+  },
+  "Rua Doutor Mário Sacramento": {
+   "street": "Rua Doutor Mário Sacramento",
+   "query": "Rua Doutor Mário Sacramento, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Dr. Mário Sacramento 10, 2855-438 Corroios, Portugal"
+  },
+  "Rua Dulcino Caiano Pereira": {
+   "street": "Rua Dulcino Caiano Pereira",
+   "query": "Rua Dulcino Caiano Pereira, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Dulcino Caiano Pereira 10, 2855-575 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Dórdio Gomes": {
+   "street": "Rua Dórdio Gomes",
+   "query": "Rua Dórdio Gomes, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Dórdio Gomes 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua E": {
+   "street": "Rua E",
+   "query": "Rua E, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. e 10, Corroios, Portugal"
+  },
+  "Rua Eduarda Lapa": {
+   "street": "Rua Eduarda Lapa",
+   "query": "Rua Eduarda Lapa, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua Eduarda Lapa 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Egas Moniz": {
+   "street": "Rua Egas Moniz",
+   "query": "Rua Egas Moniz, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Egas Moniz 10, 2855-450 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Emmerico Nunes": {
+   "street": "Rua Emmerico Nunes",
+   "query": "Rua Emmerico Nunes, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Emmérico Nunes 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Eça de Queiroz": {
+   "street": "Rua Eça de Queiroz",
+   "query": "Rua Eça de Queiroz, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Eça de Queirós 10, Corroios, Portugal"
+  },
+  "Rua Eça de Queirós": {
+   "street": "Rua Eça de Queirós",
+   "query": "Rua Eça de Queirós, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Eça de Queirós 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua F": {
+   "street": "Rua F",
+   "query": "Rua F, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. F 10, 2845-397 Amora, Portugal"
+  },
+  "Rua Fausto Duarte": {
+   "street": "Rua Fausto Duarte",
+   "query": "Rua Fausto Duarte, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Fausto Duarte, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Fernanda Porto": {
+   "street": "Rua Fernanda Porto",
+   "query": "Rua Fernanda Porto, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Fernanda Porto 10, 2855-112 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Fernando Namora": {
+   "street": "Rua Fernando Namora",
+   "query": "Rua Fernando Namora, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Fernando Namora 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Fernando Pessoa": {
+   "street": "Rua Fernando Pessoa",
+   "query": "Rua Fernando Pessoa, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Fernando Pessoa 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Fernão Lopes": {
+   "street": "Rua Fernão Lopes",
+   "query": "Rua Fernão Lopes, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Fernão Lopes 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Fernão Mendes Pinto": {
+   "street": "Rua Fernão Mendes Pinto",
+   "query": "Rua Fernão Mendes Pinto, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Fernão Mendes Pinto 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Fernão de Magalhães": {
+   "street": "Rua Fernão de Magalhães",
+   "query": "Rua Fernão de Magalhães, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Fernão de Magalhães 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Ferreira de Castro": {
+   "street": "Rua Ferreira de Castro",
+   "query": "Rua Ferreira de Castro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Ferreira de Castro 10, Miratejo, 2855-238 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Fialho de Almeida": {
+   "street": "Rua Fialho de Almeida",
+   "query": "Rua Fialho de Almeida, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Fialho de Almeida 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Florbela Espanca": {
+   "street": "Rua Florbela Espanca",
+   "query": "Rua Florbela Espanca, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Florbela Espanca 10, 2855-022 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Francisco Aires": {
+   "street": "Rua Francisco Aires",
+   "query": "Rua Francisco Aires, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Francisco Aires 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Francisco Franco": {
+   "street": "Rua Francisco Franco",
+   "query": "Rua Francisco Franco, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Francisco Franco 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Francisco Gentil": {
+   "street": "Rua Francisco Gentil",
+   "query": "Rua Francisco Gentil, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Francisco Gentil 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Francisco Lázaro": {
+   "street": "Rua Francisco Lázaro",
+   "query": "Rua Francisco Lázaro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Francisco Lázaro 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Francisco Pereira de Sousa": {
+   "street": "Rua Francisco Pereira de Sousa",
+   "query": "Rua Francisco Pereira de Sousa, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Francisco Pereira de Sousa 10, 2855-095 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Francisco Relógio": {
+   "street": "Rua Francisco Relógio",
+   "query": "Rua Francisco Relógio, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Francisco Relógio 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua G": {
+   "street": "Rua G",
+   "query": "Rua G, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. G 10, Amora, Portugal"
+  },
+  "Rua Gago Coutinho": {
+   "street": "Rua Gago Coutinho",
+   "query": "Rua Gago Coutinho, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Gago Coutinho 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Gama Pinto": {
+   "street": "Rua Gama Pinto",
+   "query": "Rua Gama Pinto, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Gama Pinto 10, 2855-450 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Garcia Lorca": {
+   "street": "Rua Garcia Lorca",
+   "query": "Rua Garcia Lorca, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Garcia Lorca, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Garcia de Resende": {
+   "street": "Rua Garcia de Resende",
+   "query": "Rua Garcia de Resende, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Garcia de Resende 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua García Lorca": {
+   "street": "Rua García Lorca",
+   "query": "Rua García Lorca, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Garcia Lorca, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Garrett": {
+   "street": "Rua Garrett",
+   "query": "Rua Garrett, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Almeida Garrett 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua General Humberto Delgado": {
+   "street": "Rua General Humberto Delgado",
+   "query": "Rua General Humberto Delgado, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Gen. Humberto Delgado 10, Corroios, Portugal"
+  },
+  "Rua Gil Vicente": {
+   "street": "Rua Gil Vicente",
+   "query": "Rua Gil Vicente, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Gil Vicente 10, 2855-454 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Ginásio Clube de Corroios": {
+   "street": "Rua Ginásio Clube de Corroios",
+   "query": "Rua Ginásio Clube de Corroios, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Ginásio Clube de Corroios 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Gonçalves Zarco": {
+   "street": "Rua Gonçalves Zarco",
+   "query": "Rua Gonçalves Zarco, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Gonçalves Zarco 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Grupo Desportivo Unidos do Arco": {
+   "street": "Rua Grupo Desportivo Unidos do Arco",
+   "query": "Rua Grupo Desportivo Unidos do Arco, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Grupo Desportivo Unidos do Arco 10, 2855-076 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Guerra Junqueiro": {
+   "street": "Rua Guerra Junqueiro",
+   "query": "Rua Guerra Junqueiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Guerra Junqueiro 10, 2855-456 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Guilherme Camarinha": {
+   "street": "Rua Guilherme Camarinha",
+   "query": "Rua Guilherme Camarinha, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Guilherme Camarinha, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua H": {
+   "street": "Rua H",
+   "query": "Rua H, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. H 10, Amora, Portugal"
+  },
+  "Rua Helena de Aragão": {
+   "street": "Rua Helena de Aragão",
+   "query": "Rua Helena de Aragão, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Helena de Aragão 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Henrique Pousão": {
+   "street": "Rua Henrique Pousão",
+   "query": "Rua Henrique Pousão, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Henrique Pousão 10, 2855-513 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua I": {
+   "street": "Rua I",
+   "query": "Rua I, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. 1 10, Portugal"
+  },
+  "Rua Ilha das Berlengas": {
+   "street": "Rua Ilha das Berlengas",
+   "query": "Rua Ilha das Berlengas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Ilha das Berlengas 10, 2855-621 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Infante": {
+   "street": "Rua Infante",
+   "query": "Rua Infante, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Infante 10, 2855-723 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Infante Dom Henrique": {
+   "street": "Rua Infante Dom Henrique",
+   "query": "Rua Infante Dom Henrique, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Infante Dom Henrique 10, 2855-454 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Irene Isidro": {
+   "street": "Rua Irene Isidro",
+   "query": "Rua Irene Isidro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Irene Isidro, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua J": {
+   "street": "Rua J",
+   "query": "Rua J, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. J 10, Amora, Portugal"
+  },
+  "Rua Jasmim de Matos": {
+   "street": "Rua Jasmim de Matos",
+   "query": "Rua Jasmim de Matos, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Jasmim de Matos 10, 2855-541 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Jorge Brum do Canto": {
+   "street": "Rua Jorge Brum do Canto",
+   "query": "Rua Jorge Brum do Canto, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Jorge Brum do Canto 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Jorge Croner de Vasconcelos": {
+   "street": "Rua Jorge Croner de Vasconcelos",
+   "query": "Rua Jorge Croner de Vasconcelos, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Jorge Croner de Vasconcelos 10, 1750-128 Lisboa, Portugal"
+  },
+  "Rua Jorge de Sena": {
+   "street": "Rua Jorge de Sena",
+   "query": "Rua Jorge de Sena, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Jorge de Sena 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Josefa de Óbidos": {
+   "street": "Rua Josefa de Óbidos",
+   "query": "Rua Josefa de Óbidos, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Josefa de Óbidos 10, 2855-175 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Josefina Silva": {
+   "street": "Rua Josefina Silva",
+   "query": "Rua Josefina Silva, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Josefina Silva 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua José Beltrão": {
+   "street": "Rua José Beltrão",
+   "query": "Rua José Beltrão, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. José Beltrão 10, 2855-001 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua José Carlos Ary dos Santos": {
+   "street": "Rua José Carlos Ary dos Santos",
+   "query": "Rua José Carlos Ary dos Santos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. José Carlos Ary dos Santos 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua José Dias Coelho": {
+   "street": "Rua José Dias Coelho",
+   "query": "Rua José Dias Coelho, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. José Dias Coelho 10, 2855-173 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua José Gomes Ferreira": {
+   "street": "Rua José Gomes Ferreira",
+   "query": "Rua José Gomes Ferreira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. José Gomes Ferreira 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua José Malhoa": {
+   "street": "Rua José Malhoa",
+   "query": "Rua José Malhoa, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua José Malhôa 10, 2855-252 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua José Manuel Soares": {
+   "street": "Rua José Manuel Soares",
+   "query": "Rua José Manuel Soares, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. José Manuel Soares, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua José Régio": {
+   "street": "Rua José Régio",
+   "query": "Rua José Régio, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. José Régio 10, 2855-385 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua João Villaret": {
+   "street": "Rua João Villaret",
+   "query": "Rua João Villaret, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. João Villaret 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua João da Nova": {
+   "street": "Rua João da Nova",
+   "query": "Rua João da Nova, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. João da Nova 10, 2855-477 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua João das Regras": {
+   "street": "Rua João das Regras",
+   "query": "Rua João das Regras, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. João das Regras 10, 2855-001 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua João de Barros": {
+   "street": "Rua João de Barros",
+   "query": "Rua João de Barros, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. João de Barros 10, 2855-025 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua João de Deus": {
+   "street": "Rua João de Deus",
+   "query": "Rua João de Deus, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. João de Deus 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Júlio Dantas": {
+   "street": "Rua Júlio Dantas",
+   "query": "Rua Júlio Dantas, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Júlio Dantas 10, 2855-454 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Júlio Dias": {
+   "street": "Rua Júlio Dias",
+   "query": "Rua Júlio Dias, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Júlio Dantas, Corroios, Portugal"
+  },
+  "Rua Júlio Dinis": {
+   "street": "Rua Júlio Dinis",
+   "query": "Rua Júlio Dinis, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Júlio Dinis 10, 2855-464 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua L": {
+   "street": "Rua L",
+   "query": "Rua L, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. e 10, Corroios, Portugal"
+  },
+  "Rua Lagoa das Sete Cidades": {
+   "street": "Rua Lagoa das Sete Cidades",
+   "query": "Rua Lagoa das Sete Cidades, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Lagoa das Sete Cidades 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Lagoa de Albufeira": {
+   "street": "Rua Lagoa de Albufeira",
+   "query": "Rua Lagoa de Albufeira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Lagoa de Albufeira 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Lagoa de Quiaios": {
+   "street": "Rua Lagoa de Quiaios",
+   "query": "Rua Lagoa de Quiaios, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Lagoas de Quiaios 10, Corroios, Portugal"
+  },
+  "Rua Lagoa de Santo André": {
+   "street": "Rua Lagoa de Santo André",
+   "query": "Rua Lagoa de Santo André, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Lagoa de Santo André 10, 2855-624 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Lagoa de Óbidos": {
+   "street": "Rua Lagoa de Óbidos",
+   "query": "Rua Lagoa de Óbidos, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Lagoa de Óbidos 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Leal da Câmara": {
+   "street": "Rua Leal da Câmara",
+   "query": "Rua Leal da Câmara, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Leal da Câmara 10, 2855-179 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Leopoldo de Almeida": {
+   "street": "Rua Leopoldo de Almeida",
+   "query": "Rua Leopoldo de Almeida, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Leopoldo de Almeida 10a, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Lima Basto": {
+   "street": "Rua Lima Basto",
+   "query": "Rua Lima Basto, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Lima Basto 10, Portugal"
+  },
+  "Rua Lima de Freitas": {
+   "street": "Rua Lima de Freitas",
+   "query": "Rua Lima de Freitas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Lima de Freitas 10, 2855-378 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Lopo de Carvalho": {
+   "street": "Rua Lopo de Carvalho",
+   "query": "Rua Lopo de Carvalho, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Lopo de Carvalho 10, Almada, Portugal"
+  },
+  "Rua Luis de Camões": {
+   "street": "Rua Luis de Camões",
+   "query": "Rua Luis de Camões, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Luís de Camões 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Luís Costa": {
+   "street": "Rua Luís Costa",
+   "query": "Rua Luís Costa, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Luís Costa 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Luís Stau Monteiro": {
+   "street": "Rua Luís Stau Monteiro",
+   "query": "Rua Luís Stau Monteiro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Luís Stau Monteiro 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Luís de Freitas Branco": {
+   "street": "Rua Luís de Freitas Branco",
+   "query": "Rua Luís de Freitas Branco, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Luís de Freitas Branco 10, 2820-377 Charneca de Caparica, Portugal"
+  },
+  "Rua Luísa Tody": {
+   "street": "Rua Luísa Tody",
+   "query": "Rua Luísa Tody, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Luísa Tody 10, 2855-382 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Lília da Fonseca": {
+   "street": "Rua Lília da Fonseca",
+   "query": "Rua Lília da Fonseca, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Lília da Fonseca 10, 2855-546 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua M": {
+   "street": "Rua M",
+   "query": "Rua M, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. M 10, Amora, Portugal"
+  },
+  "Rua Machado de Castro": {
+   "street": "Rua Machado de Castro",
+   "query": "Rua Machado de Castro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Machado de Castro 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Manuel Bernardes": {
+   "street": "Rua Manuel Bernardes",
+   "query": "Rua Manuel Bernardes, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Manuel Bernardes 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Manuel Ferreira": {
+   "street": "Rua Manuel Ferreira",
+   "query": "Rua Manuel Ferreira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Manuel Ferreira 10, 2855-597 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Manuel Ribeiro de Pavia": {
+   "street": "Rua Manuel Ribeiro de Pavia",
+   "query": "Rua Manuel Ribeiro de Pavia, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Manuel Ribeiro de Pavia 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Manuel Tiago": {
+   "street": "Rua Manuel Tiago",
+   "query": "Rua Manuel Tiago, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Manuel Tiago 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Manuela Margarido": {
+   "street": "Rua Manuela Margarido",
+   "query": "Rua Manuela Margarido, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Manuela Margarido, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Maria Isabel Aboim Inglês": {
+   "street": "Rua Maria Isabel Aboim Inglês",
+   "query": "Rua Maria Isabel Aboim Inglês, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Maria Isabel Aboim Inglês, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Maria Lamas": {
+   "street": "Rua Maria Lamas",
+   "query": "Rua Maria Lamas, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Maria Lamas 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Maria Rosa Colaço": {
+   "street": "Rua Maria Rosa Colaço",
+   "query": "Rua Maria Rosa Colaço, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Maria Rosa Colaço 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Maria da Fonte": {
+   "street": "Rua Maria da Fonte",
+   "query": "Rua Maria da Fonte, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Maria da Fonte 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Maria de Lourdes Pintasilgo": {
+   "street": "Rua Maria de Lourdes Pintasilgo",
+   "query": "Rua Maria de Lourdes Pintasilgo, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Rua Martinho D'Assunção": {
+   "street": "Rua Martinho D'Assunção",
+   "query": "Rua Martinho D'Assunção, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Martinho D'Assunção 10, 2855-599 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Mata dos Medos": {
+   "street": "Rua Mata dos Medos",
+   "query": "Rua Mata dos Medos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Mata dos Medos 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Miguel Bombarda": {
+   "street": "Rua Miguel Bombarda",
+   "query": "Rua Miguel Bombarda, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Miguel Bombarda 10, 2855-440 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Miguel Russel": {
+   "street": "Rua Miguel Russel",
+   "query": "Rua Miguel Russel, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Miguel Russel 10, 2855-702 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Miguel Torga": {
+   "street": "Rua Miguel Torga",
+   "query": "Rua Miguel Torga, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Miguel Torga 10, 2855-123 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Miratejo": {
+   "street": "Rua Miratejo",
+   "query": "Rua Miratejo, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Rua Moinhos de Maré": {
+   "street": "Rua Moinhos de Maré",
+   "query": "Rua Moinhos de Maré, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Moinhos de Maré 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Mário Castrim": {
+   "street": "Rua Mário Castrim",
+   "query": "Rua Mário Castrim, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Mário Castrim, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Mário Henrique Leiria": {
+   "street": "Rua Mário Henrique Leiria",
+   "query": "Rua Mário Henrique Leiria, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Mário Henrique Leiria 10, 2855-227 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Mário Pereira": {
+   "street": "Rua Mário Pereira",
+   "query": "Rua Mário Pereira, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Mário Pereira 10, 2855-338 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Mário Pinto de Andrade": {
+   "street": "Rua Mário Pinto de Andrade",
+   "query": "Rua Mário Pinto de Andrade, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Mário Pinto de Andrade 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Mário Sampaio Ribeiro": {
+   "street": "Rua Mário Sampaio Ribeiro",
+   "query": "Rua Mário Sampaio Ribeiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Mário Sampaio Ribeiro 10, 2855-598 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Mártires da Pátria": {
+   "street": "Rua Mártires da Pátria",
+   "query": "Rua Mártires da Pátria, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Mártires da Pátria 10, 2855-440 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua N": {
+   "street": "Rua N",
+   "query": "Rua N, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "N10, Corroios, Portugal"
+  },
+  "Rua Natália Correia": {
+   "street": "Rua Natália Correia",
+   "query": "Rua Natália Correia, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Natália Correia 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Neves e Sousa": {
+   "street": "Rua Neves e Sousa",
+   "query": "Rua Neves e Sousa, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Neves e Sousa 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Nicolau Tolentino": {
+   "street": "Rua Nicolau Tolentino",
+   "query": "Rua Nicolau Tolentino, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Nicolau Tolentino 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Norberto Araújo": {
+   "street": "Rua Norberto Araújo",
+   "query": "Rua Norberto Araújo, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Norberto Araújo 10, 2855-546 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Noémia de Sousa": {
+   "street": "Rua Noémia de Sousa",
+   "query": "Rua Noémia de Sousa, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Noémia de Sousa, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Nuno Gonçalves": {
+   "street": "Rua Nuno Gonçalves",
+   "query": "Rua Nuno Gonçalves, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Nuno Gonçalves 10, 2855-547 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Nuno de Bragança": {
+   "street": "Rua Nuno de Bragança",
+   "query": "Rua Nuno de Bragança, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Nuno de Bragança 10, 2855-112 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Orlando Gonçalves": {
+   "street": "Rua Orlando Gonçalves",
+   "query": "Rua Orlando Gonçalves, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Orlando Gonçalves, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Ovídio Martins": {
+   "street": "Rua Ovídio Martins",
+   "query": "Rua Ovídio Martins, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Ovídio Martins 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Pablo Picasso": {
+   "street": "Rua Pablo Picasso",
+   "query": "Rua Pablo Picasso, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Pablo Picasso 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Parque Natural da Madeira": {
+   "street": "Rua Parque Natural da Madeira",
+   "query": "Rua Parque Natural da Madeira, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Parque Natural da Madeira 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Parque Natural da Serra de São Mamede": {
+   "street": "Rua Parque Natural da Serra de São Mamede",
+   "query": "Rua Parque Natural da Serra de São Mamede, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Parque Natural da Serra de São Mamede 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Parque Natural de São Miguel": {
+   "street": "Rua Parque Natural de São Miguel",
+   "query": "Rua Parque Natural de São Miguel, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Parque Natural de São Miguel 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Parque Natural do Alvão": {
+   "street": "Rua Parque Natural do Alvão",
+   "query": "Rua Parque Natural do Alvão, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Parque Natural do Alvão 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Pateira de Fermentelos": {
+   "street": "Rua Pateira de Fermentelos",
+   "query": "Rua Pateira de Fermentelos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Pateira de Fermentelos 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Paulo Renato": {
+   "street": "Rua Paulo Renato",
+   "query": "Rua Paulo Renato, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Paulo Renato 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Paúl do Boquilobo": {
+   "street": "Rua Paúl do Boquilobo",
+   "query": "Rua Paúl do Boquilobo, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Paúl do Boquilobo, Fernão Ferro, Portugal"
+  },
+  "Rua Pedro Nunes": {
+   "street": "Rua Pedro Nunes",
+   "query": "Rua Pedro Nunes, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Pedro Nunes 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Pedro Álvares Cabral": {
+   "street": "Rua Pedro Álvares Cabral",
+   "query": "Rua Pedro Álvares Cabral, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Pedro Álvares Cabral 10, 2855-477 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Peneda-Gerês": {
+   "street": "Rua Peneda-Gerês",
+   "query": "Rua Peneda-Gerês, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Peneda Gerês 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Penedo de Lechim": {
+   "street": "Rua Penedo de Lechim",
+   "query": "Rua Penedo de Lechim, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Penedo de Lechim 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Península de Tróia": {
+   "street": "Rua Península de Tróia",
+   "query": "Rua Península de Tróia, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Península de Tróia 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Perdigão Queiroga": {
+   "street": "Rua Perdigão Queiroga",
+   "query": "Rua Perdigão Queiroga, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Perdigão Queiroga, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Pinhal Vidal": {
+   "street": "Rua Pinhal Vidal",
+   "query": "Rua Pinhal Vidal, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. Pinhal Vidal 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Pinhal da Estacada": {
+   "street": "Rua Pinhal da Estacada",
+   "query": "Rua Pinhal da Estacada, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Pinhal da Estacada 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Pinhal de Leiria": {
+   "street": "Rua Pinhal de Leiria",
+   "query": "Rua Pinhal de Leiria, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Pinhal de Leiria 10, 2855-637 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Pinhal de Sertórios": {
+   "street": "Rua Pinhal de Sertórios",
+   "query": "Rua Pinhal de Sertórios, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Pinhal de Sertórios 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Ponta de Sagres": {
+   "street": "Rua Ponta de Sagres",
+   "query": "Rua Ponta de Sagres, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Ponta de Sagres 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Primavera a Marco Cabaço": {
+   "street": "Rua Primavera a Marco Cabaço",
+   "query": "Rua Primavera a Marco Cabaço, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. da Primavera, Charneca de Caparica, Portugal"
+  },
+  "Rua Primeiro de Dezembro": {
+   "street": "Rua Primeiro de Dezembro",
+   "query": "Rua Primeiro de Dezembro, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. 1º de Dezembro 10, 2855-454 Corroios, Portugal"
+  },
+  "Rua Pêro Escobar": {
+   "street": "Rua Pêro Escobar",
+   "query": "Rua Pêro Escobar, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Pero Escobar 10, Sobreda, Portugal"
+  },
+  "Rua Quinta da Fábrica": {
+   "street": "Rua Quinta da Fábrica",
+   "query": "Rua Quinta da Fábrica, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Q.ta da Fábrica 10, Corroios, Portugal"
+  },
+  "Rua Quinta da Niza": {
+   "street": "Rua Quinta da Niza",
+   "query": "Rua Quinta da Niza, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Q.ta da Niza 10, 2855-111 Corroios, Portugal"
+  },
+  "Rua Quinta da Queimada": {
+   "street": "Rua Quinta da Queimada",
+   "query": "Rua Quinta da Queimada, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Q.ta da Queimada 10, Corroios, Portugal"
+  },
+  "Rua Quinta de Cima": {
+   "street": "Rua Quinta de Cima",
+   "query": "Rua Quinta de Cima, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Q.ta de Cima 10, Charneca de Caparica, Portugal"
+  },
+  "Rua Quinta de São Nicolau": {
+   "street": "Rua Quinta de São Nicolau",
+   "query": "Rua Quinta de São Nicolau, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Q.ta de São Nicolau, 2855-076 Corroios, Portugal"
+  },
+  "Rua Quinta de São Pedro": {
+   "street": "Rua Quinta de São Pedro",
+   "query": "Rua Quinta de São Pedro, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Q.ta de São Pedro 10, Corroios, Portugal"
+  },
+  "Rua Quinta do Brasileiros Rouxinol": {
+   "street": "Rua Quinta do Brasileiros Rouxinol",
+   "query": "Rua Quinta do Brasileiros Rouxinol, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Q.ta do Brasileiro, 2855-204 Corroios, Portugal"
+  },
+  "Rua Quinta do Campo": {
+   "street": "Rua Quinta do Campo",
+   "query": "Rua Quinta do Campo, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Quinta do Campo 10, 2855-131 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Quinta do Conde": {
+   "street": "Rua Quinta do Conde",
+   "query": "Rua Quinta do Conde, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Q.ta do Conde 10, 2855-079 Corroios, Portugal"
+  },
+  "Rua Quinta do Leilão": {
+   "street": "Rua Quinta do Leilão",
+   "query": "Rua Quinta do Leilão, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Q.ta do Leilão 10, Corroios, Portugal"
+  },
+  "Rua Ramalho Ortigão": {
+   "street": "Rua Ramalho Ortigão",
+   "query": "Rua Ramalho Ortigão, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Ramalho Ortigão 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Raul Brandão": {
+   "street": "Rua Raul Brandão",
+   "query": "Rua Raul Brandão, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Raul Brandão 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Reinaldo Ferreira": {
+   "street": "Rua Reinaldo Ferreira",
+   "query": "Rua Reinaldo Ferreira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Reinaldo Ferreira 10, 2855-076 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Reserva Natural da Montanha do Pico": {
+   "street": "Rua Reserva Natural da Montanha do Pico",
+   "query": "Rua Reserva Natural da Montanha do Pico, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Reserva Natural da Montanha do Pico 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Reserva Natural da Ria de Faro": {
+   "street": "Rua Reserva Natural da Ria de Faro",
+   "query": "Rua Reserva Natural da Ria de Faro, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Reserva Natural da Ria de Faro, Fernão Ferro, Portugal"
+  },
+  "Rua Reserva Natural da Serra da Malcata": {
+   "street": "Rua Reserva Natural da Serra da Malcata",
+   "query": "Rua Reserva Natural da Serra da Malcata, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Reserva Natural da Serra da Malcata 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Reserva Natural das Ilhas Selvagens": {
+   "street": "Rua Reserva Natural das Ilhas Selvagens",
+   "query": "Rua Reserva Natural das Ilhas Selvagens, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Reserva Natural das Ilhas Selvagens 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Reserva Natural do Cambarinho": {
+   "street": "Rua Reserva Natural do Cambarinho",
+   "query": "Rua Reserva Natural do Cambarinho, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Reserva Natural do Cambarinho 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Ria de Aveiro": {
+   "street": "Rua Ria de Aveiro",
+   "query": "Rua Ria de Aveiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Ria de Aveiro 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Ricardo Jorge": {
+   "street": "Rua Ricardo Jorge",
+   "query": "Rua Ricardo Jorge, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Ricardo Jorge 10, 2855-095 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Ricardo Malheiros": {
+   "street": "Rua Ricardo Malheiros",
+   "query": "Rua Ricardo Malheiros, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Ricardo Malheiros 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Rodrigues Lapa": {
+   "street": "Rua Rodrigues Lapa",
+   "query": "Rua Rodrigues Lapa, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Rodrigues Lapa 10, Portugal"
+  },
+  "Rua Rogério Amaral": {
+   "street": "Rua Rogério Amaral",
+   "query": "Rua Rogério Amaral, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Rogério Amaral 10, 2855-175 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Roque Gameiro": {
+   "street": "Rua Roque Gameiro",
+   "query": "Rua Roque Gameiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Roque Gameiro 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Rui Filipe": {
+   "street": "Rua Rui Filipe",
+   "query": "Rua Rui Filipe, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Rui Filipe 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Rui Luis Gomes": {
+   "street": "Rua Rui Luis Gomes",
+   "query": "Rua Rui Luis Gomes, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Rui Luís Gomes 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Ruy Belo": {
+   "street": "Rua Ruy Belo",
+   "query": "Rua Ruy Belo, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Ruy Belo 10, 2855-050 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua S": {
+   "street": "Rua S",
+   "query": "Rua S, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Rua Sacadura Cabral": {
+   "street": "Rua Sacadura Cabral",
+   "query": "Rua Sacadura Cabral, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Sacadura Cabral 10, 2855-381 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Samento Pimentel": {
+   "street": "Rua Samento Pimentel",
+   "query": "Rua Samento Pimentel, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Sarmento Pimentel 10, 2855-456 Corroios, Portugal"
+  },
+  "Rua Sant'Anna Dionísio": {
+   "street": "Rua Sant'Anna Dionísio",
+   "query": "Rua Sant'Anna Dionísio, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Santana Dionísio 10, Corroios, Portugal"
+  },
+  "Rua Santa Marta de Corroios": {
+   "street": "Rua Santa Marta de Corroios",
+   "query": "Rua Santa Marta de Corroios, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Santa Marta de Corroios 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Santa Marta do Pinhal": {
+   "street": "Rua Santa Marta do Pinhal",
+   "query": "Rua Santa Marta do Pinhal, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Alameda Santa Marta do Pinhal 10, 2855-576 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Santa-Rita Pintor": {
+   "street": "Rua Santa-Rita Pintor",
+   "query": "Rua Santa-Rita Pintor, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Santa Rita Pintor 10, 2855-182 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Santiago Kastner": {
+   "street": "Rua Santiago Kastner",
+   "query": "Rua Santiago Kastner, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Santiago Kastner 10A, 2855-599 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Sapal de Castro Marim": {
+   "street": "Rua Sapal de Castro Marim",
+   "query": "Rua Sapal de Castro Marim, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Sapal de Castro Marim 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Sara Beirão": {
+   "street": "Rua Sara Beirão",
+   "query": "Rua Sara Beirão, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Sara Beirão 10, 2855-095 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Sebastião da Gama": {
+   "street": "Rua Sebastião da Gama",
+   "query": "Rua Sebastião da Gama, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Sebastião da Gama 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Serra D'Aire": {
+   "street": "Rua Serra D'Aire",
+   "query": "Rua Serra D'Aire, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Serra D'Aire 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Serra da Estrela": {
+   "street": "Rua Serra da Estrela",
+   "query": "Rua Serra da Estrela, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Serra da Estrela 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Serra da Gardunha": {
+   "street": "Rua Serra da Gardunha",
+   "query": "Rua Serra da Gardunha, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Serra da Gardunha 10, 2855-637 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Serra de Grândola": {
+   "street": "Rua Serra de Grândola",
+   "query": "Rua Serra de Grândola, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Serra de Grândola 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Serra de Monchique": {
+   "street": "Rua Serra de Monchique",
+   "query": "Rua Serra de Monchique, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Serra de Monchique 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Serra de Montejunto": {
+   "street": "Rua Serra de Montejunto",
+   "query": "Rua Serra de Montejunto, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Serra de Montejunto 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Serra de Montezinho": {
+   "street": "Rua Serra de Montezinho",
+   "query": "Rua Serra de Montezinho, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Serra De Montezinho 10, São Lourenço, Portugal"
+  },
+  "Rua Serra de Niza": {
+   "street": "Rua Serra de Niza",
+   "query": "Rua Serra de Niza, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Serra de Nisa 10, 2855-630 Corroios, Portugal"
+  },
+  "Rua Serra de Portel": {
+   "street": "Rua Serra de Portel",
+   "query": "Rua Serra de Portel, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Serra de Portel 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Serra de Sintra": {
+   "street": "Rua Serra de Sintra",
+   "query": "Rua Serra de Sintra, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Serra de Sintra 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Serra do Caldeirão": {
+   "street": "Rua Serra do Caldeirão",
+   "query": "Rua Serra do Caldeirão, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Serra do Caldeirão 10, 2855-606 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Serra do Marão": {
+   "street": "Rua Serra do Marão",
+   "query": "Rua Serra do Marão, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Serra do Marão 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Silva Pereira": {
+   "street": "Rua Silva Pereira",
+   "query": "Rua Silva Pereira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Silva Pereira 10, 2855-603 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Simões de Almeida": {
+   "street": "Rua Simões de Almeida",
+   "query": "Rua Simões de Almeida, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Simões de Almeida 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Soares dos Reis": {
+   "street": "Rua Soares dos Reis",
+   "query": "Rua Soares dos Reis, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Soares dos Reis 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Soeiro Pereira Gomes": {
+   "street": "Rua Soeiro Pereira Gomes",
+   "query": "Rua Soeiro Pereira Gomes, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Soeiro Pereira Gomes 10, 2855-215 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Soldado Luís": {
+   "street": "Rua Soldado Luís",
+   "query": "Rua Soldado Luís, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Sd. Luís 10, 2855-154 Corroios, Portugal"
+  },
+  "Rua Stallete Tavares": {
+   "street": "Rua Stallete Tavares",
+   "query": "Rua Stallete Tavares, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Sallete Tavares 10, Corroios, Portugal"
+  },
+  "Rua Sá de Miranda": {
+   "street": "Rua Sá de Miranda",
+   "query": "Rua Sá de Miranda, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Sá de Miranda 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua São Cristóvão": {
+   "street": "Rua São Cristóvão",
+   "query": "Rua São Cristóvão, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. de São Cristovão 10, Charneca de Caparica, Portugal"
+  },
+  "Rua Teixeira Lopes": {
+   "street": "Rua Teixeira Lopes",
+   "query": "Rua Teixeira Lopes, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Teixeira Lopes 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Tenente Coronel Ribeiro dos Reis": {
+   "street": "Rua Tenente Coronel Ribeiro dos Reis",
+   "query": "Rua Tenente Coronel Ribeiro dos Reis, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Ten-Cel. Ribeiro dos Reis 10, Corroios, Portugal"
+  },
+  "Rua Tomás Alcaide": {
+   "street": "Rua Tomás Alcaide",
+   "query": "Rua Tomás Alcaide, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Tomás Alcaide 10, 2855-454 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Tomás Ribeiro": {
+   "street": "Rua Tomás Ribeiro",
+   "query": "Rua Tomás Ribeiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Tomás Ribeiro 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Trindade Coelho": {
+   "street": "Rua Trindade Coelho",
+   "query": "Rua Trindade Coelho, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Trindade Coelho 10, 2855-488 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua U": {
+   "street": "Rua U",
+   "query": "Rua U, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Rua Vanda Ramos": {
+   "street": "Rua Vanda Ramos",
+   "query": "Rua Vanda Ramos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Vanda Ramos 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Vasco Sameiro": {
+   "street": "Rua Vasco Sameiro",
+   "query": "Rua Vasco Sameiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Vasco Sameiro 10, 2855-053 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Vasco da Gama": {
+   "street": "Rua Vasco da Gama",
+   "query": "Rua Vasco da Gama, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Vasco da Gama 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Verdizela": {
+   "street": "Rua Verdizela",
+   "query": "Rua Verdizela, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Av. da Verdizela 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Vergílio Ferreira": {
+   "street": "Rua Vergílio Ferreira",
+   "query": "Rua Vergílio Ferreira, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Vergílio Ferreira 10, 2855-736 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Viana da Mota": {
+   "street": "Rua Viana da Mota",
+   "query": "Rua Viana da Mota, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Viana da Mota 10, 2855-040 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Victor Bastos": {
+   "street": "Rua Victor Bastos",
+   "query": "Rua Victor Bastos, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Victor Bastos 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Victor Santos": {
+   "street": "Rua Victor Santos",
+   "query": "Rua Victor Santos, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Vitor Santos 10, Corroios, Portugal"
+  },
+  "Rua Vieira Lusitano": {
+   "street": "Rua Vieira Lusitano",
+   "query": "Rua Vieira Lusitano, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Vieira Lusitano 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Vieira Portuense": {
+   "street": "Rua Vieira Portuense",
+   "query": "Rua Vieira Portuense, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Vieira Portuense 10, 2855-513 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Vila de Corroios": {
+   "street": "Rua Vila de Corroios",
+   "query": "Rua Vila de Corroios, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Rua Viriato Cruz": {
+   "street": "Rua Viriato Cruz",
+   "query": "Rua Viriato Cruz, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Viriato Cruz, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua Vitória": {
+   "street": "Rua Vitória",
+   "query": "Rua Vitória, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. da Vitória 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua XXIV": {
+   "street": "Rua XXIV",
+   "query": "Rua XXIV, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. XXIV, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua da Antiga Fábrica da Pólvora": {
+   "street": "Rua da Antiga Fábrica da Pólvora",
+   "query": "Rua da Antiga Fábrica da Pólvora, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. da Antiga Fábrica da Pólvora 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua da Carta Constitucional": {
+   "street": "Rua da Carta Constitucional",
+   "query": "Rua da Carta Constitucional, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. da Carta Constitucional 10, 2855-717 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua da Esperança da Quinta de Cima": {
+   "street": "Rua da Esperança da Quinta de Cima",
+   "query": "Rua da Esperança da Quinta de Cima, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Q.ta de Cima 10, Charneca de Caparica, Portugal"
+  },
+  "Rua da Estação": {
+   "street": "Rua da Estação",
+   "query": "Rua da Estação, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua da Estação, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Rua da Igreja": {
+   "street": "Rua da Igreja",
+   "query": "Rua da Igreja, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua da Igreja 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua da Indústria": {
+   "street": "Rua da Indústria",
+   "query": "Rua da Indústria, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. da Indústria 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua da Juventude": {
+   "street": "Rua da Juventude",
+   "query": "Rua da Juventude, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua da Juventude 10, 2855-465 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua da Madressilva": {
+   "street": "Rua da Madressilva",
+   "query": "Rua da Madressilva, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua da Madressilva 10, 2855-204 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua da Niza": {
+   "street": "Rua da Niza",
+   "query": "Rua da Niza, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. da Niza 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua da Paz": {
+   "street": "Rua da Paz",
+   "query": "Rua da Paz, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua da Paz 10, 2855-454 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua da Resistência": {
+   "street": "Rua da Resistência",
+   "query": "Rua da Resistência, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Resistência 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua da Restauração da Independência": {
+   "street": "Rua da Restauração da Independência",
+   "query": "Rua da Restauração da Independência, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. da Restauração da Independência 10, 2855-717 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua da Unidade": {
+   "street": "Rua da Unidade",
+   "query": "Rua da Unidade, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. da Unidade 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua da Vitória": {
+   "street": "Rua da Vitória",
+   "query": "Rua da Vitória, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. da Vitória 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua das Acácias": {
+   "street": "Rua das Acácias",
+   "query": "Rua das Acácias, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. das Acácias 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua das Amendoeiras": {
+   "street": "Rua das Amendoeiras",
+   "query": "Rua das Amendoeiras, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. das Amendoeiras 10, Sobreda, Portugal"
+  },
+  "Rua das Amoreiras": {
+   "street": "Rua das Amoreiras",
+   "query": "Rua das Amoreiras, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. das Amoreiras 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua das Araucárias": {
+   "street": "Rua das Araucárias",
+   "query": "Rua das Araucárias, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. das Araucárias 10, 2855-257 Sobreda, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua das Azinheiras": {
+   "street": "Rua das Azinheiras",
+   "query": "Rua das Azinheiras, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. das Azinheiras 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua das Camélias": {
+   "street": "Rua das Camélias",
+   "query": "Rua das Camélias, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua das Camélias 10, 2855-204 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua das Catalpas": {
+   "street": "Rua das Catalpas",
+   "query": "Rua das Catalpas, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. de Baleizão 10, 2855-260 Corroios, Portugal"
+  },
+  "Rua das Descobertas": {
+   "street": "Rua das Descobertas",
+   "query": "Rua das Descobertas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua das Descobertas 10, 2855-720 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua das Faias": {
+   "street": "Rua das Faias",
+   "query": "Rua das Faias, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. das Faias 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua das Flores": {
+   "street": "Rua das Flores",
+   "query": "Rua das Flores, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. das Flores 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua das Furnas de São Miguel": {
+   "street": "Rua das Furnas de São Miguel",
+   "query": "Rua das Furnas de São Miguel, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. das Furnas S. Miguel 10, Corroios, Portugal"
+  },
+  "Rua das Gémeas": {
+   "street": "Rua das Gémeas",
+   "query": "Rua das Gémeas, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. das Gémeas 10, 2855-236 Laranjeiro, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua das Laranjeiras": {
+   "street": "Rua das Laranjeiras",
+   "query": "Rua das Laranjeiras, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. das Laranjeiras 10, Charneca de Caparica, Portugal"
+  },
+  "Rua das Magnólias": {
+   "street": "Rua das Magnólias",
+   "query": "Rua das Magnólias, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. das Magnolias 10, Sobreda, Portugal"
+  },
+  "Rua das Manjeronas": {
+   "street": "Rua das Manjeronas",
+   "query": "Rua das Manjeronas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. das Manjeronas 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua das Mestras": {
+   "street": "Rua das Mestras",
+   "query": "Rua das Mestras, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. das Mestras 10, 2500-412 Carvalhal Benfeito, Portugal"
+  },
+  "Rua das Nogueiras": {
+   "street": "Rua das Nogueiras",
+   "query": "Rua das Nogueiras, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. das Nogueiras 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua das Olaias": {
+   "street": "Rua das Olaias",
+   "query": "Rua das Olaias, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. das Olaias 10, Sobreda, Portugal"
+  },
+  "Rua das Oliveiras": {
+   "street": "Rua das Oliveiras",
+   "query": "Rua das Oliveiras, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua das Oliveiras 10, 2855-200 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua das Operárias": {
+   "street": "Rua das Operárias",
+   "query": "Rua das Operárias, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. das Operárias 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua das Orquídeas": {
+   "street": "Rua das Orquídeas",
+   "query": "Rua das Orquídeas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. das Orquídeas 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua das Palmeiras": {
+   "street": "Rua das Palmeiras",
+   "query": "Rua das Palmeiras, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. das Palmeiras 10, 2855-193 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua das Sesmarias": {
+   "street": "Rua das Sesmarias",
+   "query": "Rua das Sesmarias, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. das Sesmarias 10, Fernão Ferro, Portugal"
+  },
+  "Rua das Tulipas": {
+   "street": "Rua das Tulipas",
+   "query": "Rua das Tulipas, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. das Túlipas 10, Amora, Portugal"
+  },
+  "Rua das Tílias": {
+   "street": "Rua das Tílias",
+   "query": "Rua das Tílias, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. das Tílias 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua de Camões": {
+   "street": "Rua de Camões",
+   "query": "Rua de Camões, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. de Camões 10, 2855-017 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua de Marialva": {
+   "street": "Rua de Marialva",
+   "query": "Rua de Marialva, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Marialva 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua de Nossa Senhora da Graça": {
+   "street": "Rua de Nossa Senhora da Graça",
+   "query": "Rua de Nossa Senhora da Graça, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Nossa Senhora da Graça 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua de São Cristóvão": {
+   "street": "Rua de São Cristóvão",
+   "query": "Rua de São Cristóvão, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. de São Cristovão 10, Charneca de Caparica, Portugal"
+  },
+  "Rua do Alecrim": {
+   "street": "Rua do Alecrim",
+   "query": "Rua do Alecrim, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua do Alecrim 10, 2855-203 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua do Antigo Bairro Operário": {
+   "street": "Rua do Antigo Bairro Operário",
+   "query": "Rua do Antigo Bairro Operário, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. do Antigo Bairro Operário 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua do Feijó": {
+   "street": "Rua do Feijó",
+   "query": "Rua do Feijó, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Rua do Feijó 10, 2810-047 Feijó, Portugal"
+  },
+  "Rua do Girassol": {
+   "street": "Rua do Girassol",
+   "query": "Rua do Girassol, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua do Girassol 10, 2855-204 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua do Levantamento Popular de Lisboa": {
+   "street": "Rua do Levantamento Popular de Lisboa",
+   "query": "Rua do Levantamento Popular de Lisboa, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Levantamento Popular de Lisboa 10, 2855-723 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua do Movimento Republicano": {
+   "street": "Rua do Movimento Republicano",
+   "query": "Rua do Movimento Republicano, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua do Movimento Republicano 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua do Rouxinol": {
+   "street": "Rua do Rouxinol",
+   "query": "Rua do Rouxinol, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. do Rouxinol 10, 2855-200 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua do Trevo": {
+   "street": "Rua do Trevo",
+   "query": "Rua do Trevo, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua do Trevo 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua dos Carvalhos": {
+   "street": "Rua dos Carvalhos",
+   "query": "Rua dos Carvalhos, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. dos Carvalhos 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua dos Castanheiros": {
+   "street": "Rua dos Castanheiros",
+   "query": "Rua dos Castanheiros, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. dos Castanheiros 10, Sobreda, Portugal"
+  },
+  "Rua dos Catos": {
+   "street": "Rua dos Catos",
+   "query": "Rua dos Catos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. dos Catos 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua dos Cedros": {
+   "street": "Rua dos Cedros",
+   "query": "Rua dos Cedros, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Rua dos Cedros 10, 2815-895 Sobreda, Portugal"
+  },
+  "Rua dos Corticeiros": {
+   "street": "Rua dos Corticeiros",
+   "query": "Rua dos Corticeiros, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua dos Corticeiros 10, 2855-367 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua dos Cravos Vermelhos": {
+   "street": "Rua dos Cravos Vermelhos",
+   "query": "Rua dos Cravos Vermelhos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua dos Cravos Vermelhos 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua dos Eucaliptos": {
+   "street": "Rua dos Eucaliptos",
+   "query": "Rua dos Eucaliptos, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. dos Eucaliptos 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua dos Freixos": {
+   "street": "Rua dos Freixos",
+   "query": "Rua dos Freixos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. dos Freixos 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua dos Jacarandás": {
+   "street": "Rua dos Jacarandás",
+   "query": "Rua dos Jacarandás, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Rua dos Jacarandás 10, Sobreda, Portugal"
+  },
+  "Rua dos Lariços": {
+   "street": "Rua dos Lariços",
+   "query": "Rua dos Lariços, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Rua dos Lariços 10, Sobreda, Portugal"
+  },
+  "Rua dos Malmequeres": {
+   "street": "Rua dos Malmequeres",
+   "query": "Rua dos Malmequeres, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Rua dos Malmequeres 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua dos Pinheiros": {
+   "street": "Rua dos Pinheiros",
+   "query": "Rua dos Pinheiros, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. dos Pinheiros 10, Sobreda, Portugal"
+  },
+  "Rua dos Plátanos": {
+   "street": "Rua dos Plátanos",
+   "query": "Rua dos Plátanos, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. dos Plátanos 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua dos Salgueiros": {
+   "street": "Rua dos Salgueiros",
+   "query": "Rua dos Salgueiros, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. dos Salgueiros 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua dos Sobreiros": {
+   "street": "Rua dos Sobreiros",
+   "query": "Rua dos Sobreiros, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. dos Sobreiros 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua vale de Milhaços": {
+   "street": "Rua vale de Milhaços",
+   "query": "Rua vale de Milhaços, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Av. Vale de Milhaços 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Álvaro Ferreira Alves": {
+   "street": "Rua Álvaro Ferreira Alves",
+   "query": "Rua Álvaro Ferreira Alves, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "R. Álvaro Ferreira Alves 10, 2855-597 Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Rua Álvaro Guerra": {
+   "street": "Rua Álvaro Guerra",
+   "query": "Rua Álvaro Guerra, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. Álvaro Guerra 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Rua Érico Braga": {
+   "street": "Rua Érico Braga",
+   "query": "Rua Érico Braga, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Travessa Actores": {
+   "street": "Travessa Actores",
+   "query": "Travessa Actores, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. dos Actores, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Travessa Alexandre Paixão": {
+   "street": "Travessa Alexandre Paixão",
+   "query": "Travessa Alexandre Paixão, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Alexandre Paixão 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Alfredo de Matos": {
+   "street": "Travessa Alfredo de Matos",
+   "query": "Travessa Alfredo de Matos, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Alfredo de Matos, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Travessa Bernardo de Passos": {
+   "street": "Travessa Bernardo de Passos",
+   "query": "Travessa Bernardo de Passos, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. Bernardo Santareno, Corroios, Portugal"
+  },
+  "Travessa Branca Colaço": {
+   "street": "Travessa Branca Colaço",
+   "query": "Travessa Branca Colaço, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Branca Colaço 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Cidade de Alverca do Ribatejo": {
+   "street": "Travessa Cidade de Alverca do Ribatejo",
+   "query": "Travessa Cidade de Alverca do Ribatejo, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Cidade de Alverca do Ribatejo 10, 2855-155 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Cidade de Faro": {
+   "street": "Travessa Cidade de Faro",
+   "query": "Travessa Cidade de Faro, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Tv. da Cidade de Faro 10, Portugal"
+  },
+  "Travessa Diogo Monteiro": {
+   "street": "Travessa Diogo Monteiro",
+   "query": "Travessa Diogo Monteiro, 10, Corroios",
+   "outcome": "exact",
+   "formatted_address": "Tv. Diogo Monteiro 10, Corroios, Portugal",
+   "location_type": "ROOFTOP",
+   "partial_match": false
+  },
+  "Travessa Estêvão Gomes": {
+   "street": "Travessa Estêvão Gomes",
+   "query": "Travessa Estêvão Gomes, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Estevão Gomes 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Fernando Fragoso": {
+   "street": "Travessa Fernando Fragoso",
+   "query": "Travessa Fernando Fragoso, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Fernando Fragoso, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Travessa Francisco Álvares": {
+   "street": "Travessa Francisco Álvares",
+   "query": "Travessa Francisco Álvares, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Francisco Álvares 10, 2855-591 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa José de Barros": {
+   "street": "Travessa José de Barros",
+   "query": "Travessa José de Barros, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "R. José de Barros 10, 2970-301 Quintinha, Portugal"
+  },
+  "Travessa João Pé-Leve": {
+   "street": "Travessa João Pé-Leve",
+   "query": "Travessa João Pé-Leve, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. João Pé-Leve 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa João Ribas": {
+   "street": "Travessa João Ribas",
+   "query": "Travessa João Ribas, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Travessa Luís Braga": {
+   "street": "Travessa Luís Braga",
+   "query": "Travessa Luís Braga, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Braga, Portugal"
+  },
+  "Travessa Luís Leitão": {
+   "street": "Travessa Luís Leitão",
+   "query": "Travessa Luís Leitão, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Luís Leitão, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Travessa Luís de Magalhães": {
+   "street": "Travessa Luís de Magalhães",
+   "query": "Travessa Luís de Magalhães, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Luís de Magalhães 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Manuel Boaventura": {
+   "street": "Travessa Manuel Boaventura",
+   "query": "Travessa Manuel Boaventura, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Manuel Boaventura 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Manuel de Lima": {
+   "street": "Travessa Manuel de Lima",
+   "query": "Travessa Manuel de Lima, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Manuel de Lima, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Travessa Maria Archer": {
+   "street": "Travessa Maria Archer",
+   "query": "Travessa Maria Archer, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Maria Archer 10, 2855-382 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Marta da Câmara": {
+   "street": "Travessa Marta da Câmara",
+   "query": "Travessa Marta da Câmara, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Marta da Câmara 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Moinho Velho dos Paulistas": {
+   "street": "Travessa Moinho Velho dos Paulistas",
+   "query": "Travessa Moinho Velho dos Paulistas, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Moinho Velho dos Paulistas 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Moinho da Passagem": {
+   "street": "Travessa Moinho da Passagem",
+   "query": "Travessa Moinho da Passagem, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Moinho de Passagem 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Moinho da Torre": {
+   "street": "Travessa Moinho da Torre",
+   "query": "Travessa Moinho da Torre, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Moinho da Torre 10, 2855-608 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Moinho de Corroios": {
+   "street": "Travessa Moinho de Corroios",
+   "query": "Travessa Moinho de Corroios, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Moinho de Corroios 10, 2855-637 Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Moinho do Breyner": {
+   "street": "Travessa Moinho do Breyner",
+   "query": "Travessa Moinho do Breyner, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Moinho do Breyner 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Moinho do Capitão": {
+   "street": "Travessa Moinho do Capitão",
+   "query": "Travessa Moinho do Capitão, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Tv. Moinho do Cap. 10, Corroios, Portugal"
+  },
+  "Travessa Moinho do Galvão": {
+   "street": "Travessa Moinho do Galvão",
+   "query": "Travessa Moinho do Galvão, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Moinho do Galvão 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Moinho do Zeimoto": {
+   "street": "Travessa Moinho do Zeimoto",
+   "query": "Travessa Moinho do Zeimoto, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Moinho do Zeimoto 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Moinho do Zé-Zé": {
+   "street": "Travessa Moinho do Zé-Zé",
+   "query": "Travessa Moinho do Zé-Zé, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Moinho do Zé-Zé 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Pedro Ivo": {
+   "street": "Travessa Pedro Ivo",
+   "query": "Travessa Pedro Ivo, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Pedro Ivo, Corroios, Portugal",
+   "location_type": "GEOMETRIC_CENTER",
+   "partial_match": true
+  },
+  "Travessa Pinhal de Sertórios": {
+   "street": "Travessa Pinhal de Sertórios",
+   "query": "Travessa Pinhal de Sertórios, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Rua Pinhal de Sertórios 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa Quinta da Aniza": {
+   "street": "Travessa Quinta da Aniza",
+   "query": "Travessa Quinta da Aniza, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Q.ta da Aniza, Corroios, Portugal"
+  },
+  "Travessa Roberto Mesquita": {
+   "street": "Travessa Roberto Mesquita",
+   "query": "Travessa Roberto Mesquita, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Travessa da Vitória": {
+   "street": "Travessa da Vitória",
+   "query": "Travessa da Vitória, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Tv. da Vitoria 10, Sobreda, Portugal"
+  },
+  "Travessa das Aveleiras": {
+   "street": "Travessa das Aveleiras",
+   "query": "Travessa das Aveleiras, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Tv. das Aveleiras 10, Sobreda, Portugal"
+  },
+  "Travessa das Dálias": {
+   "street": "Travessa das Dálias",
+   "query": "Travessa das Dálias, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Travessa das Dálias 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa das Tuias": {
+   "street": "Travessa das Tuias",
+   "query": "Travessa das Tuias, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Tv. das Tuias 10, Portugal"
+  },
+  "Travessa de Baleizão": {
+   "street": "Travessa de Baleizão",
+   "query": "Travessa de Baleizão, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Tv. de Baleizão 10, 2815-875 Sobreda, Portugal"
+  },
+  "Travessa de Valadares": {
+   "street": "Travessa de Valadares",
+   "query": "Travessa de Valadares, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Tv. de Valadares 10, 2100-121 Coruche, Portugal"
+  },
+  "Travessa do Zimbro": {
+   "street": "Travessa do Zimbro",
+   "query": "Travessa do Zimbro, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. do Zimbro 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa dos Amieiros": {
+   "street": "Travessa dos Amieiros",
+   "query": "Travessa dos Amieiros, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. dos Amieiros 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa dos Jasmins": {
+   "street": "Travessa dos Jasmins",
+   "query": "Travessa dos Jasmins, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. dos Jasmins 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa dos Loendros": {
+   "street": "Travessa dos Loendros",
+   "query": "Travessa dos Loendros, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "R. dos Loendros 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa dos Loureiros": {
+   "street": "Travessa dos Loureiros",
+   "query": "Travessa dos Loureiros, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Travessa dos Nenúfares": {
+   "street": "Travessa dos Nenúfares",
+   "query": "Travessa dos Nenúfares, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. dos Nenúfares 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Travessa dos Ulmeiros": {
+   "street": "Travessa dos Ulmeiros",
+   "query": "Travessa dos Ulmeiros, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Tv. dos Ulmeiros 10, Sobreda, Portugal"
+  },
+  "Travessa Álvaro de Brée": {
+   "street": "Travessa Álvaro de Brée",
+   "query": "Travessa Álvaro de Brée, 10, Corroios",
+   "outcome": "unverified_number",
+   "formatted_address": "Tv. Álvaro de Brée 10, Corroios, Portugal",
+   "location_type": "RANGE_INTERPOLATED",
+   "partial_match": false
+  },
+  "Trilho": {
+   "street": "Trilho",
+   "query": "Trilho, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Trilho BTT": {
+   "street": "Trilho BTT",
+   "query": "Trilho BTT, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Trilho da Pedreira": {
+   "street": "Trilho da Pedreira",
+   "query": "Trilho da Pedreira, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "Variante à EN 10": {
+   "street": "Variante à EN 10",
+   "query": "Variante à EN 10, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  },
+  "trilho das traseiras": {
+   "street": "trilho das traseiras",
+   "query": "trilho das traseiras, 10, Corroios",
+   "outcome": "not_found",
+   "status": "OK",
+   "top_result": "Corroios, Portugal"
+  }
+ }
+}

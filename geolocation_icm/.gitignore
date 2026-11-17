@@ -1,0 +1,3 @@
+# Runtime artifacts
+/observability/
+/stages/*/output/

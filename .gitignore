@@ -221,3 +221,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local configuration and credentials
+.env.*
+!.env.example
+.claude/settings.local.json
+
+# Generated evaluation runs
+/geolocation_evals/results/

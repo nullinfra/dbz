@@ -1,0 +1,137 @@
+{
+  "description": "Geolocation run observability",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreModelRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostModelRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Interrupt": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'from pathlib import Path; import runpy; p=Path(\"_config/observe.py\"); p=p if p.is_file() else Path(\"geolocation_icm/_config/observe.py\"); runpy.run_path(str(p), run_name=\"__main__\")'",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
