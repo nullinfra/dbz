@@ -18,7 +18,7 @@ Run all commands from this root directory (`Restaurante/`). Never read any `.py`
 1. **Decide the route(s):**
    - Route to **Geolocation ICM** if the message includes a delivery location/address.
    - Route to **OlaClick ICM** if the message asks about menu items/stock/hours or wants to create, check, update, or cancel an order (or owner menu/stock/order management).
-   - **Combined messages** (e.g., *"Quero 2 pastéis de carne para a Av. Cristo Rei, 47"*): run **both** ICMs and combine their results in one reply.
+   - **Combined messages** (e.g., *"Quero 2 pastéis de carne para a Av. Cristo Rei, 47"*): run **both** ICMs **in parallel** (issue independent tool calls together) and combine their results in one reply.
 2. **Respect ICM contracts:**
    - For **Geolocation ICM**, follow its stage contract (it writes `orientation.json`; in eval runs, follow the prompt's `--out-dir` / `--maps` flags).
    - For **OlaClick ICM**, run `01_classify_and_extract` then `02_resolve_and_execute`.

@@ -5,7 +5,7 @@ Decision rules for Stage 01. Follow [tool rules](../tools/rules.md) for exact CL
 ## 1. Action gate (`is_olaclick_action`)
 
 - If the text has **no** OlaClick operation (only greeting, chit-chat, or a pure delivery address with no order/menu/store request), use `intent: "non_actionable"`.
-- If the text contains **1** operation, use `--intent` + `--entities`.
+- If the text contains **1** operation, use `--intent` + `--entities`. (Asking for *"today's available menu"* with no specific item is **1** `get_menu_category` operation with `'{}'` — it already filters available/in-stock items.)
 - If the text contains **2 or more** operations (e.g. *"têm coca-cola? quero 2 pastéis de carne e vê o estado do pedido #12"* or *"mete o bacalhau out of stock e muda a coxinha para 3€"* or a bulk menu import), use `--operations` as a JSON array of `{"intent": ..., "entities": {...}}`.
 
 ## 2. Actor classification (`actor`)

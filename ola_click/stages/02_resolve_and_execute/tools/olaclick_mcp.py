@@ -230,8 +230,17 @@ def _plan_mcp_call(action: str, entities: dict[str, Any], cached_menu: Any) -> t
         return tool_class, "get_delivery_quote", args
     if action == "create_order":
         args = {"service_type": _normalize_service_type(entities.get("service_type")), "idempotency_key": str(uuid.uuid4())}
+        comment_parts = []
+        if entities.get("delivery_address"):
+            comment_parts.append(f"Entrega: {entities['delivery_address']}")
+        if entities.get("customer_name"):
+            comment_parts.append(f"Cliente: {entities['customer_name']}")
+        if entities.get("customer_phone"):
+            comment_parts.append(f"Tel: {entities['customer_phone']}")
         if entities.get("notes"):
-            args["comment"] = entities["notes"]
+            comment_parts.append(str(entities["notes"]))
+        if comment_parts:
+            args["comment"] = " | ".join(comment_parts)[:500]
         return tool_class, "create_order", args
     if action == "update_order":
         args = {"id": oid}
@@ -318,7 +327,13 @@ def _execute_create_order(mcp_url: str, api_key: str, entities: dict[str, Any], 
             combos.append(c)
     if order_id and combos:
         ok2, combo_res = _mcp_call(mcp_url, api_key, "add_order_combos", {"id": order_id, "combos": combos})
-        return ok2, {"order": order_res, "combos": combo_res}
+        if not ok2:
+            return False, {"order": order_res, "combos": combo_res}
+        ok3, confirm_res = _mcp_call(mcp_url, api_key, "update_order_status", {"id": order_id, "status": "PENDING"})
+        return ok3, {"order": confirm_res if ok3 else order_res, "combos": combo_res}
+    if order_id:
+        ok3, confirm_res = _mcp_call(mcp_url, api_key, "update_order_status", {"id": order_id, "status": "PENDING"})
+        return ok3, confirm_res
     return True, order_res
 
 
