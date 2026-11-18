@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Codex and Claude Code command-hook handler: persist bounded metadata and monotonic timing per turn."""
-import fcntl
+from contextlib import contextmanager
 import hashlib
 import json
 import os
@@ -11,8 +11,21 @@ import uuid
 from collections import Counter
 from pathlib import Path
 
+try:
+    import fcntl
+except ImportError:
+    fcntl = None
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = Path(os.environ['ICM_OBSERVABILITY_DIR']) if os.environ.get('ICM_OBSERVABILITY_DIR') else ROOT / 'observability'
+
+
+@contextmanager
+def file_lock(path: Path):
+    with path.open('a') as lock_file:
+        if fcntl is not None:
+            fcntl.flock(lock_file, fcntl.LOCK_EX)
+        yield
 
 
 def safe(value):
@@ -29,8 +42,7 @@ def main():
     if os.environ.get('ICM_HOOK_RUNTIME') == 'claude':
         session_dir = DATA / session
         session_dir.mkdir(parents=True, exist_ok=True, mode=0o700)
-        with (session_dir / '.session.lock').open('a') as session_lock:
-            fcntl.flock(session_lock, fcntl.LOCK_EX)
+        with file_lock(session_dir / '.session.lock'):
             active = session_dir / '.active_turn'
             if event == 'UserPromptSubmit':
                 turn = uuid.uuid4().hex
@@ -45,8 +57,7 @@ def main():
         return
     directory = DATA / session / turn
     directory.mkdir(parents=True, exist_ok=True, mode=0o700)
-    with (directory / '.lock').open('a') as lock:
-        fcntl.flock(lock, fcntl.LOCK_EX)
+    with file_lock(directory / '.lock'):
         path = directory / 'events.jsonl'
         record = {'event': event, 'monotonic_ns': stamp, 'unix_ns': wall}
         for key in ('tool_name', 'tool_use_id', 'model', 'status', 'token_usage', 'trigger', 'agent_id', 'agent_type', 'duration_ms', 'is_interrupt'):

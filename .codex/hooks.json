@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" UserPromptSubmit",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'UserPromptSubmit']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" PreToolUse",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'PreToolUse']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" PostToolUse",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'PostToolUse']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -39,7 +39,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" PostToolUseFailure",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'PostToolUseFailure']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -50,7 +50,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" PreModelRequest",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'PreModelRequest']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -61,7 +61,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" PostModelRequest",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'PostModelRequest']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -72,7 +72,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" PreCompact",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'PreCompact']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -83,7 +83,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" PostCompact",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'PostCompact']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -94,7 +94,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" SubagentStart",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'SubagentStart']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -105,7 +105,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" SubagentStop",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'SubagentStop']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -116,7 +116,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" Stop",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'Stop']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]
@@ -127,7 +127,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$(if [ -d geolocation_icm ]; then printf %s .; else printf %s ..; fi)/.codex/run-observer.sh\" Interrupt",
+            "command": "python3 -c \"import runpy,sys; from pathlib import Path; p=Path('.codex/run-observer.py'); p=p if p.is_file() else Path('../.codex/run-observer.py'); sys.argv=[str(p),'Interrupt']; runpy.run_path(str(p),run_name='__main__')\"",
             "timeout": 10
           }
         ]

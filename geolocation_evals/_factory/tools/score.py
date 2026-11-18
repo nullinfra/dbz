@@ -4,6 +4,7 @@
 import argparse
 import json
 import sys
+import tempfile
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,7 +16,7 @@ from patterns import render_patterns_md
 
 EVALS_ROOT = Path(__file__).resolve().parent.parent.parent
 RESULTS_ROOT = EVALS_ROOT.parent / "output" / "evals"
-TEMP_EVALS_ROOT = Path("/tmp/icm-evals")
+TEMP_EVALS_ROOT = Path(tempfile.gettempdir()) / "icm-evals"
 
 
 def render_case_report(result: dict[str, Any]) -> str:

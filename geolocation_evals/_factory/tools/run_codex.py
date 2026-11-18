@@ -4,12 +4,12 @@
 Usage: python3 geolocation_evals/_factory/tools/run_codex.py <eval_id> [--jobs 36] [--model gpt-6-luna] [--effort medium]
 Run from the maps/ workspace root. Does not retry failed cases.
 """
-import argparse, json, os, subprocess, sys, time
+import argparse, json, os, subprocess, sys, tempfile, time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]  # maps/
-TEMP_EVALS_ROOT = Path("/tmp/icm-evals")
+TEMP_EVALS_ROOT = Path(tempfile.gettempdir()) / "icm-evals"
 
 
 def run_case(case_dir: Path, eval_id: str, model: str, effort: str, timeout: int) -> tuple[str, int]:

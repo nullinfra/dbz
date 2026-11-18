@@ -4,6 +4,7 @@ import concurrent.futures
 import json
 import os
 import re
+import tempfile
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError
@@ -522,9 +523,10 @@ if __name__ == "__main__":
         encoded = json.dumps(result, ensure_ascii=False, separators=(",", ":"))
         out_path = arguments.out
         if not out_path:
-            active = Path("/tmp/icm-observability/.active-run")
+            tmp_root = Path(tempfile.gettempdir())
+            active = tmp_root / "icm-observability" / ".active-run"
             run_id = active.read_text(encoding="utf-8").strip() if active.is_file() else "default"
-            out_path = f"/tmp/icm_maps_{run_id}.json"
+            out_path = str(tmp_root / f"icm_maps_{run_id}.json")
         out_dir = os.path.dirname(os.path.abspath(out_path))
         os.makedirs(out_dir, exist_ok=True)
         with open(out_path, "w", encoding="utf-8") as out_file:

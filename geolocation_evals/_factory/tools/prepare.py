@@ -7,6 +7,7 @@ import random
 import re
 import shutil
 import sys
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -18,7 +19,7 @@ ICM_ROOT = EVALS_ROOT.parent / "geolocation_icm"
 GOLDEN_PATH = EVALS_ROOT / "_factory" / "golden.json"
 STREETS_PATH = EVALS_ROOT / "_factory" / "corroios_streets.json"
 RESULTS_ROOT = EVALS_ROOT.parent / "output" / "evals"
-TEMP_EVALS_ROOT = Path("/tmp/icm-evals")
+TEMP_EVALS_ROOT = Path(tempfile.gettempdir()) / "icm-evals"
 
 PREFIX_STOPWORDS = {
     "acesso",

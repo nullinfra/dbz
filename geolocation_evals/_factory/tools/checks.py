@@ -2,6 +2,7 @@
 
 import json
 import re
+import tempfile
 import unicodedata
 from pathlib import Path
 from typing import Any
@@ -368,7 +369,7 @@ def evaluate_case(case_meta: dict[str, Any], case_dir: Path) -> dict[str, Any]:
     direct_out = case_dir / "output"
     workspace = case_dir / "workspace"
     eval_id = case_dir.parent.parent.name
-    tmp_maps = Path("/tmp/icm-evals") / eval_id / case_dir.name / "maps_raw_output.json"
+    tmp_maps = Path(tempfile.gettempdir()) / "icm-evals" / eval_id / case_dir.name / "maps_raw_output.json"
     if direct_orientation.is_file() or (not direct_out.is_dir() and not workspace.is_dir()):
         s1_out = case_dir
         s2_out = case_dir

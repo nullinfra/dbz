@@ -8,6 +8,7 @@ import unicodedata
 from datetime import datetime
 from difflib import SequenceMatcher
 import sys
+import tempfile
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -196,7 +197,8 @@ def build_orientation(maps: dict[str, Any], attempts: list[dict[str, Any]], sub_
 
 
 def _default_run_paths(create_if_missing: bool) -> tuple[Path, Path]:
-    active_file = Path("/tmp/icm-observability/.active-run")
+    tmp_root = Path(tempfile.gettempdir())
+    active_file = tmp_root / "icm-observability" / ".active-run"
     if active_file.is_file():
         run_id = active_file.read_text(encoding="utf-8").strip()
     else:
@@ -205,7 +207,7 @@ def _default_run_paths(create_if_missing: bool) -> tuple[Path, Path]:
             active_file.parent.mkdir(parents=True, exist_ok=True)
             active_file.write_text(run_id + "\n", encoding="utf-8")
     repo_root = Path(__file__).resolve().parents[4]
-    return repo_root / "output" / "runs" / run_id, Path(f"/tmp/icm_maps_{run_id}.json")
+    return repo_root / "output" / "runs" / run_id, tmp_root / f"icm_maps_{run_id}.json"
 
 
 def main() -> int:
