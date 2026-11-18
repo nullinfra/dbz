@@ -1,0 +1,238 @@
+{
+ "ambiguous_streets": {
+  "Rua da Liberdade": {
+   "input": "Rua da Liberdade",
+   "query": "Rua da Liberdade, 10",
+   "outcome": "multiple",
+   "candidate_count": 2,
+   "service_area_bias_applied": false,
+   "candidates": [
+    "R. da Liberdade 10, 2625-435 Forte da Casa, Portugal",
+    "R. da Liberdade 10, 2650-419 Brandoa, Portugal"
+   ]
+  },
+  "Rua 25 de Abril": {
+   "input": "Rua 25 de Abril",
+   "query": "Rua 25 de Abril, 10",
+   "outcome": "single",
+   "candidate_count": 1,
+   "service_area_bias_applied": true,
+   "candidates": [
+    "R. 25 de Abril 10, Corroios, Portugal"
+   ]
+  },
+  "Rua Direita": {
+   "input": "Rua Direita",
+   "query": "Rua Direita, 10",
+   "outcome": "multiple",
+   "candidate_count": 3,
+   "service_area_bias_applied": false,
+   "candidates": [
+    "R. Direita 10, 1600-038 Lisboa, Portugal",
+    "R. Direita 10, 2665-001 Enxara do Bpo., Portugal",
+    "R. Direita 10, 2800-682 Almada, Portugal"
+   ]
+  },
+  "Rua Nova": {
+   "input": "Rua Nova",
+   "query": "Rua Nova, 10",
+   "outcome": "single",
+   "candidate_count": 1,
+   "service_area_bias_applied": true,
+   "candidates": [
+    "R. João da Nova 10, 2855-477 Corroios, Portugal"
+   ]
+  },
+  "Rua do Comércio": {
+   "input": "Rua do Comércio",
+   "query": "Rua do Comércio, 10",
+   "outcome": "multiple",
+   "candidate_count": 2,
+   "service_area_bias_applied": false,
+   "candidates": [
+    "R. do Comércio 10, 2970-067, Portugal",
+    "R. do Comércio 10, 2840-327 Arrentela, Portugal"
+   ]
+  },
+  "Rua da Igreja": {
+   "input": "Rua da Igreja",
+   "query": "Rua da Igreja, 10",
+   "outcome": "single",
+   "candidate_count": 1,
+   "service_area_bias_applied": true,
+   "candidates": [
+    "Rua da Igreja 10, Corroios, Portugal"
+   ]
+  },
+  "Rua Primeiro de Maio": {
+   "input": "Rua Primeiro de Maio",
+   "query": "Rua Primeiro de Maio, 10",
+   "outcome": "single",
+   "candidate_count": 1,
+   "service_area_bias_applied": true,
+   "candidates": [
+    "R. 1º de Maio 10, Corroios, Portugal"
+   ]
+  },
+  "Avenida da República": {
+   "input": "Avenida da República",
+   "query": "Avenida da República, 10",
+   "outcome": "single",
+   "candidate_count": 1,
+   "service_area_bias_applied": false,
+   "candidates": [
+    "Av. da República 10, 1050-191 Lisboa, Portugal"
+   ]
+  },
+  "Rua da Escola": {
+   "input": "Rua da Escola",
+   "query": "Rua da Escola, 10",
+   "outcome": "multiple",
+   "candidate_count": 3,
+   "service_area_bias_applied": false,
+   "candidates": [
+    "Rua da Escola 10, 2675-260 Odivelas, Portugal",
+    "R. da Escola 10, 2810-291 Almada, Portugal",
+    "R. da Escola 10, Santo Estêvão das Galés, Portugal"
+   ]
+  },
+  "Rua dos Pescadores": {
+   "input": "Rua dos Pescadores",
+   "query": "Rua dos Pescadores, 10",
+   "outcome": "multiple",
+   "candidate_count": 3,
+   "service_area_bias_applied": false,
+   "candidates": [
+    "R. dos Pescadores 10, 2825-343 Costa de Caparica, Portugal",
+    "R. dos Pescadores 10, 1200-860 Lisboa, Portugal",
+    "R. dos Pescadores 10, 2825-322 Trafaria, Portugal"
+   ]
+  },
+  "Travessa da Fonte": {
+   "input": "Travessa da Fonte",
+   "query": "Travessa da Fonte, 10",
+   "outcome": "single",
+   "candidate_count": 1,
+   "service_area_bias_applied": true,
+   "candidates": [
+    "R. Maria da Fonte 10, Corroios, Portugal"
+   ]
+  },
+  "Rua do Moinho": {
+   "input": "Rua do Moinho",
+   "query": "Rua do Moinho, 10",
+   "outcome": "single",
+   "candidate_count": 1,
+   "service_area_bias_applied": false,
+   "candidates": [
+    "Rua do Moinho 10, 2725-397 Algueirão-Mem Martins, Portugal"
+   ]
+  },
+  "Rua da Boavista": {
+   "input": "Rua da Boavista",
+   "query": "Rua da Boavista, 10",
+   "outcome": "single",
+   "candidate_count": 1,
+   "service_area_bias_applied": false,
+   "candidates": [
+    "Rua da Boavista 10, 1200-066 Lisboa, Portugal"
+   ]
+  },
+  "Rua Luís de Camões": {
+   "input": "Rua Luís de Camões",
+   "query": "Rua Luís de Camões, 10",
+   "outcome": "single",
+   "candidate_count": 1,
+   "service_area_bias_applied": true,
+   "candidates": [
+    "R. Luís de Camões 10, Corroios, Portugal"
+   ]
+  },
+  "Avenida dos Bombeiros Voluntários": {
+   "input": "Avenida dos Bombeiros Voluntários",
+   "query": "Avenida dos Bombeiros Voluntários, 10",
+   "outcome": "single",
+   "candidate_count": 1,
+   "service_area_bias_applied": false,
+   "candidates": [
+    "Av. dos Bombeiros Voluntários 10, 1675-183 Pontinha, Portugal"
+   ]
+  }
+ },
+ "pois": {
+  "Pingo Doce Corroios": {
+   "input": "Pingo Doce Corroios",
+   "outcome": "found",
+   "candidate_count": 2,
+   "candidates": [
+    "Parque Luso Lote, Av. Dom Afonso Henriques 134, 2855-721 Corroios, Portugal",
+    "R. Manuel Ferreira 10 12 Lote, 2855-597 Corroios, Portugal"
+   ]
+  },
+  "Lidl Corroios": {
+   "input": "Lidl Corroios",
+   "outcome": "found",
+   "candidate_count": 2,
+   "candidates": [
+    "R. Ferreira de Castro 10A, 2855-238 Corroios, Portugal",
+    "Av. Vieira da Silva 307, 2855-578 Corroios, Portugal"
+   ]
+  },
+  "Continente Corroios": {
+   "input": "Continente Corroios",
+   "outcome": "not_found",
+   "candidate_count": 0,
+   "candidates": []
+  },
+  "Fórum Seixal": {
+   "input": "Fórum Seixal",
+   "outcome": "found",
+   "candidate_count": 1,
+   "candidates": [
+    "R. Dr. Aristides Sousa Mendes, 2840-244 Seixal, Portugal"
+   ]
+  },
+  "Estação de Corroios": {
+   "input": "Estação de Corroios",
+   "outcome": "found",
+   "candidate_count": 1,
+   "candidates": [
+    "Corroios, 2855-097 Corroios, Portugal"
+   ]
+  },
+  "Câmara Municipal do Seixal": {
+   "input": "Câmara Municipal do Seixal",
+   "outcome": "found",
+   "candidate_count": 1,
+   "candidates": [
+    "Alameda dos Bombeiros Voluntários 45, 2844-001 Seixal, Portugal"
+   ]
+  },
+  "Centro de Saúde de Corroios": {
+   "input": "Centro de Saúde de Corroios",
+   "outcome": "not_found",
+   "candidate_count": 0,
+   "candidates": []
+  },
+  "Escola Secundária de Corroios": {
+   "input": "Escola Secundária de Corroios",
+   "outcome": "not_found",
+   "candidate_count": 0,
+   "candidates": []
+  },
+  "Farmácia Corroios": {
+   "input": "Farmácia Corroios",
+   "outcome": "not_found",
+   "candidate_count": 0,
+   "candidates": []
+  },
+  "Piscina Municipal de Corroios": {
+   "input": "Piscina Municipal de Corroios",
+   "outcome": "found",
+   "candidate_count": 1,
+   "candidates": [
+    "Av. Rui Grácio, 2855-577 Corroios, Portugal"
+   ]
+  }
+ }
+}
