@@ -15,9 +15,9 @@ def main() -> int:
     if os.environ.get("ICM_DISABLE_OBSERVABILITY") == "1":
         return 0
 
-    cwd = Path.cwd()
-    root = cwd.parent if cwd.name == "geolocation_icm" else cwd
-    runs = root / "output" / "runs"
+    root = Path(__file__).resolve().parents[1]
+    maps_root = root / "maps"
+    runs = maps_root / "output" / "runs"
     state_root = Path(tempfile.gettempdir()) / "icm-observability"
     runs.mkdir(parents=True, exist_ok=True)
     state_root.mkdir(parents=True, exist_ok=True)
@@ -47,7 +47,7 @@ def main() -> int:
     obs_dir.mkdir(parents=True, exist_ok=True)
 
     env = {**os.environ, "ICM_OBSERVABILITY_DIR": str(obs_dir)}
-    obs_script = root / "geolocation_icm" / "_config" / "observe.py"
+    obs_script = maps_root / "geolocation_icm" / "_config" / "observe.py"
     subprocess.run([sys.executable, str(obs_script)], input=payload, text=True, env=env, check=True)
 
     event_files = list(obs_dir.rglob("events.jsonl"))

@@ -228,7 +228,8 @@ __marimo__/
 .claude/settings.local.json
 
 # Generated evaluation runs
-/geolocation_evals/results/
+/maps/geolocation_evals/results/
 
 # Generated runs and evaluations
-/output/
+/maps/output/
+/ola_click/output/
