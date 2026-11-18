@@ -12,9 +12,15 @@ This stage processes the customer message supplied in the caller's query.
 
 Read both reference files and follow their instructions together. Apply the decision rules to the working input and use the tools as specified by the tool rules. Never read any `.py` file or `_config/*` source files.
 
+Run all commands from the `maps/` workspace root. Never create `stages/*/output/` or copy stage files.
+
+- **Normal run**: invoke `write_stage01.py` and `google_maps.py` without `--out-dir` or `--out`; they automatically write `output/runs/<run_id>/orientation.json` and clean up intermediate Maps files.
+- **Eval run**: when the prompt specifies an explicit output directory, pass `--out-dir "<out_dir>"` to `write_stage01.py` and `--out "<out_dir>/maps_raw_output.json"` to `google_maps.py`.
+
 ## Outputs
 
-The tool rules specify the output files and when each is produced.
+- Normal run: `output/runs/<run_id>/orientation.json` (plus `summary.md` written by the observer hook).
+- Eval run: `<out_dir>/orientation.json` and `<out_dir>/maps_raw_output.json`.
 
 ## Check
 

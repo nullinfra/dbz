@@ -6,7 +6,7 @@ Runs 50 dynamic cases by default (10 random Corroios streets × `original`, `def
 |---|---|
 | Run an evaluation | Open `/home/pedro-pc/Projects/ICM/maps/` and ask the VS Code agent: *"Run `geolocation_evals`"* (always starts fresh with `prepare.py`, generating 50 cases by default) |
 | Pipeline stages | [CONTEXT.md](CONTEXT.md) |
-| Read the latest run | `geolocation_evals/results/<eval_id>/summary.md` and `inputs_outputs.md` |
+| Read the latest run | `output/evals/<eval_id>/summary.md` and `inputs_outputs.md` |
 | Add or change golden cases | [golden.json](_factory/golden.json) (schema in [_factory/schema.md](_factory/schema.md)), then `python3 geolocation_evals/_factory/tools/validate_golden.py` |
 | Re-score an existing run | `python3 geolocation_evals/_factory/tools/score.py <eval_id>` |
 | Eval settings | [_factory/config.md](_factory/config.md) |

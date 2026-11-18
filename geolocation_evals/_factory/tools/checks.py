@@ -364,15 +364,33 @@ def evaluate_case(case_meta: dict[str, Any], case_dir: Path) -> dict[str, Any]:
         case_meta["expected_input"] = case_meta["exp_stage01"]
     if "expected_orientation" not in case_meta and "exp_stage03" in case_meta:
         case_meta["expected_orientation"] = case_meta["exp_stage03"]
+    direct_orientation = case_dir / "orientation.json"
+    direct_out = case_dir / "output"
     workspace = case_dir / "workspace"
-    s1_out = workspace / "stages" / "01_extract_and_resolve" / "output"
-    legacy_out = workspace / "stages" / "02_policy_and_orientation" / "output"
-    # Historical eval workspaces retain the previous artifact layout.
-    s2_out = legacy_out if legacy_out.is_dir() else s1_out
-    policy_check = s2_out / ("check.md" if s2_out == legacy_out else "policy_check.md")
+    eval_id = case_dir.parent.parent.name
+    tmp_maps = Path("/tmp/icm-evals") / eval_id / case_dir.name / "maps_raw_output.json"
+    if direct_orientation.is_file() or (not direct_out.is_dir() and not workspace.is_dir()):
+        s1_out = case_dir
+        s2_out = case_dir
+        legacy_out = case_dir / "_nonexistent_legacy_"
+        policy_check = s2_out / "policy_check.md"
+        maps_path = tmp_maps if tmp_maps.is_file() else case_dir / "maps_raw_output.json"
+    elif direct_out.is_dir():
+        s1_out = direct_out
+        s2_out = direct_out
+        legacy_out = direct_out / "_nonexistent_legacy_"
+        policy_check = s2_out / "policy_check.md"
+        maps_path = direct_out / "maps_raw_output.json"
+    else:
+        s1_out = workspace / "stages" / "01_extract_and_resolve" / "output"
+        legacy_out = workspace / "stages" / "02_policy_and_orientation" / "output"
+        # Historical eval workspaces retain the previous artifact layout.
+        s2_out = legacy_out if legacy_out.is_dir() else s1_out
+        policy_check = s2_out / ("check.md" if s2_out == legacy_out else "policy_check.md")
+        maps_path = s1_out / "maps_raw_output.json"
 
     s1_json, s1_err = _load_json(s1_out / "extraction.json")
-    s1_maps_json, s1_maps_err = _load_json(s1_out / "maps_raw_output.json")
+    s1_maps_json, s1_maps_err = _load_json(maps_path)
     s2_json, s2_err = _load_json(s2_out / "orientation.json")
     current_contract = not legacy_out.is_dir()
 

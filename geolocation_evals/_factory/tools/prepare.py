@@ -17,7 +17,8 @@ EVALS_ROOT = Path(__file__).resolve().parent.parent.parent
 ICM_ROOT = EVALS_ROOT.parent / "geolocation_icm"
 GOLDEN_PATH = EVALS_ROOT / "_factory" / "golden.json"
 STREETS_PATH = EVALS_ROOT / "_factory" / "corroios_streets.json"
-RESULTS_ROOT = EVALS_ROOT / "results"
+RESULTS_ROOT = EVALS_ROOT.parent / "output" / "evals"
+TEMP_EVALS_ROOT = Path("/tmp/icm-evals")
 
 PREFIX_STOPWORDS = {
     "acesso",
@@ -51,48 +52,15 @@ PREFIX_STOPWORDS = {
 }
 
 
-def make_blind_prompt(workspace_rel: str, raw_input: str) -> str:
+def make_blind_prompt(out_dir_rel: str, maps_path: str, raw_input: str) -> str:
     return (
         "Your workspace directory for this run is the current directory.\n"
-        "Read `AGENTS.md` inside that directory, then run the "
-        "geolocation ICM pipeline for the customer message below, following every "
-        "stage contract and check. Write all outputs only inside that directory's "
-        "`stages/*/output/` folders.\n\n"
+        "Read `AGENTS.md`, then run the geolocation ICM pipeline for the customer message below, "
+        "following every stage contract and check. Write `orientation.json` only inside "
+        f"`{out_dir_rel}` (pass `--out-dir {out_dir_rel} --maps {maps_path}` to `write_stage01.py` "
+        f"and `--out {maps_path}` to `google_maps.py`, without `--cleanup-maps`).\n\n"
         f"Customer message:\n{raw_input}"
     )
-
-
-def copy_icm_workspace(dest: Path) -> None:
-    """Create a clean isolated copy of the geolocation ICM workspace."""
-    dest.mkdir(parents=True, exist_ok=True)
-    for filename in ("AGENTS.md", "CLAUDE.md", "CONTEXT.md"):
-        src = ICM_ROOT / filename
-        if src.exists():
-            shutil.copy2(src, dest / filename)
-
-    shutil.copytree(ICM_ROOT / "_config", dest / "_config", ignore=shutil.ignore_patterns("__pycache__", "*.pyc"), dirs_exist_ok=True)
-    for agent_config in (".codex", ".claude"):
-        source = ICM_ROOT / agent_config
-        if source.is_dir():
-            shutil.copytree(source, dest / agent_config, dirs_exist_ok=True)
-
-    for stage_dir in sorted((ICM_ROOT / "stages").iterdir()):
-        if not stage_dir.is_dir():
-            continue
-        target_stage = dest / "stages" / stage_dir.name
-        target_stage.mkdir(parents=True, exist_ok=True)
-        for item in stage_dir.iterdir():
-            if item.name == "output":
-                (target_stage / "output").mkdir(parents=True, exist_ok=True)
-            elif item.is_dir():
-                shutil.copytree(
-                    item,
-                    target_stage / item.name,
-                    ignore=shutil.ignore_patterns("__pycache__", "*.pyc"),
-                    dirs_exist_ok=True,
-                )
-            else:
-                shutil.copy2(item, target_stage / item.name)
 
 
 def _distinctive_word_indices(words: list[str]) -> list[int]:
@@ -505,11 +473,14 @@ def prepare_eval(
             case_dir_name = case["id"] if repeat == 1 else f"{case['id']}-r{rep}"
             case_dir = eval_dir / "cases" / case_dir_name
             case_dir.mkdir(parents=True, exist_ok=True)
-            workspace_rel = f"geolocation_evals/results/{eid}/cases/{case_dir_name}/workspace"
-            (case_dir / "prompt.md").write_text(
-                make_blind_prompt(workspace_rel, case["input"]) + "\n", encoding="utf-8"
+            out_dir_rel = f"output/evals/{eid}/cases/{case_dir_name}"
+            tmp_case_dir = TEMP_EVALS_ROOT / eid / case_dir_name
+            tmp_case_dir.mkdir(parents=True, exist_ok=True)
+            maps_path = str(tmp_case_dir / "maps_raw_output.json")
+            case_dir.mkdir(parents=True, exist_ok=True)
+            (tmp_case_dir / "prompt.md").write_text(
+                make_blind_prompt(out_dir_rel, maps_path, case["input"]) + "\n", encoding="utf-8"
             )
-            copy_icm_workspace(case_dir / "workspace")
             manifest_cases.append(
                 {
                     "dir": case_dir_name,
@@ -542,10 +513,12 @@ def prepare_eval(
         "total_runs": len(manifest_cases),
         "cases": manifest_cases,
     }
-    (eval_dir / "eval.json").write_text(
+    tmp_eval_dir = TEMP_EVALS_ROOT / eid
+    tmp_eval_dir.mkdir(parents=True, exist_ok=True)
+    (tmp_eval_dir / "eval.json").write_text(
         json.dumps(eval_meta, indent=2, ensure_ascii=False), encoding="utf-8"
     )
-    (eval_dir / "status.json").write_text(
+    (tmp_eval_dir / "status.json").write_text(
         json.dumps({"eval_id": eid, "state": "prepared"}, indent=2), encoding="utf-8"
     )
     return eid

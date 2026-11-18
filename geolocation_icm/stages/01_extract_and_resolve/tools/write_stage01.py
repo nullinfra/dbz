@@ -2,19 +2,19 @@
 """Validate the agent's judgment and write the final orientation."""
 import argparse
 import json
+import os
 import re
 import unicodedata
+from datetime import datetime
 from difflib import SequenceMatcher
 import sys
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from typing import Any
 
 from google_maps import load_store_config
 
-OUTPUT = Path(__file__).resolve().parent.parent / "output"
-MAPS = OUTPUT / "maps_raw_output.json"
-RESULT = OUTPUT / "orientation.json"
 API_ERRORS = {"REQUEST_DENIED", "OVER_QUERY_LIMIT", "INVALID_REQUEST", "UNKNOWN_ERROR"}
 
 
@@ -195,27 +195,52 @@ def build_orientation(maps: dict[str, Any], attempts: list[dict[str, Any]], sub_
     return orientation
 
 
+def _default_run_paths(create_if_missing: bool) -> tuple[Path, Path]:
+    active_file = Path("/tmp/icm-observability/.active-run")
+    if active_file.is_file():
+        run_id = active_file.read_text(encoding="utf-8").strip()
+    else:
+        run_id = datetime.now(ZoneInfo("Europe/Lisbon")).strftime("%Y%m%d-%H%M%S")
+        if create_if_missing:
+            active_file.parent.mkdir(parents=True, exist_ok=True)
+            active_file.write_text(run_id + "\n", encoding="utf-8")
+    repo_root = Path(__file__).resolve().parents[4]
+    return repo_root / "output" / "runs" / run_id, Path(f"/tmp/icm_maps_{run_id}.json")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Write the final geolocation orientation.")
     parser.add_argument("--start", action="store_true", help="Start a new run and clear previous outputs")
+    parser.add_argument("--out-dir", default=os.environ.get("ICM_OUTPUT_DIR"), help="Directory where orientation.json is written")
+    parser.add_argument("--maps", default=None, help="Path to maps_raw_output.json (defaults to <out-dir>/maps_raw_output.json)")
+    parser.add_argument("--cleanup-maps", action="store_true", help="Remove the intermediate maps JSON file after finalizing")
     parser.add_argument("--is-address", choices=["true", "false"])
     parser.add_argument("--sub-premise-notes", default="")
     parser.add_argument("--attempts", default="[]")
     parser.add_argument("--destination-type", choices=["address", "poi"], default="address")
     parser.add_argument("--alternatives", default="[]", help="JSON list of customer-supplied alternative delivery addresses")
     args = parser.parse_args()
-    OUTPUT.mkdir(parents=True, exist_ok=True)
+    auto_normal_run = not args.out_dir
+    if auto_normal_run:
+        out_dir, default_maps = _default_run_paths(create_if_missing=args.start)
+        maps_path = Path(args.maps) if args.maps else default_maps
+        cleanup_maps = True
+    else:
+        out_dir = Path(args.out_dir)
+        maps_path = Path(args.maps) if args.maps else out_dir / "maps_raw_output.json"
+        cleanup_maps = args.cleanup_maps
+    result_path = out_dir / "orientation.json"
+    out_dir.mkdir(parents=True, exist_ok=True)
     if args.start:
-        for item in OUTPUT.iterdir():
-            if item.is_file() or item.is_symlink():
-                item.unlink()
+        result_path.unlink(missing_ok=True)
+        maps_path.unlink(missing_ok=True)
         return 0
     if args.is_address is None:
         parser.error("--is-address is required unless --start is used")
-    RESULT.unlink(missing_ok=True)
+    result_path.unlink(missing_ok=True)
     try:
         if args.is_address == "false":
-            if MAPS.exists():
+            if maps_path.exists():
                 raise ValueError("Maps output exists for a non-address input")
             result = {"is_address": False}
         else:
@@ -227,7 +252,7 @@ def main() -> int:
                 raise ValueError("attempts must contain queries and valid verdicts")
             if len(attempts) > 4 or len({a["query"].strip().casefold() for a in attempts}) != len(attempts):
                 raise ValueError("attempts must contain at most four distinct queries")
-            maps = json.loads(MAPS.read_text(encoding="utf-8"))
+            maps = json.loads(maps_path.read_text(encoding="utf-8"))
             if maps.get("query_executed") not in [a["query"] for a in attempts]:
                 raise ValueError("Maps query does not match any recorded attempt")
             if maps.get("maps_status") in API_ERRORS or maps.get("distance_matrix_status") in API_ERRORS:
@@ -236,7 +261,9 @@ def main() -> int:
             if not isinstance(alternatives, list) or any(not isinstance(a, str) or not a.strip() for a in alternatives) or len(alternatives) == 1:
                 raise ValueError("alternatives must be empty or contain at least two addresses")
             result = build_orientation(maps, attempts, args.sub_premise_notes, args.destination_type, alternatives)
-        RESULT.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        result_path.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        if cleanup_maps:
+            maps_path.unlink(missing_ok=True)
         print(json.dumps(result, ensure_ascii=False))
         return 0
     except (OSError, ValueError, KeyError, TypeError) as exc:

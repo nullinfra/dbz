@@ -1,9 +1,9 @@
 # 00_prepare — validate and freeze an eval run
 
 1. Run `python3 geolocation_evals/_factory/tools/prepare.py` (defaults to `--mode streets --streets 10 --scenarios 20`, generating `10 * 3 = 30` street cases plus 20 scenario cases = `50` cases from `_factory/corroios_streets.json`; pass `--mode golden` to run `_factory/golden.json`).
-2. Preserves all previous runs under `geolocation_evals/results/` and creates a new timestamped folder `geolocation_evals/results/<YYYYMMDD-HHMMSS>/` with `eval.json`, `status.json` (`prepared`), and for each case/repeat:
+2. Preserves all previous runs under `output/evals/` and creates a new timestamped folder `output/evals/<YYYYMMDD-HHMMSS>/` with `eval.json`, `status.json` (`prepared`), and for each case/repeat:
    - `cases/<dir>/prompt.md` (blind prompt)
-   - `cases/<dir>/workspace/` (isolated copy of the ICM with `input/whatsapp_payload.md` populated and empty `stages/*/output/`).
+   - `cases/<dir>/output/` (empty case output directory; no workspace copy is created).
 
 ## Scenarios and door numbers
 

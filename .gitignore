@@ -229,3 +229,6 @@ __marimo__/
 
 # Generated evaluation runs
 /geolocation_evals/results/
+
+# Generated runs and evaluations
+/output/

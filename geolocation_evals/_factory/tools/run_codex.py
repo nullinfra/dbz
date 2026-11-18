@@ -4,26 +4,33 @@
 Usage: python3 geolocation_evals/_factory/tools/run_codex.py <eval_id> [--jobs 36] [--model gpt-6-luna] [--effort medium]
 Run from the maps/ workspace root. Does not retry failed cases.
 """
-import argparse, json, subprocess, sys, time
+import argparse, json, os, subprocess, sys, time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]  # maps/
+TEMP_EVALS_ROOT = Path("/tmp/icm-evals")
 
 
-def run_case(case_dir: Path, model: str, effort: str, timeout: int) -> tuple[str, int]:
-    prompt = (case_dir / "prompt.md").read_text()
+def run_case(case_dir: Path, eval_id: str, model: str, effort: str, timeout: int) -> tuple[str, int]:
+    tmp_case_dir = TEMP_EVALS_ROOT / eval_id / case_dir.name
+    tmp_case_dir.mkdir(parents=True, exist_ok=True)
+    prompt_path = tmp_case_dir / "prompt.md"
+    if not prompt_path.is_file():
+        prompt_path = case_dir / "prompt.md"
+    prompt = prompt_path.read_text()
     cmd = [
         "codex", "exec", "--skip-git-repo-check", "--ephemeral", "--trust", "--dangerously-bypass-hook-trust",
         "-m", model, "-c", f'model_reasoning_effort="{effort}"',
-        "-s", "workspace-write", "-c", "sandbox_workspace_write.network_access=true", "-C", str(case_dir / "workspace"),
-        "-o", str(case_dir / "codex_last_message.md"),
+        "-s", "workspace-write", "-c", "sandbox_workspace_write.network_access=true", "-C", str(ROOT),
+        "-o", str(tmp_case_dir / "codex_last_message.md"),
         "-",
     ]
-    with open(case_dir / "codex.log", "w") as log:
+    env = {**os.environ, "ICM_DISABLE_OBSERVABILITY": "1"}
+    with open(tmp_case_dir / "codex.log", "w") as log:
         try:
             p = subprocess.run(cmd, input=prompt, text=True, stdout=log,
-                               stderr=subprocess.STDOUT, timeout=timeout)
+                               stderr=subprocess.STDOUT, timeout=timeout, env=env)
             return case_dir.name, p.returncode
         except subprocess.TimeoutExpired:
             return case_dir.name, -1
@@ -38,12 +45,15 @@ def main():
     ap.add_argument("--timeout", type=int, default=1200)
     a = ap.parse_args()
 
-    eval_dir = ROOT / "geolocation_evals" / "results" / a.eval_id
-    cases = [eval_dir / "cases" / c["dir"] for c in json.loads((eval_dir / "eval.json").read_text())["cases"]]
+    eval_dir = ROOT / "output" / "evals" / a.eval_id
+    eval_meta_path = TEMP_EVALS_ROOT / a.eval_id / "eval.json"
+    if not eval_meta_path.is_file():
+        eval_meta_path = eval_dir / "eval.json"
+    cases = [eval_dir / "cases" / c["dir"] for c in json.loads(eval_meta_path.read_text())["cases"]]
     t0 = time.time()
     failed = []
     with ThreadPoolExecutor(a.jobs) as ex:
-        for name, rc in ex.map(lambda c: run_case(c, a.model, a.effort, a.timeout), cases):
+        for name, rc in ex.map(lambda c: run_case(c, a.eval_id, a.model, a.effort, a.timeout), cases):
             print(f"{'ok  ' if rc == 0 else 'FAIL'} {name} (rc={rc})", flush=True)
             if rc != 0:
                 failed.append(name)

@@ -14,13 +14,42 @@ from metrics import compute_metrics, render_metrics_md
 from patterns import render_patterns_md
 
 EVALS_ROOT = Path(__file__).resolve().parent.parent.parent
-RESULTS_ROOT = EVALS_ROOT / "results"
+RESULTS_ROOT = EVALS_ROOT.parent / "output" / "evals"
+TEMP_EVALS_ROOT = Path("/tmp/icm-evals")
+
+
+def render_case_report(result: dict[str, Any]) -> str:
+    """Render per-case deterministic check report as markdown."""
+    status = "PASS" if result.get("passed") else "FAIL"
+    lines = [
+        f"# Case Report — {result.get('dir', result.get('case_id', 'unknown'))}",
+        "",
+        f"- **Result:** {status}",
+        f"- **Kind:** {result.get('kind')}",
+        f"- **Split:** {result.get('split')}",
+        f"- **Input:** {result.get('input')}",
+        "",
+        "## Checks",
+        "",
+        "| Check | Passed | Detail |",
+        "|---|---|---|",
+    ]
+    for name, c in result.get("checks", {}).items():
+        mark = "PASS" if c.get("passed") else "FAIL"
+        detail = str(c.get("detail") or "-").replace("\n", " ").replace("|", "\\|")
+        lines.append(f"| {name} | {mark} | {detail} |")
+    return "\n".join(lines) + "\n"
 
 
 def score_eval(eval_id: str) -> dict[str, Any]:
-    """Score (or re-score) every case in results/<eval_id>/."""
+    """Score (or re-score) every case in output/evals/<eval_id>/."""
     eval_dir = RESULTS_ROOT / eval_id
-    eval_meta = json.loads((eval_dir / "eval.json").read_text(encoding="utf-8"))
+    tmp_eval_dir = TEMP_EVALS_ROOT / eval_id
+    tmp_eval_dir.mkdir(parents=True, exist_ok=True)
+    eval_meta_path = tmp_eval_dir / "eval.json"
+    if not eval_meta_path.is_file():
+        eval_meta_path = eval_dir / "eval.json"
+    eval_meta = json.loads(eval_meta_path.read_text(encoding="utf-8"))
     cases = eval_meta["cases"]
 
     scored: list[dict[str, Any]] = []
@@ -28,8 +57,9 @@ def score_eval(eval_id: str) -> dict[str, Any]:
         case_dir = eval_dir / "cases" / case_meta["dir"]
         result = evaluate_case(case_meta, case_dir)
         result["door_number"] = case_meta.get("door_number")
-        (case_dir / "check.json").write_text(
-            json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8"
+        (case_dir / "check.json").unlink(missing_ok=True)
+        (case_dir / "report.md").write_text(
+            render_case_report(result), encoding="utf-8"
         )
         scored.append(result)
 
@@ -77,7 +107,7 @@ def score_eval(eval_id: str) -> dict[str, Any]:
         "cases": scored,
     }
 
-    (eval_dir / "summary.json").write_text(
+    (tmp_eval_dir / "summary.json").write_text(
         json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     (eval_dir / "summary.md").write_text(render_markdown(summary), encoding="utf-8")
@@ -85,7 +115,7 @@ def score_eval(eval_id: str) -> dict[str, Any]:
     (eval_dir / "inputs_outputs.md").write_text(
         render_inputs_outputs(summary), encoding="utf-8"
     )
-    (eval_dir / "status.json").write_text(
+    (tmp_eval_dir / "status.json").write_text(
         json.dumps(
             {
                 "eval_id": eval_id,
@@ -97,6 +127,8 @@ def score_eval(eval_id: str) -> dict[str, Any]:
         ),
         encoding="utf-8",
     )
+    for stale_json in ("eval.json", "status.json", "summary.json"):
+        (eval_dir / stale_json).unlink(missing_ok=True)
     return summary
 
 
@@ -192,7 +224,7 @@ def render_markdown(summary: dict[str, Any]) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Score a completed eval run.")
-    parser.add_argument("eval_id", help="Eval ID under evals/results/")
+    parser.add_argument("eval_id", help="Eval ID under output/evals/")
     args = parser.parse_args()
 
     try:
@@ -203,8 +235,8 @@ def main() -> int:
 
     print(
         f"Eval {summary['eval_id']}: {summary['passed_runs']}/{summary['total_runs']} passed "
-        f"(summary: geolocation_evals/results/{summary['eval_id']}/summary.md, "
-        f"patterns: geolocation_evals/results/{summary['eval_id']}/report.md)"
+        f"(summary: output/evals/{summary['eval_id']}/summary.md, "
+        f"patterns: output/evals/{summary['eval_id']}/report.md)"
     )
     return 0 if summary["failed_runs"] == 0 else 1
 

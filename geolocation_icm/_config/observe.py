@@ -12,7 +12,7 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / 'observability'
+DATA = Path(os.environ['ICM_OBSERVABILITY_DIR']) if os.environ.get('ICM_OBSERVABILITY_DIR') else ROOT / 'observability'
 
 
 def safe(value):

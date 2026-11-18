@@ -520,11 +520,15 @@ if __name__ == "__main__":
             locality_stated=(arguments.locality_stated == "true"),
         )
         encoded = json.dumps(result, ensure_ascii=False, separators=(",", ":"))
-        if arguments.out:
-            out_dir = os.path.dirname(os.path.abspath(arguments.out))
-            os.makedirs(out_dir, exist_ok=True)
-            with open(arguments.out, "w", encoding="utf-8") as out_file:
-                out_file.write(encoded + "\n")
+        out_path = arguments.out
+        if not out_path:
+            active = Path("/tmp/icm-observability/.active-run")
+            run_id = active.read_text(encoding="utf-8").strip() if active.is_file() else "default"
+            out_path = f"/tmp/icm_maps_{run_id}.json"
+        out_dir = os.path.dirname(os.path.abspath(out_path))
+        os.makedirs(out_dir, exist_ok=True)
+        with open(out_path, "w", encoding="utf-8") as out_file:
+            out_file.write(encoded + "\n")
         print(encoded)
     except Exception as exc:
         print(json.dumps({"error": str(exc), "query": arguments.query}, ensure_ascii=False))

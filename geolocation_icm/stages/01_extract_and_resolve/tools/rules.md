@@ -1,6 +1,8 @@
 # Stage 01 tool and command rules
 
-Run all commands from the workspace root: the directory containing `AGENTS.md` and `stages/` (normally `geolocation_icm/`, or the isolated workspace root in an eval). Do not change into `stages/`. Treat all Python files as black boxes: never read any `.py` file. Do not read `_config/*` source files. Use only `tools/google_maps.py` and `tools/write_stage01.py` via the commands below; do not write output files by hand.
+Run all commands from the `maps/` workspace root. Never create `stages/*/output/` or copy stage files. Treat all Python files as black boxes: never read any `.py` file. Do not read `_config/*` source files. Use only `geolocation_icm/stages/01_extract_and_resolve/tools/google_maps.py` and `geolocation_icm/stages/01_extract_and_resolve/tools/write_stage01.py` via the commands below; do not write output files by hand.
+
+If the prompt specifies an explicit output directory `<out_dir>`, add `--out-dir "<out_dir>"` to `write_stage01.py` and `--out "<out_dir>/maps_raw_output.json"` to `google_maps.py`. Otherwise (normal run), omit both flags.
 
 ## Start and classify
 
@@ -9,17 +11,17 @@ Store the message verbatim as `raw_text`. Do not run `--start` as a separate tur
 For a non-address, run and stop:
 
 ```sh
-python3 stages/01_extract_and_resolve/tools/write_stage01.py --start && python3 stages/01_extract_and_resolve/tools/write_stage01.py --is-address false
+python3 geolocation_icm/stages/01_extract_and_resolve/tools/write_stage01.py --start && python3 geolocation_icm/stages/01_extract_and_resolve/tools/write_stage01.py --is-address false
 ```
 
-This writes `stages/01_extract_and_resolve/output/orientation.json` with `is_address: false`; do not call Maps.
+This writes `orientation.json` with `is_address: false`; do not call Maps.
 
 ## Address resolution
 
 After classification and extraction according to the [decision rules](../references/extraction_and_maps_rules.md), run the first attempt:
 
 ```sh
-python3 stages/01_extract_and_resolve/tools/write_stage01.py --start && python3 stages/01_extract_and_resolve/tools/google_maps.py --query "<exact query>" --locality-stated <true|false> --out stages/01_extract_and_resolve/output/maps_raw_output.json
+python3 geolocation_icm/stages/01_extract_and_resolve/tools/write_stage01.py --start && python3 geolocation_icm/stages/01_extract_and_resolve/tools/google_maps.py --query "<exact query>" --locality-stated <true|false>
 ```
 
 The Maps tool writes the JSON directly and prints the same JSON to stdout. For each retry, omit `--start` and use the same Maps command with the new query. If the fallback is an earlier attempt, rerun that query so the output holds the chosen response. The saved response's `query_executed` must exactly match a recorded attempt query. Never hand-edit or copy this output.
@@ -27,12 +29,12 @@ The Maps tool writes the JSON directly and prints the same JSON to stdout. For e
 Finalize the chosen attempt:
 
 ```sh
-python3 stages/01_extract_and_resolve/tools/write_stage01.py --is-address true --sub-premise-notes "<notes>" --destination-type <address|poi> --alternatives '<JSON list>' --attempts '<JSON list>'
+python3 geolocation_icm/stages/01_extract_and_resolve/tools/write_stage01.py --is-address true --sub-premise-notes "<notes>" --destination-type <address|poi> --alternatives '<JSON list>' --attempts '<JSON list>'
 ```
 
 Pass `--alternatives` as `[]` unless the customer supplied alternative delivery addresses; otherwise pass a JSON list containing each original address, including its number. Search the first address independently, and preserve the others in this list. Pass `--destination-type poi` for a named destination, and `address` for a street address even if a place is mentioned as a landmark.
 
-The finalizer validates the chosen Maps response and judgments, runs deterministic policy evaluation, writes `stages/01_extract_and_resolve/output/orientation.json`, and prints it to stdout. Do not re-read that file afterward. Validation or policy failure returns a nonzero exit code. Continue only when the finalizer exits zero and the output file exists. A top-level API or matrix error, including `REQUEST_DENIED`, returns nonzero; `ZERO_RESULTS` after all attempts is valid.
+The finalizer validates the chosen Maps response and judgments, runs deterministic policy evaluation, writes `orientation.json`, and prints it to stdout. Do not re-read that file afterward. Validation or policy failure returns a nonzero exit code. Continue only when the finalizer exits zero and the output file exists. A top-level API or matrix error, including `REQUEST_DENIED`, returns nonzero; `ZERO_RESULTS` after all attempts is valid.
 
 ## Maps behavior
 
