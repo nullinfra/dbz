@@ -6,6 +6,6 @@ Runs 50 dynamic cases by default (10 random Corroios streets × `original`, `def
 |---|---|
 | Run an evaluation | Open the project root (`Restaurante/`) and ask the agent: *"Run `geolocation_evals`"* (always starts fresh with `prepare.py`, generating 50 cases by default) |
 | Pipeline stages | [CONTEXT.md](CONTEXT.md) |
-| Read the latest run | `maps/output/evals/<eval_id>/summary.md` and `inputs_outputs.md` |
-| Re-score an existing run | `python3 maps/geolocation_evals/_factory/tools/score.py <eval_id>` |
+| Read an evaluation | `<message_dir>/geolocation_eval/summary.md` and `inputs_outputs.md` |
+| Re-score an existing run | `python3 maps/geolocation_evals/_factory/tools/score.py "$eval_dir"` |
 | Eval settings | [_factory/config.md](_factory/config.md) |

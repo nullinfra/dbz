@@ -233,3 +233,4 @@ __marimo__/
 # Generated runs and evaluations
 /maps/output/
 /ola_click/output/
+/output/

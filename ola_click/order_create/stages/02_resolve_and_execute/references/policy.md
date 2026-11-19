@@ -1,0 +1,6 @@
+# Order creation — Resolution policy
+
+1. Run the [draft check](../CONTEXT.md) after every basket change. It checks that each line carries a catalogue identity and review, that declared choice totals are met, and that destination details and allergy verification are present when required.
+2. The executor fetches the current catalogue and checks product identity, visibility, availability, description, selected variants, and native modifier membership and quantities. A changed description or missing option sends the line back for a fresh review. Use the [catalogue rules](../../../../references/catalog-resolution.md) and [review contract](../../01_extract/references/menus_and_boxes.md) to resolve the item. Native modifiers are sent by ID. Verified choices described in prose go in the combo comment.
+3. Check pricing, service and schedule before checkout. A blocked or incomplete draft stays open and should carry forward the confirmed choices. Use checkout preview with writes disabled for a reviewed order whose total or availability needs verifying.
+4. A live checkout creates the order, adds the reviewed combos and advances it to `PENDING`. An error after creation may leave an initiated order. Verify the order and items already recorded before any retry. Report a placed order only after verifying the result.

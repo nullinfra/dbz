@@ -10,19 +10,21 @@ Run all commands from this root directory (`Restaurante/`). Never read any `.py`
 |---|---|
 | Run geolocation evaluations | [maps/geolocation_evals/CONTEXT.md](maps/geolocation_evals/CONTEXT.md) |
 | Delivery address, street, postal code, or delivery ETA/distance | Read [stage context](maps/geolocation_icm/stages/01_extract_and_resolve/CONTEXT.md), [decision rules](maps/geolocation_icm/stages/01_extract_and_resolve/references/extraction_and_maps_rules.md), and [tool rules](maps/geolocation_icm/stages/01_extract_and_resolve/tools/rules.md) in one batch |
-| Menu, stock, orders (create/update/status/cancel), promos, store hours, or owner management | Read Stage 01 ([context](ola_click/stages/01_classify_and_extract/CONTEXT.md), [rules](ola_click/stages/01_classify_and_extract/references/intent_and_extraction_rules.md), [tools](ola_click/stages/01_classify_and_extract/tools/rules.md)) in one batch → run Stage 01 → read Stage 02 ([context](ola_click/stages/02_resolve_and_execute/CONTEXT.md), [rules](ola_click/stages/02_resolve_and_execute/references/execution_and_policy_rules.md), [tools](ola_click/stages/02_resolve_and_execute/tools/rules.md)) in one batch → run Stage 02 |
-| Greeting, general question, or non-actionable chat | Reply directly as the restaurant's WhatsApp assistant (skip both ICMs) |
+| Menu, stock, orders, promotions, store hours, delivery fees, rider operations, or owner management | [OlaClick router](ola_click/CONTEXT.md) |
+| Greeting, casual appetite cue, or non-actionable chat | Reply directly. If the customer only says they are hungry, ask a short preference question. Route to OlaClick when they ask for a menu recommendation, product, price, or availability. |
 
 ## How to handle a message
 
-1. **Decide the route(s):**
+1. **Allocate output.** Follow the [chat output contract](tools/chat-output.md). Use the current message directory for every ICM. An evaluation worker uses the explicit case output directory from its prompt.
+2. **Decide the route(s):**
    - Route to **Geolocation ICM** if the message includes a delivery location/address.
-   - Route to **OlaClick ICM** if the message asks about menu items/stock/hours or wants to create, check, update, or cancel an order (or owner menu/stock/order management).
-   - **Combined messages** (e.g., *"Quero 2 pastéis de carne para a Av. Cristo Rei, 47"*): run **both** ICMs **in parallel** (issue independent tool calls together) and combine their results in one reply.
-2. **Respect ICM contracts:**
+   - Route to **OlaClick** for the restaurant operations in the routing table.
+   - **Combined messages** (e.g., *"Quero 2 pastéis de carne para a Av. Cristo Rei, 47"*): run independent Maps and OlaClick work in parallel. Pass any Maps result needed by a dependent OlaClick operation before executing it, then combine the results in one reply.
+3. **Respect ICM contracts:**
    - For **Geolocation ICM**, follow its stage contract (it writes `orientation.json`; in eval runs, follow the prompt's `--out-dir` / `--maps` flags).
-   - For **OlaClick ICM**, run `01_classify_and_extract` then `02_resolve_and_execute`.
-3. **Respond as WhatsApp:**
-   - Use the `orientation.json` output (`status`, `suggested_message`, `menu_matches`, `within_50km`, `eta`, `confirmation_required`) to write a clear, friendly WhatsApp reply in the user's language (default Portuguese).
+   - For **OlaClick**, follow the router's coordination steps and the selected ICMs' stage contracts. Use the resulting `orientation.json` files for the reply.
+4. **Respond as WhatsApp:**
+   - Use the verified result to answer in the customer's language (default Portuguese). If a tool needs a progress update, keep it to one brief customer-facing line. Keep terms such as ICM, pipeline, system, and backend out of the customer reply.
    - Do not dump raw JSON to the user unless explicitly requested.
-   - If `confirmation_required: true` or `needs_clarification: true`, ask the user cleanly before proceeding.
+   - When details are missing, carry forward the choices already made and **always end with a concrete question** asking for the next useful decision (naming the specific product(s) or group, missing quantities, and verified options). Never stop after merely summarizing what is still missing. For an incomplete order, finish resolving all item choices and item confirmations before asking for delivery vs. pickup or location/checkout details (unless already given). Describe an incomplete order as a draft. Claim a placed order only when the order result confirms creation.
+   - Ask for any confirmation required by the orientation before proceeding.

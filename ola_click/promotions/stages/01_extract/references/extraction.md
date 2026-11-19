@@ -1,0 +1,9 @@
+# Promotions — Extraction rules
+
+Use `manage_promotions` with `operation` set to `list`, `get`, `create`, `update` or `delete`. Use `promotion_id` from the verified result for an existing promotion. Resolve a name or code by inspecting the available promotion records, then carry the actual ID.
+
+For creation, record `name`, `code`, `discount_type` (`percentage` or `amount`), `discount_value`, `minimum_order_amount`, `valid_from`, `valid_until`, `usage_limit` (positive integer or null for explicitly unlimited), and `published`. Ask for any terms that materially affect the discount and remain unclear. Use dates or ISO-8601 timestamps representing the intended validity window in Europe/Lisbon.
+
+For updates, supply only the desired changes. Optional restrictions are `promotion_type`, `products`, `service_types`, `audience`, `usage_limit_per_customer`, `schedule`, and `terms`. For a product-specific offer, set `promotion_type: "products"` and pass the exact `products: [{"id":"...","name":"..."}]` selected from the [current catalogue](../../../../references/catalog-resolution.md). Resolve ingredient or category language before expanding the product list.
+
+For listing, use `service_type_filter` when specified. Use `redeemable_now: true` for promotions redeemable at this time. Refer to the [official promotion tools](https://developers.olaclick.app/docs/mcp#promotions) for supported fields.

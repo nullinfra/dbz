@@ -1,0 +1,6 @@
+# Menu lookup — Resolution policy
+
+- `get_menu_category` with `include_details: true` returns `results[].mcp_result.menu_matches`. Each row carries the catalogue identity, description, availability, variants and modifier category IDs. Use the detailed list for discovery and for scopes that include currently unavailable items. With no filters or detail flag the result is the available menu summary.
+- `check_menu_item` checks a verified UUID or an exact catalogue name. `include_details: true` also returns the official product detail in `mcp_result.response.data` when the product is unique. Use the detail for native variants, modifiers and stock settings.
+- Availability, numeric price ranges and category visibility are checked against current API data. For a product with multiple variants, report the price and availability of the selected variant. Semantic filters such as dietary or ingredient requests follow the [catalogue resolution contract](../../../../references/catalog-resolution.md).
+- For an offer customers may order by position, [save the actual products in the order shown](../tools/rules.md). Preserve the catalogue identity even when the WhatsApp label is shorter.

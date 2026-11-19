@@ -1,9 +1,14 @@
 # 00_prepare — validate and freeze an eval run
 
-1. Run `python3 maps/geolocation_evals/_factory/tools/prepare.py` (defaults to `--streets 10 --scenarios 20`, generating `10 * 3 = 30` street cases plus 20 scenario cases = `50` cases from `_factory/corroios_streets.json`).
-2. Preserves all previous runs under `maps/output/evals/` and creates a new timestamped folder `maps/output/evals/<YYYYMMDD-HHMMSS>/` with `eval.json`, `status.json` (`prepared`), and for each case/repeat:
-   - `cases/<dir>/prompt.md` (blind prompt)
-   - `cases/<dir>/output/` (empty case output directory; no workspace copy is created).
+Use the allocated [chat message directory](../../../../tools/chat-output.md) as `message_dir`. Run from the project root:
+
+```sh
+eval_dir="$(pwd -P)/$message_dir/geolocation_eval"
+python3 maps/geolocation_evals/_factory/tools/prepare.py --eval-id "$eval_dir" &&
+  node maps/geolocation_evals/stages/00_prepare/tools/bind-case-output.cjs "$eval_dir"
+```
+
+The preparer writes `eval.json`, `status.json`, and the blind prompts into `eval_dir`. The binder assigns `cases/<dir>/` for each case's orientation and Maps response while preserving its message verbatim. Proceed only if both commands exit zero. The default is `--streets 10 --scenarios 20`.
 
 ## Scenarios and door numbers
 

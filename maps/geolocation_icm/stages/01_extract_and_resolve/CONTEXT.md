@@ -5,6 +5,7 @@ This stage processes the customer message supplied in the caller's query.
 ## Inputs
 
 - Working input: the customer message supplied in the caller's query.
+- Output assignment: the current [chat message directory](../../../../tools/chat-output.md) or the evaluation case paths supplied by the caller.
 - Decision rules: [extraction and resolution rules](references/extraction_and_maps_rules.md).
 - Tool and command rules: [tool rules](tools/rules.md).
 
@@ -14,13 +15,13 @@ Read both reference files and follow their instructions together. Apply the deci
 
 Run all commands from the project root. Never create `stages/*/output/` or copy stage files.
 
-- **Normal run**: invoke `write_stage01.py` and `google_maps.py` without `--out-dir` or `--out`; they automatically write `maps/output/runs/<run_id>/orientation.json` and clean up intermediate Maps files.
-- **Eval run**: when the prompt specifies an explicit output directory, pass `--out-dir "<out_dir>"` to `write_stage01.py` and `--out "<out_dir>/maps_raw_output.json"` to `google_maps.py`.
+- **Chat run**: use `<message_dir>/maps/` for the whole run. Pass its path to each tool as documented and clean up the intermediate Maps file when finalizing.
+- **Eval case**: use the output directory and Maps response path assigned in the case prompt. Retain the Maps response for scoring.
 
 ## Outputs
 
-- Normal run: `maps/output/runs/<run_id>/orientation.json` (plus `summary.md` written by the observer hook).
-- Eval run: `<out_dir>/orientation.json` and `<out_dir>/maps_raw_output.json`.
+- Chat run: `<message_dir>/maps/orientation.json`.
+- Eval case: `orientation.json` and `maps_raw_output.json` at the assigned paths.
 
 ## Check
 
