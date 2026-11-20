@@ -9,17 +9,19 @@ Run all commands from this root directory (`Restaurante/`). Never read any `.py`
 | Message / Task | Where to go |
 |---|---|
 | Run geolocation evaluations | [maps/geolocation_evals/CONTEXT.md](maps/geolocation_evals/CONTEXT.md) |
-| Delivery address, street, postal code, or delivery ETA/distance | Read [stage context](maps/geolocation_icm/stages/01_extract_and_resolve/CONTEXT.md), [decision rules](maps/geolocation_icm/stages/01_extract_and_resolve/references/extraction_and_maps_rules.md), and [tool rules](maps/geolocation_icm/stages/01_extract_and_resolve/tools/rules.md) in one batch |
-| Menu, stock, orders, promotions, store hours, delivery fees, rider operations, or owner management | [OlaClick router](ola_click/CONTEXT.md) |
+| Run OlaClick conversation evaluations | [ola_click/ola_click_evals/CONTEXT.md](ola_click/ola_click_evals/CONTEXT.md) |
+| Delivery street address, postal code, landmark, or delivery ETA/distance | Read [stage context](maps/geolocation_icm/stages/01_extract_and_resolve/CONTEXT.md), [decision rules](maps/geolocation_icm/stages/01_extract_and_resolve/references/extraction_and_maps_rules.md), and [tool rules](maps/geolocation_icm/stages/01_extract_and_resolve/tools/rules.md) in one batch |
+| Menu, stock, orders, promotions, store hours, delivery fees (including district/zone quotes), rider operations, client profiles, or owner management | [OlaClick router](ola_click/CONTEXT.md) |
 | Greeting, casual appetite cue, or non-actionable chat | Reply directly. If the customer only says they are hungry, ask a short preference question. Route to OlaClick when they ask for a menu recommendation, product, price, or availability. |
 
 ## How to handle a message
 
-1. **Allocate output.** Follow the [chat output contract](tools/chat-output.md). Use the current message directory for every ICM. An evaluation worker uses the explicit case output directory from its prompt.
-2. **Decide the route(s):**
-   - Route to **Geolocation ICM** if the message includes a delivery location/address.
+1. **Allocate output.** If a message directory is already supplied (by the hook or eval prompt), use it directly and **do not open `tools/chat-output.md`**. Otherwise follow [tools/chat-output.md](tools/chat-output.md). Use `<message_dir>/ola_click/NN_<icm>/` for OlaClick runs and `<message_dir>/maps/` for Maps.
+2. **Decide the route(s) and read once:**
+   - Route to **Geolocation ICM** if the message includes a street address, postal code, landmark, or delivery ETA/distance request (do **not** route district/zone-only fee questions such as *"distrito de Corroios"* to Geolocation ICM—send those directly to OlaClick `quote_delivery`).
    - Route to **OlaClick** for the restaurant operations in the routing table.
    - **Combined messages** (e.g., *"Quero 2 pastéis de carne para a Av. Cristo Rei, 47"*): run independent Maps and OlaClick work in parallel. Pass any Maps result needed by a dependent OlaClick operation before executing it, then combine the results in one reply.
+   - **Minimize round trips:** For OlaClick, read `ola_click/CONTEXT.md` once, then `cat` the complete read set of the selected ICM(s) in **one** shell command. Never `ls`, `find`, or `rg` inside `ola_click/` to discover docs. For multi-turn chats, run `node .codex/chat-output.cjs context "$MSG"` instead of `find` to locate prior drafts, `menu_offer.json`, and orientations. Combine write + run in one command, and run independent branches concurrently with `&` + `wait`.
 3. **Respect ICM contracts:**
    - For **Geolocation ICM**, follow its stage contract (it writes `orientation.json`; in eval runs, follow the prompt's `--out-dir` / `--maps` flags).
    - For **OlaClick**, follow the router's coordination steps and the selected ICMs' stage contracts. Use the resulting `orientation.json` files for the reply.

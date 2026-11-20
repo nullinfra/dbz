@@ -95,22 +95,22 @@ function messageDirectory(chatId, { turnId = null, messageId, rawInput = null } 
 }
 
 function activeMessage(chatId, turnId) {
-  if (!turnId) return null;
   const chat = findSession(chatId);
   if (!chat) return null;
-  const legacyPrefix = `${id(turnId, 'turn ID')}__`;
   const names = fs.readdirSync(chat, { withFileTypes: true })
     .filter(entry => entry.isDirectory())
     .map(entry => entry.name)
     .sort()
     .reverse();
 
-  function newestCandidate(matches) {
+  function newestCandidate(matches, requireTurnId) {
     for (const name of names.filter(matches)) {
       const directory = path.join(chat, name);
       try {
         const metadata = JSON.parse(fs.readFileSync(path.join(directory, 'message.json'), 'utf8'));
-        if (metadata.turn_id === turnId) return { directory, receivedAt: metadata.received_at };
+        if (requireTurnId ? metadata.turn_id === turnId : metadata.turn_id == null) {
+          return { directory, receivedAt: metadata.received_at };
+        }
       } catch (error) {
         if (error.code !== 'ENOENT') throw error;
       }
@@ -118,8 +118,13 @@ function activeMessage(chatId, turnId) {
     return null;
   }
 
-  const current = newestCandidate(name => timestampName.test(name));
-  const legacy = newestCandidate(name => name.startsWith(legacyPrefix));
+  if (!turnId) {
+    return newestCandidate(name => timestampName.test(name), false)?.directory ?? null;
+  }
+
+  const legacyPrefix = `${id(turnId, 'turn ID')}__`;
+  const current = newestCandidate(name => timestampName.test(name), true);
+  const legacy = newestCandidate(name => name.startsWith(legacyPrefix), true);
   if (current && (!legacy || current.receivedAt >= legacy.receivedAt)) return current.directory;
   return legacy?.directory ?? null;
 }
@@ -127,7 +132,7 @@ function activeMessage(chatId, turnId) {
 function onHook(event) {
   if (process.env.RESTAURANTE_EVAL_WORKER === '1') return;
 
-  const { hook_event_name: name, session_id: chatId, turn_id: turnId } = event;
+  const { hook_event_name: name, session_id: chatId, turn_id: turnId = null } = event;
   if (name === 'SessionStart') {
     sessionDirectory(chatId);
     return;
@@ -159,6 +164,55 @@ function onHook(event) {
   }
 }
 
+function chatContext(messageDir) {
+  const resolved = path.resolve(messageDir);
+  const chatDir = path.dirname(resolved);
+  const currentName = path.basename(resolved);
+  if (!fs.existsSync(chatDir)) throw new Error('Chat directory not found.');
+  const turns = fs.readdirSync(chatDir, { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+    .map(entry => entry.name)
+    .sort()
+    .filter(name => name <= currentName);
+
+  let latestMenuOffer = null;
+  let latestCreateOrderIntent = null;
+  const recentOrientations = [];
+
+  for (const turn of turns) {
+    const olaDir = path.join(chatDir, turn, 'ola_click');
+    if (!fs.existsSync(olaDir)) continue;
+    const runs = fs.readdirSync(olaDir, { withFileTypes: true })
+      .filter(entry => entry.isDirectory())
+      .map(entry => entry.name)
+      .sort();
+    for (const run of runs) {
+      const runDir = path.join(olaDir, run);
+      const offer = path.join(runDir, 'menu_offer.json');
+      if (fs.existsSync(offer)) latestMenuOffer = offer;
+      const intentFile = path.join(runDir, 'stage01_intent.json');
+      if (fs.existsSync(intentFile)) {
+        try {
+          const data = JSON.parse(fs.readFileSync(intentFile, 'utf8'));
+          const ops = data.operations ?? [data];
+          if (ops.some(op => op.intent === 'create_order')) latestCreateOrderIntent = intentFile;
+        } catch {}
+      }
+      const orientationFile = path.join(runDir, 'orientation.json');
+      if (fs.existsSync(orientationFile)) recentOrientations.push(orientationFile);
+    }
+  }
+
+  return {
+    chat_dir: chatDir,
+    message_dir: resolved,
+    turns,
+    latest_menu_offer: latestMenuOffer,
+    latest_create_order_intent: latestCreateOrderIntent,
+    recent_orientations: recentOrientations.slice(-3),
+  };
+}
+
 try {
   const [command, ...args] = process.argv.slice(2);
   const fromStdin = command === 'message' && args[0] === '--stdin';
@@ -171,8 +225,12 @@ try {
   } else if (command === 'message') {
     const rawInput = fromStdin ? fs.readFileSync(0, 'utf8') : null;
     console.log(path.relative(root, messageDirectory(currentChat, { messageId, rawInput })));
+  } else if (command === 'context') {
+    const target = args[0] || process.env.RESTAURANTE_EVAL_MESSAGE_DIR;
+    if (!target) throw new Error('Usage: node .codex/chat-output.cjs context <message-dir>');
+    console.log(JSON.stringify(chatContext(target), null, 2));
   } else {
-    throw new Error('Usage: node .codex/chat-output.cjs session [chat-id] | message [--stdin] [chat-id [message-id]]');
+    throw new Error('Usage: node .codex/chat-output.cjs session [chat-id] | message [--stdin] [chat-id [message-id]] | context <message-dir>');
   }
 } catch (error) {
   console.error(error.message);

@@ -1,0 +1,6 @@
+# Clients — Resolution policy
+
+1. Client operations require the actor to be a known `owner`. OlaClick requires `clients:read` for `get_clients` and `get_client`, and `clients:write` for `create_client` and `update_client`.
+2. For client lists, inspect `pagination.has_more` in `mcp_result.response`. If the owner requests all results or a unique match needs more pages, advance the page in a new run with the same filters. Use the total only when OlaClick supplies it. Share only the fields needed for the request.
+3. Creation and updates use the existing `OLACLICK_ALLOW_WRITES` gate. Send only the requested updates and verify that the response identifies the same UUID. A successful creation returns the new client UUID.
+4. For `422 client_already_exists`, find the existing profile by exact phone and calling code using `get_clients`. Use the lookup to explain the conflict and ask whether the owner wants an update. After an uncertain write outcome, check for the change before attempting the write again. Use the [official create reference](https://developers.olaclick.app/docs/mcp#create_client) and [update reference](https://developers.olaclick.app/docs/mcp#update_client) for upstream behavior.

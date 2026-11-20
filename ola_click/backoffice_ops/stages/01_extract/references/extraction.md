@@ -1,6 +1,6 @@
 # Back-office operations — Extraction rules
 
-Use this pipeline for checking order status, listing orders, querying sales, analytics or cashier balances, and working with saved delivery addresses. Route staff and standalone client profile requests to [Company & Users](../../../../company_users/CONTEXT.md).
+Use this pipeline for checking order status, listing orders, querying sales, analytics or cashier balances, and working with saved delivery addresses. Route staff requests to [Company & Users](../../../../company_users/CONTEXT.md) and standalone client profile requests to [Clients](../../../../clients/CONTEXT.md).
 
 ## 1. Intents and exact `entities` schemas
 

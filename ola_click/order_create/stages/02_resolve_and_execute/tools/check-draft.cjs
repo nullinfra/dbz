@@ -8,10 +8,18 @@ function checkItem(item, add) {
   if (!integer(item?.quantity, 1)) add('quantity');
   if (item?.variant_id != null && !uuid(item.variant_id)) add('variant_id');
   const review = item?.catalog_review;
-  if (!record(review) || !uuid(review.category_id) ||
-      !(review.description === null || typeof review.description === 'string') ||
-      !Array.isArray(review.issues) || !Array.isArray(review.groups)) {
-    add('catalog_review');
+  const expectedShape = '{ category_id: "<uuid>", description: "<string|null>", groups: [], issues: [] }';
+  if (!record(review)) {
+    add('catalog_review', { expected: expectedShape });
+    return;
+  }
+  const missingFields = [];
+  if (!uuid(review.category_id)) missingFields.push('category_id (uuid)');
+  if (!(review.description === null || typeof review.description === 'string')) missingFields.push('description (string|null)');
+  if (!Array.isArray(review.groups)) missingFields.push('groups (array)');
+  if (!Array.isArray(review.issues)) missingFields.push('issues (array)');
+  if (missingFields.length) {
+    add('catalog_review', { missing_fields: missingFields, expected: expectedShape });
     return;
   }
 

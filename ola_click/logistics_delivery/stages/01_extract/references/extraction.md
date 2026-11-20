@@ -22,4 +22,5 @@ Use this pipeline for delivery pricing/quotes, assigning or unassigning a rider,
    - *"problema na entrega"* → `"DELIVERY_ISSUE"`
 2. **Unassigning a rider (*"tira o estafeta do pedido X"*):**
    - Use `intent: "assign_rider"` with `entities: {"order_id": ..., "unassign": true}`.
-3. Leave unresolved order references and GPS coordinates null. Use the [resolution policy](../../02_resolve_and_execute/references/policy.md) to find the correct delivery zone or staff rider. The API also accepts `RIDER_NOT_FOUND` and `REQUEST_FAILED` from the delivery provider.
+3. **District/zone-only fee questions (*"distrito de Coroios"*, *"entrega para Corroios"*):** Do **not** put the district name in `delivery_address` (that blocks preflight without calling pricing). Use `quote_delivery` with `{}` (or a verified `district_id`) so Stage 02 calls `get_delivery_pricing` and resolves the district—even if the customer misspelled the district name.
+4. Leave unresolved order references and GPS coordinates null. Use the [resolution policy](../../02_resolve_and_execute/references/policy.md) to find the correct delivery zone or staff rider. The API also accepts `RIDER_NOT_FOUND` and `REQUEST_FAILED` from the delivery provider.

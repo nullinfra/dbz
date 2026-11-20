@@ -13,6 +13,10 @@ function outputParts(file) {
   if (parts[0] === '..' || path.isAbsolute(parts.join(path.sep))) {
     throw new Error('Use an artifact inside the chat output directory.');
   }
+  // Eval conversations keep each case's normal chat layout inside the triggering message.
+  if (['.ola_click_eval_work', 'ola_click_eval'].includes(parts[2]) && parts[3] === 'cases' && parts.length >= 6) {
+    return [parts.slice(0, 5).join(path.sep), ...parts.slice(5)];
+  }
   return parts;
 }
 

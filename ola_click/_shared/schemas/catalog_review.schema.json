@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "catalog_review",
+  "description": "Required review object on every create_order / items_add / items_swap item.",
+  "type": "object",
+  "required": ["category_id", "description", "groups", "issues"],
+  "properties": {
+    "category_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Exact category UUID from the live menu result."
+    },
+    "description": {
+      "type": ["string", "null"],
+      "description": "Exact catalogue description from the live menu result, or null."
+    },
+    "groups": {
+      "type": "array",
+      "description": "Prose choice groups; [] when the item has no prose choices.",
+      "items": {
+        "type": "object",
+        "required": ["label", "min", "max", "selections"],
+        "properties": {
+          "label": { "type": "string" },
+          "min": { "type": "integer", "minimum": 0 },
+          "max": { "type": ["integer", "null"] },
+          "selections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "quantity"],
+              "properties": {
+                "name": { "type": "string" },
+                "quantity": { "type": "integer", "minimum": 1 },
+                "product_id": { "type": ["string", "null"], "format": "uuid" }
+              }
+            }
+          },
+          "question": { "type": "string" }
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "description": "Unresolved conditions outside group counts; [] when none.",
+      "items": {
+        "type": "object",
+        "required": ["question"],
+        "properties": {
+          "question": { "type": "string" }
+        }
+      }
+    }
+  }
+}

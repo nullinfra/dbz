@@ -12,7 +12,8 @@ output/<chat_folder>/<message_folder>/
 │   └── 01_batch/
 │       ├── stage01_intent.json
 │       └── orientation.json
-└── geolocation_eval/
+├── geolocation_eval/
+└── ola_click_eval/
 ```
 
 `message.json` records the folder's chat ID, message ID, timestamp, and Codex turn ID when available. `raw_input` holds the original message text, including line breaks and whitespace. The hook writes the summary at the end of the message. Create ICM folders as they are used.
@@ -36,4 +37,5 @@ Set `message_text` to the incoming text as received. The command uses the curren
 - Treat the allocated path as `message_dir`. Pass it to each selected ICM and delegated stage, along with the exact subfolder assigned to that work.
 - Use `<message_dir>/maps/` for Maps. Use numbered run directories under `<message_dir>/ola_click/`, such as `01_batch/` or `01_menu_read/`. Each parallel or dependent run gets its own directory. Both OlaClick stages in a run share it.
 - Start a geolocation evaluation under `<message_dir>/geolocation_eval/`. Evaluation workers use their explicit per-case paths under that evaluation, including any supplied `--maps` path.
+- Publish an OlaClick evaluation under `<message_dir>/ola_click_eval/` with an `eval_report.md` and one folder per test. Each worker treats `<message_dir>/.ola_click_eval_work/cases/<case>/<turn>/` as its assigned message directory, with a shared case directory for the conversation.
 - Supply the output flags in the ICM's tool rules on every call. Use the output from the assigned directory when replying.

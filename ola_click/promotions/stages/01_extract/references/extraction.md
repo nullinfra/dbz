@@ -1,6 +1,6 @@
 # Promotions — Extraction rules
 
-Use `manage_promotions` with `operation` set to `list`, `get`, `create`, `update` or `delete`. Use `promotion_id` from the verified result for an existing promotion. Resolve a name or code by inspecting the available promotion records, then carry the actual ID.
+Use `manage_promotions` with `operation` set to `list`, `get`, `create`, `update` or `delete`. Use `promotion_id` from the verified result for an existing promotion. When the owner names a promotion code or title (e.g. `BALCAO10`) without a `promotion_id`, **always** run `manage_promotions` with `{"operation":"list"}` first to resolve `promotion_id`—never ask the user for the ID. Resolve a name or code by inspecting the available promotion records, then carry the actual ID.
 
 For creation, record `name`, `code`, `discount_type` (`percentage` or `amount`), `discount_value`, `minimum_order_amount`, `valid_from`, `valid_until`, `usage_limit` (positive integer or null for explicitly unlimited), and `published`. Ask for any terms that materially affect the discount and remain unclear. Use dates or ISO-8601 timestamps representing the intended validity window in Europe/Lisbon.
 

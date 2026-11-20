@@ -1,62 +1,109 @@
 # OlaClick tool and command rules
 
-Run these commands from `Restaurante/`. Treat the Python tools as black boxes. Set `ola_out` to this run's assigned subdirectory under the [message output directory](../../../tools/chat-output.md). Pass it to every tool in the run.
+Run all commands from `Restaurante/`. Treat Python tools as black boxes. Set `ola_out` to this run's assigned subdirectory under `<message_dir>/ola_click/`, e.g. `"$MSG/ola_click/01_menu_read"`.
 
-## Write the intent
+**Critical:** Always pass `--raw-text` as the **exact, character-for-character `<whatsapp>` message** (never paraphrase, trim, or merge with prior turns).
 
-For one operation, supply the verbatim message, the known actor (`customer`, `owner`, or `unknown`), the intent, and a JSON entity object:
+## Canonical one-liner (write + run in one command)
+
+Use the unified writer `ola_click/_shared/tools/write-intent.cjs` for **every** OlaClick intent (it auto-dispatches `company_users`, `clients`, and all other modules) and `run-stage02.cjs --summary` to execute and print a compact summary while writing full artifacts to disk:
 
 ```sh
-python3 ola_click/_shared/tools/cli/write_stage01.py \
-  --start \
-  --out-dir "$ola_out" \
+o="$MSG/ola_click/01_menu_read" && mkdir -p "$o" && \
+node ola_click/_shared/tools/write-intent.cjs --quiet \
+  --out-dir "$o" \
   --raw-text "Quero ver as opções do menu" \
   --actor customer \
   --intent get_menu_category \
-  --entities '{"include_details":true}'
+  --entities '{"include_details":true}' && \
+node ola_click/_shared/tools/run-stage02.cjs --summary "$o"
 ```
 
-For a batch of independent operations:
+For a batch of independent operations (note: `company_users` and `clients` must be in separate runs from other modules):
 
 ```sh
-python3 ola_click/_shared/tools/cli/write_stage01.py \
-  --start \
-  --out-dir "$ola_out" \
+o="$MSG/ola_click/01_batch" && mkdir -p "$o" && \
+node ola_click/_shared/tools/write-intent.cjs --quiet \
+  --out-dir "$o" \
   --raw-text "<verbatim text>" \
   --actor customer \
-  --operations '[{"intent":"get_menu_category","entities":{"include_details":true}},{"intent":"check_store_hours_or_open","entities":{"check_external_apps":true}}]'
+  --operations '[{"intent":"get_menu_category","entities":{"include_details":true}},{"intent":"check_store_hours_or_open","entities":{"check_external_apps":true}}]' && \
+node ola_click/_shared/tools/run-stage02.cjs --summary "$o"
 ```
 
-Use `--operations-file <path>` for a large operations array, such as a bulk menu import. The writer maps its intents to the ICM automatically. Use the [Company & Users writer](../../company_users/stages/01_extract/CONTEXT.md) for that module.
+Use `--operations-file <path>` for a large operations array (e.g., bulk menu import).
 
-The writer exits `0` for valid input and writes `stage01_intent.json` and stdout. The intent artifact contains `run_id`, `raw_text`, `actor`, `is_olaclick_action`, `intent`, `pipeline`, `active_pipelines`, `entities`, and `operations` (each with `intent`, `pipeline`, and `entities`).
+### Parallel independent runs in one command
 
-## Write the orientation
-
-Run this command for checked intents, including batches and gate-only runs.
+When running `company_users` / `clients` alongside another module, or multiple independent runs:
 
 ```sh
-node ola_click/_shared/tools/run-stage02.cjs "$ola_out"
+( o1="$MSG/ola_click/01_payments"; mkdir -p "$o1" && node ola_click/_shared/tools/write-intent.cjs --quiet --out-dir "$o1" --raw-text "$RAW" --actor owner --intent list_payment_methods --entities '{"service_type":"DELIVERY"}' && node ola_click/_shared/tools/run-stage02.cjs --summary "$o1" ) & \
+( o2="$MSG/ola_click/02_menu"; mkdir -p "$o2" && node ola_click/_shared/tools/write-intent.cjs --quiet --out-dir "$o2" --raw-text "$RAW" --actor owner --intent get_menu_category --entities '{"include_details":true}' && node ola_click/_shared/tools/run-stage02.cjs --summary "$o2" ) & \
+wait
 ```
 
-The command writes `preflight.json` with each operation's issues. A blocked run returns an orientation with clarification or an unsupported reason before any MCP call. An unaffected entry in a blocked batch has status `NO_ACTION` and can proceed in a new run if it is independent. A ready run executes its assigned operations and writes `orientation.json`. The same orientation is printed to stdout. The existing Python tools handle legacy intents and gate-only finalization. Company & Users runs use the new module's MCP adapter.
+## Multi-turn chat context
 
-### Execute an order
+Instead of `find`, locate prior drafts, `menu_offer.json`, and recent orientations in one command:
 
-Use the same runner for ready orders. It runs the draft check and writes `draft_readiness.json` before attempting checkout. Use preview for unfinished orders. After a partial failure, check the order and items already recorded before retrying. When retrying an individual MCP order creation, use the same idempotency key.
+```sh
+node .codex/chat-output.cjs context "$MSG"
+```
 
-## Preview an order
+## Exit codes
 
-Use a separate order run for preview. Set both write gates to zero and use the same shared runner. The preflight report lists any incomplete selections. A reviewed draft can continue through live read checks and return the proposed checkout without submitting it.
+| Tool | Exit `0` | Non-zero exit |
+|---|---|---|
+| `write-intent.cjs` | `stage01_intent.json` written | Invalid flags, unknown intent, or mixed `company_users`/`clients` with legacy modules |
+| `run-stage02.cjs` | `orientation.json` written (`COMPLETED`, `NEEDS_CLARIFICATION`, `UNSUPPORTED_OPERATION`, `NEEDS_CONFIRMATION`, `PLANNED_DRY_RUN`, `NO_ACTION`) | `API_ERROR` or invalid `stage01_intent.json` |
+| `check-draft.cjs` | `status: "READY"` | **`status: "DRAFT"` (exits `1`!)** — never chain `check-draft.cjs` with `&&` before `run-stage02.cjs`. `run-stage02.cjs` already runs the draft check and writes `draft_readiness.json` automatically. |
+| `menu-offer.cjs` | Path or JSON items printed | Invalid args or unavailable/missing product |
+
+## Preview an order (or unfinished draft)
+
+Use `run-stage02.cjs --summary` directly with write gates set to `0` — it writes `draft_readiness.json`, `preflight.json`, and `orientation.json` in one call:
 
 ```sh
 OLACLICK_ALLOW_WRITES=0 OLACLICK_ALLOW_DESTRUCTIVE=0 \
-  node ola_click/_shared/tools/run-stage02.cjs "$ola_out"
+  node ola_click/_shared/tools/run-stage02.cjs --summary "$ola_out"
 ```
 
-## Orientation contract
+## Required `catalog_review` shape (`create_order`, `items_add`, `items_swap`)
 
-The finalizer writes and prints `orientation.json`. Use the per-operation entries in `results` for mixed requests. They carry the intent, pipeline, status, clarification or unsupported reason, confirmation flags, proposed action, MCP result, and suggested message where applicable.
+Every item requires `product_id`, `name`, `quantity` (>= 1), and `catalog_review` with all 4 keys (`ola_click/_shared/schemas/catalog_review.schema.json`):
+
+```json
+"catalog_review": {
+  "category_id": "<category UUID from live menu result>",
+  "description": "<exact catalogue description string, or null>",
+  "groups": [],
+  "issues": []
+}
+```
+
+If there are prose choices, add `{"label":"Bebida","min":1,"max":1,"selections":[],"question":"Qual bebida?"}` to `groups`. If there is an unresolved condition outside group counts, add `{"question":"..."}` to `issues`.
+
+## `menu-offer.cjs` quick reference
+
+- Record shortlist: `node ola_click/menu_read/stages/02_resolve_and_execute/tools/menu-offer.cjs record "$ola_out/orientation.json" "$product_ids_json"`
+- Resolve selection (arg 1 is **current** `$MSG`, not `..`): `node ola_click/menu_read/stages/02_resolve_and_execute/tools/menu-offer.cjs select "$MSG" "$offer_file" 'all'` (or `'[1,3]'`)
+- Expand full catalog (arg 1 is **current** `$MSG`): `node ola_click/menu_read/stages/02_resolve_and_execute/tools/menu-offer.cjs catalog "$MSG" "$menu_out/orientation.json"`
+
+## Intent → ICM quick map
+
+- `order_create`: `create_order`
+- `order_modify`: `update_order`, `cancel_order`, `advance_order_status`, `apply_coupon_or_promo`, `register_payment`
+- `menu_read`: `check_menu_item`, `get_menu_category`, `check_store_hours_or_open`
+- `menu_manage`: `set_item_out_of_stock`, `restore_item_in_stock`, `edit_menu`
+- `promotions`: `manage_promotions`
+- `logistics_delivery`: `quote_delivery`, `assign_rider`, `update_delivery_status`, `report_rider_position`
+- `backoffice_ops`: `check_order_status`, `list_active_orders`, `sales_summary`, `manage_customer_address`
+- `company_users`: `get_company`, `list_payment_methods`, `list_users`
+- `clients`: `get_clients`, `get_client`, `create_client`, `update_client`
+- `routing_gates`: `non_actionable`, `unsupported_request`
+
+## Orientation contract
 
 | Status | Meaning |
 |---|---|
@@ -68,4 +115,4 @@ The finalizer writes and prints `orientation.json`. Use the per-operation entrie
 | `NO_ACTION` | The request matched the non-actionable gate. |
 | `API_ERROR` | The finalizer reports an upstream error and exits nonzero. |
 
-Use `needs_clarification`, `confirmation_required`, and `suggested_message` when replying. A failed tool call needs its exit status and diagnostic checked before using any result.
+Use `needs_clarification`, `confirmation_required`, and `suggested_message` when replying. Full details are always in `<run>/orientation.json`.
