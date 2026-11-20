@@ -7,7 +7,7 @@
 
 ## Process
 
-1. Invoke the [shared Stage 02 runner](../../../_shared/tools/rules.md#write-the-orientation). It checks pagination, filters and permissions before calling MCP. When quoting branch opening/closing hours from `get_company`, include the exact `HH:MM` times (e.g. `12:00`, `22:00`).
+1. Invoke the [shared Stage 02 runner](../../../_shared/tools/rules.md). It checks pagination, filters and permissions before calling MCP. When quoting branch opening/closing hours from `get_company`, include the exact `HH:MM` times (e.g. `12:00`, `22:00`). See [native company, staff and payment arguments](tools/rules.md).
 2. For staff lists, check pagination before giving a total or calling the list exhaustive. Advance pages when the request asks for all results. For a rider lookup, require one exact match among active staff with the `rider` role. Return its actual UUID for [delivery logistics](../../../logistics_delivery/CONTEXT.md). Share only the fields needed for the request.
 
 ## Outputs and check

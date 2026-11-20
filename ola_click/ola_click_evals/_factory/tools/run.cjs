@@ -13,7 +13,7 @@ const executor = 'ola_click/_shared/tools/run-stage02.cjs';
 function prompt(scenario, turn, messageDirectory) {
   return [
     'Act as the WhatsApp interface for DoBrasil Pastéis. Follow AGENTS.md and the normal routing and stage contracts.',
-    'Only use the documented restaurant commands. The OlaClick environment already points to the isolated test store. Keep the supplied endpoint and credentials.',
+    'Only use the documented restaurant commands. This evaluation covers OlaClick workflows only (do not invoke Geolocation/Maps ICM). The OlaClick environment already points to the isolated test store. Keep the supplied endpoint and credentials.',
     'Use past turns and artifacts from this chat when relevant. Process only the message below. Do not open the evaluation manifest, fixture, other cases, or harness files.',
     'Return only the WhatsApp reply as your final message.',
     `Verified actor from chat metadata: ${scenario.actor}.`,

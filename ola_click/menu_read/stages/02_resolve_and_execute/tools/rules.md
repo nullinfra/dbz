@@ -1,4 +1,20 @@
-# Save and resolve a menu offer
+# Menu lookup — Tool rules
+
+Use the shared writer for `get_menu_category`, `check_menu_item` and `check_store_hours_or_open`. The table describes native MCP arguments. ICM filters such as `include_details` are handled by the ICM and are absent from the native call.
+
+## Catalogue and food app reads
+
+| Tool | Scope / kind | Required arguments | Optional arguments | When and how to use |
+|---|---|---|---|---|
+| [`get_menu`](https://developers.olaclick.app/docs/mcp#get_menu) | `menu:read` / read | — | `category_slug` (string), `available_only` (boolean) | Read the catalogue, availability and prices in major currency units. The category slug comes from the result. Full catalogue is not paginated and excludes products without variants. |
+| [`list_categories`](https://developers.olaclick.app/docs/mcp#list_categories) | `menu:read` / read | — | — | Resolve category UUIDs, visibility and positions, including categories hidden from the menu. |
+| [`get_category`](https://developers.olaclick.app/docs/mcp#get_category) | `menu:read` / read | `id` (UUID) | — | Read one category by UUID. Use it to confirm a change in position or visibility. |
+| [`list_products`](https://developers.olaclick.app/docs/mcp#list_products) | `menu:read` / read | — | `page` (integer ≥ 1 (default `1`)), `per_page` (integer ≥ 1 ≤ 100 (default `20`)), `category_id` (UUID) | Page through product records, optionally scoped by category. Use get_product for options and modifiers. |
+| [`get_product`](https://developers.olaclick.app/docs/mcp#get_product) | `menu:read` / read | `id` (UUID) | — | Read the product, its variants, stock tracking and modifier categories, including limits and required groups. |
+| [`list_product_variants`](https://developers.olaclick.app/docs/mcp#list_product_variants) | `menu:read` / read | `id` (UUID) | — | Read the variants of one product and resolve their IDs, prices, SKU and stock. Use for variant rename verification. |
+| `get_store_status` | `stores:read` / read | — | `provider_names` (string) | Read open status per food app. UNKNOWN is distinct from closed. For the restaurant’s direct channel use get_company. |
+
+## Menu offers
 
 Run from `Restaurante/`. Use this tool when offering a product shortlist that can be ordered by position or as a group. Use a completed menu lookup with `results[].mcp_result.menu_matches` so the offer has exact catalog identities.
 

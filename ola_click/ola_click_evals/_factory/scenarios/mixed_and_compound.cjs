@@ -12,21 +12,6 @@ module.exports = [
       reply: ['água', '2[,.]5', 'mb[ -]*way'],
     })),
 
-  scenario('mix-maps-order-quote-and-confirm', 'customer', ['routing', 'maps', 'orders', 'delivery', 'payments', 'long'],
-    t('Quero 2 Pastéis de Carne para entregar na Av. Cristo Rei, 47, Corroios. Quanto fica tudo com a entrega e posso pagar por MB WAY?', {
-      calls: [call('list_payment_methods')],
-      reply: ['10[,.]4', '2[,.]5', 'mb[ -]*way'],
-    }),
-    t('Confirmo, envia já o pedido e pago por MB WAY.', {
-      operations: [op('create_order', completed)],
-      writes: [
-        call('create_order', { service_type: 'DELIVERY' }),
-        call('add_order_combos', { combos: [{ variant_id: id(111), quantity: 2 }] }),
-        call('update_order_status', { status: 'PENDING' }),
-      ],
-      reply: ['pt-eval105'],
-    })),
-
   scenario('mix-student-menu-frozen-and-service-switch', 'customer', ['draft', 'menu', 'delivery', 'long'],
     t('Quero um Menu Estudante com carne, alho e Coca-Cola, mais um Pastel de Carne Congelado, para levar.', {
       draft: draft([item(41, 1), item(51, 1)], ['catalog_review.issue'], { service: 'TAKEAWAY', selections: ['Carne', 'Alho', 'Coca-Cola'] }),
@@ -191,15 +176,6 @@ module.exports = [
       reply: ['takeaway|levant|entrega', 'balcao10'],
     })),
 
-  scenarioWithFixture('mix-delivery-distance-pricing-mode', 'customer', ['delivery', 'maps', 'short'],
-    {
-      pricing: { mode: 'DISTANCE', pricing_type: 'DISTANCE', type: 'DISTANCE', price_per_km: 0.8, base_price: 1.5 },
-    },
-    t('Quanto custa a entrega para a Av. Cristo Rei, 47, Corroios?', {
-      calls: [call('get_delivery_pricing'), call('get_delivery_quote')],
-      reply: ['2[,.]5|€|entrega'],
-    })),
-
   scenarioWithFixture('mix-clients-pagination-over-25', 'owner', ['clients', 'short'],
     {
       clients: Array.from({ length: 27 }, (_, idx) => ({
@@ -249,32 +225,6 @@ module.exports = [
         call('update_order_status', { status: 'PENDING' }),
       ],
       reply: ['pt-eval105'],
-    })),
-
-  scenario('mix-maps-poi-payment-methods-and-draft', 'customer', ['maps', 'delivery', 'payments', 'draft', 'short'],
-    t('Quero 2 Pastéis de Carne para entregar na Estação de Corroios. Aceitam MB WAY e quanto custa a entrega? Ainda não envies.', {
-      calls: [call('list_payment_methods')],
-      reply: ['estação|corroios', 'mb[ -]*way', '2[,.]5'],
-      exclude: ['pedido (confirmado|enviado)'],
-    })),
-
-  scenario('mix-maps-missing-door-then-complete-then-quote', 'customer', ['maps', 'delivery', 'long'],
-    t('Quanto custa a entrega para a Avenida Cristo Rei em Corroios?', {
-      ...question('número|porta'),
-    }),
-    t('É o número 47.', {
-      reply: ['47', 'cristo rei', '2[,.]5'],
-    })),
-
-  scenario('mix-maps-subpremise-cash-change-delivery-checkout', 'customer', ['maps', 'delivery', 'payments', 'orders', 'short'],
-    t('Envia já 1 Pastel de Carne para a Av. Cristo Rei, 47, 3º Esq, campainha Silva, Corroios, pago em dinheiro com troco para 20 €.', {
-      operations: [op('create_order', completed)],
-      writes: [
-        call('create_order', { service_type: 'DELIVERY' }),
-        call('add_order_combos', { combos: [{ variant_id: id(111), quantity: 1 }] }),
-        call('update_order_status', { status: 'PENDING' }),
-      ],
-      reply: ['pt-eval105', '20'],
     })),
 
   scenario('mix-delivery-out-of-coverage-switch-to-takeaway', 'customer', ['delivery', 'draft', 'orders', 'long'],

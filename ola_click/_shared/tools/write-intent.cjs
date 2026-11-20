@@ -6,8 +6,9 @@ const { writeJson } = require('./run-stage02.cjs');
 const { nonblank, record } = require('./preflight-values.cjs');
 const company = require('../../company_users/stages/02_resolve_and_execute/tools/company-operations.cjs');
 const clients = require('../../clients/stages/02_resolve_and_execute/tools/client-operations.cjs');
+const variants = require('../../menu_manage/stages/02_resolve_and_execute/tools/variant-operations.cjs');
 
-const mcpPipelines = { company_users: company, clients };
+const mcpPipelines = { company_users: company, clients, menu_manage: variants };
 const legacyWriter = path.join(__dirname, 'cli', 'write_stage01.py');
 
 function parseEntries(values) {
@@ -59,7 +60,7 @@ function main() {
   const allMcp = isMcp.every(Boolean);
 
   if (anyMcp && !allMcp) {
-    throw new Error('Company & Users and Clients intents require a separate run from other OlaClick intents.');
+    throw new Error('Direct MCP intents require a separate run from legacy OlaClick intents.');
   }
 
   if (allMcp) {

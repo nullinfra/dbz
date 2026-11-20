@@ -804,9 +804,9 @@ def _run_order_modify_pipeline(
             ok, res = _mcp_call(mcp_url, api_key, "add_order_discount", d_args)
             return {**base_res, "mode": "live", "http_status": 200 if ok else 422, "response": res}
 
-        if not order.get("client"):
+        if not order.get("client") and not order.get("client_id"):
             return {**base_res, "mode": "validation", "clarification_reason": "COUPON_REQUIRES_CLIENT", "suggested_message": "Na OlaClick, aplicar um cupão exige que o pedido tenha um cliente associado (nome e telefone)."}
-        cp_args = {"id": oid, "code": str(entities.get("coupon_code") or "")}
+        cp_args = {"id": oid, "coupon_code": str(entities.get("coupon_code") or "")}
         base_res["payload"] = cp_args
         if not can_execute:
             return {**base_res, "mode": "dry_run", "dry_run_reason": "safety_gate_disabled", "http_status": None, "response": None}
@@ -846,7 +846,7 @@ def _run_order_modify_pipeline(
             pm_id = p_item.get("payment_method_id")
             if not isinstance(pm_id, str) or pm_id not in method_ids:
                 return {**base_res, "mode": "validation", "clarification_reason": "PAYMENT_METHOD_UNVERIFIED"}
-            p_args: dict[str, Any] = {"id": oid, "payment_method_id": pm_id, "bill_amount": bill_amt}
+            p_args: dict[str, Any] = {"id": oid, "payment_method_id": pm_id, "amount": bill_amt}
             if p_item.get("received_amount") is not None:
                 p_args["received_amount"] = float(p_item["received_amount"])
             if p_item.get("tip_amount") is not None:
@@ -1026,20 +1026,25 @@ def _run_menu_manage_pipeline(
             return {**base_res, "endpoint": "delete_category", "mode": "live", "http_status": 200 if ok_d else 422, "response": res_d}
         if "price_delta" in patch or "price_percent" in patch:
             cat_prods = _catalog_items(menu_body, category=str(cid))
-            if not allow_writes:
-                return {**base_res, "mode": "dry_run", "dry_run_reason": "safety_gate_disabled", "payload": {"products_count": len(cat_prods), "patch": patch}, "http_status": None, "response": None}
-            updated = 0
+            planned = []
             for cp in cat_prods:
                 old_p = float(cp.get("price") or 0)
                 new_p = round(old_p + float(patch["price_delta"]), 2) if "price_delta" in patch else round(old_p * (1 + float(patch["price_percent"]) / 100.0), 2)
-                if new_p >= 0 and cp.get("variant_id"):
-                    ok_u, _ = _mcp_call(mcp_url, api_key, "update_product_variant", {"id": cp["id"], "variantId": cp["variant_id"], "price": new_p, "original_price": max(old_p, new_p)})
-                    if ok_u:
-                        updated += 1
+                if new_p < 0:
+                    return {**base_res, "mode": "validation", "clarification_reason": "INVALID_MENU_PATCH", "suggested_message": f"O ajuste deixaria '{cp.get('name')}' com preço negativo ({new_p:.2f} €). Nenhuma alteração foi feita."}
+                if cp.get("variant_id"):
+                    planned.append({"id": cp["id"], "variantId": cp["variant_id"], "price": new_p, "original_price": max(old_p, new_p)})
+            if not allow_writes:
+                return {**base_res, "mode": "dry_run", "dry_run_reason": "safety_gate_disabled", "payload": {"products_count": len(cat_prods), "patch": patch}, "http_status": None, "response": None}
+            updated = 0
+            for item_args in planned:
+                ok_u, _ = _mcp_call(mcp_url, api_key, "update_product_variant", item_args)
+                if ok_u:
+                    updated += 1
             return {**base_res, "endpoint": "update_product_variant(bulk)", "mode": "live", "http_status": 200, "response": {"updated_products": updated}}
         if cat_obj and str(cat_obj.get("type") or "").upper() == "FAVORITE" and "position" in patch:
             return {**base_res, "mode": "validation", "unsupported_reason": "FAVORITE_CATEGORY_IMMUTABLE", "suggested_message": "A categoria de destaques (`FAVORITE`) não pode ser reposicionada."}
-        u_args = {"id": cid, **{k: patch[k] for k in ("visible", "position") if k in patch}}
+        u_args = {"id": cid, **{k: patch[k] for k in ("name", "visible", "position") if k in patch}}
         base_res["endpoint"] = "update_category"
         base_res["payload"] = u_args
         if not allow_writes:
@@ -1461,6 +1466,14 @@ def _run_one(
             if not required.issubset(params) or "usage_limit" not in entities:
                 return {**base_res, "mode": "validation", "clarification_reason": "MISSING_PROMOTION_DETAILS"}
             params["usage_limit"] = entities["usage_limit"]
+            ok_ap, ap_res = _mcp_call(mcp_url, api_key, "get_active_promotions", {"timezone": "Europe/Lisbon"})
+            existing_promos = (ap_res.get("data") if isinstance(ap_res, dict) else []) if ok_ap else []
+            code_norm = str(params["coupon_code"]).strip().lower()
+            if isinstance(existing_promos, list) and any(
+                isinstance(p, dict) and str(p.get("coupon_code") or p.get("code") or "").strip().lower() == code_norm
+                for p in existing_promos
+            ):
+                return {**base_res, "mode": "validation", "clarification_reason": "DUPLICATE_COUPON_CODE", "suggested_message": f"Já existe uma promoção com o código {params['coupon_code']}."}
 
         if entities.get("product_queries"):
             return {**base_res, "mode": "validation", "clarification_reason": "PRODUCT_IDS_REQUIRED"}

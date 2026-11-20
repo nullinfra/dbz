@@ -134,38 +134,4 @@ module.exports = [
       forbidCalls: ['report_rider_position'],
       reply: ['estafeta|não tem'],
     })),
-
-  scenario('maps-missing-door-number', 'customer', ['maps', 'delivery', 'short'],
-    t('Entregam na Avenida Cristo Rei em Corroios?', {
-      ...question('número|porta'),
-    })),
-
-  scenario('maps-over-50km-rejected', 'customer', ['maps', 'delivery', 'short'],
-    t('Quero 2 Pastéis de Carne para entregar na Rua de Santa Catarina, 100, Porto.', {
-      reply: ['longe|distância|50|área|cobertura|não entreg'],
-      exclude: ['pedido (confirmado|enviado)'],
-    })),
-
-  scenario('maps-poi-landmark-delivery', 'customer', ['maps', 'delivery', 'short'],
-    t('Entregam na Estação de Corroios? Quanto fica a entrega?', {
-      reply: ['estação|corroios|ponto|encontro|2[,.]5'],
-    })),
-
-  scenario('maps-apartment-subpremise-notes', 'customer', ['maps', 'delivery', 'short'],
-    t('Quero 1 Pastel de Carne para entregar na Av. Cristo Rei, 47, 3º Esq, campainha Silva, Corroios. Ainda não envies.', {
-      reply: ['cristo rei', '47', '3º|silva'],
-    })),
-
-  scenario('maps-address-correction-turn2', 'customer', ['maps', 'delivery', 'long'],
-    t('Entregam na Av. Cristo Rei, 74, Corroios?', {
-      reply: ['74|cristo rei'],
-    }),
-    t('Enganei-me no número, é o 47 e não o 74.', {
-      reply: ['47', 'cristo rei'],
-    })),
-
-  scenario('maps-eta-distance-question', 'customer', ['maps', 'delivery', 'short'],
-    t('Quanto tempo demora a entrega para a Av. Cristo Rei, 47, Corroios?', {
-      reply: ['min|tempo|km|distância'],
-    })),
 ];

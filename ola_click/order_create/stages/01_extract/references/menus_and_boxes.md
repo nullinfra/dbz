@@ -14,7 +14,7 @@ Review every line after expanding the basket. This applies to new orders and to 
 
 Copy the exact `product_id`, product `name`, catalogue `category_id`, and `description` from the live result. Capture the variant by `variant_id` when there is more than one. In `modifiers`, use `{"modifier_id":"<verified UUID>","quantity":1}` for each selected native modifier. The executor checks membership and limits against the current product details.
 
-Store the agent's interpretation of choices described in prose in `catalog_review`. Each group contains its label, minimum, maximum (or null), selected names and counts per unit. Include a natural `question` for incomplete groups. A selection that is also a catalogue product should include its verified `product_id`. Choices specific to a menu can use the published name or a name confirmed by the merchant. Include one `{"question":"..."}` per unresolved condition that falls outside the group counts.
+Each reviewed line requires `product_id`, `name`, a positive integer `quantity`, and `catalog_review` with all four keys from the [review schema](../../../../_shared/schemas/catalog_review.schema.json). Store the agent's interpretation of choices described in prose in `catalog_review`. Each group contains its label, minimum, maximum (or null), selected names and counts per unit. Include a natural `question` for incomplete groups. A selection that is also a catalogue product should include its verified `product_id`. Choices specific to a menu can use the published name or a name confirmed by the merchant. Include one `{"question":"..."}` per unresolved condition that falls outside the group counts.
 
 ```json
 {

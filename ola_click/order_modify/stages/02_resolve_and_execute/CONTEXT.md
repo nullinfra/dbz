@@ -4,6 +4,8 @@ Resolve and execute the validated operations assigned to `order_modify`.
 
 ## Inputs
 
+- [Module tool rules](tools/rules.md) define the command arguments and verification for this workflow.
+
 - Working input is the checked `stage01_intent.json` from [Stage 01](../01_extract/CONTEXT.md). It lives at `<message_dir>/ola_click/<run>/stage01_intent.json`.
 - The caller supplies the exact run directory and, for a batch, the assigned operations and runner.
 - [Resolution policy](references/policy.md) describes lookups, checks, and outcomes.

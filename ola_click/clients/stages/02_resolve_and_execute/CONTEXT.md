@@ -4,6 +4,8 @@ Check and execute the verified client operations for this run.
 
 ## Inputs
 
+- [Module tool rules](tools/rules.md) define the command arguments and verification for this workflow.
+
 - `<message_dir>/ola_click/<run>/stage01_intent.json` from [Stage 01](../01_extract/CONTEXT.md).
 - The assigned run directory and [resolution policy](references/policy.md).
 - The branch's existing OlaClick MCP endpoint and API key.

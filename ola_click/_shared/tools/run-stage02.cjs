@@ -7,13 +7,15 @@ const { execute } = require('./execute-mcp-operations.cjs');
 const { inspectDraft } = require('../../order_create/stages/02_resolve_and_execute/tools/check-draft.cjs');
 const company = require('../../company_users/stages/02_resolve_and_execute/tools/company-operations.cjs');
 const clients = require('../../clients/stages/02_resolve_and_execute/tools/client-operations.cjs');
+const variants = require('../../menu_manage/stages/02_resolve_and_execute/tools/variant-operations.cjs');
 
-const mcpAdapters = new Map([['company_users', company], ['clients', clients]]);
+const mcpAdapters = new Map([['company_users', company], ['clients', clients], ['menu_manage', variants]]);
 
 function adapterFor({ pipeline, intent }) {
   // Earlier Stage 01 artifacts stored client operations under company_users.
   if (pipeline === 'company_users' && clients.tools.has(intent)) return clients;
-  return mcpAdapters.get(pipeline);
+  const adapter = mcpAdapters.get(pipeline);
+  return pipeline === 'menu_manage' && !adapter.tools.has(intent) ? undefined : adapter;
 }
 
 function writeJson(directory, filename, data) {
@@ -92,7 +94,7 @@ async function main() {
   }
   const usesMcpAdapters = operations.some(adapterFor);
   if (usesMcpAdapters && !operations.every(adapterFor)) {
-    throw new Error('Company & Users and Clients require a separate run from the legacy executor.');
+    throw new Error('Direct MCP intents require a separate run from the legacy executor.');
   }
   const checkedModules = new Set(['menu_read', 'menu_manage', 'order_modify', 'promotions', 'logistics_delivery', 'backoffice_ops']);
   const checks = new Map();

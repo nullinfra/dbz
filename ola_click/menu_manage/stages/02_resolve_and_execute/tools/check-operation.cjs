@@ -31,6 +31,9 @@ module.exports = function check({ intent, entities: e }, add) {
     add('operation', 'A eliminação de categorias é feita no painel da OlaClick.', 'UNSUPPORTED_OPERATION');
   }
   const patch = record(e.patch) ? e.patch : {};
+  if (present(e.variant_id) && Object.hasOwn(patch, 'name')) {
+    add('patch.name', 'Para renomear a variante, usa update_product_variant com id, variantId e name. Para renomear o produto, usa edit_menu sem variant_id.');
+  }
   priceCheck(e, add);
   priceCheck(patch, add);
   if (present(patch.price_delta) && present(patch.price_percent)) {

@@ -2,6 +2,8 @@
 
 Handle owner requests that change stock, products, variants, or categories.
 
+For an existing variant rename, use `update_product_variant` with the product `id`, the variant `variantId`, and `name`. The [module command example](stages/02_resolve_and_execute/tools/rules.md#rename-an-existing-variant) shows the separate run for this direct intent.
+
 | Stage | Handoff |
 |---|---|
 | [01 Extract](stages/01_extract/CONTEXT.md) | Checked operations or `stage01_intent.json`. |
